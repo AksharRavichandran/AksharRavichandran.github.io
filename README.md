@@ -1,9 +1,29 @@
 # AksharRavichandran.github.io
 
-Modern personal website template with:
+Personal website built with [React](https://react.dev/) and [Vite](https://vitejs.dev/).
 
-- Responsive layout using CSS grid and flexbox
-- Light/dark theme toggle with persistence
-- Sections for About, Projects, and Contact
+## Development
 
-Open `index.html` in a browser to preview locally.
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Run the linter:
+
+```bash
+npm run lint
+```
+
+Build for production:
+
+```bash
+npm run build
+```
