@@ -1,5 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import profileImg from "../assets/profile.jpeg";
+
+// Update these to your own details
+const SPOTIFY_EMBED_URL =
+  "https://open.spotify.com/embed/playlist/6AHFDICqERuGKomhF5hdNB?utm_source=generator"; 
+const CURRENTLY = [
+  { label: "Working on", value: "Intraday Beta Estimation Strategy" },
+  { label: "Learning", value: "Kalman Filtering" },
+  { label: "Craving", value: "Thai Food" },
+];
 
 export default function About() {
   return (
@@ -12,16 +22,44 @@ export default function About() {
         transition={{ duration: 0.7 }}
       >
         <div className="about-left">
-          <div className="profile glass" />
+          {/* Place your image at public/profile.jpg or update src below */}
+          <img
+            className="profile glass"
+            src={profileImg}
+            alt="Akshar Ravichandran portrait"
+            loading="lazy"
+          />
         </div>
         <div className="about-right glass">
           <h2>About Me</h2>
           <p>
-            I’m Akshar Ravichandran — a CS student at Georgia Tech, passionate about
-            software engineering, quantitative finance, and machine learning. I’ve
-            shipped production systems at Amazon and Sparksoft and contributed to
-            research at Georgia Tech.
+            I’m <strong>Akshar Ravichandran</strong> — a CS major at <strong>Georgia Tech</strong>,
+            passionate about <strong>software engineering</strong>, <strong>quantitative finance</strong>,
+            and <strong>machine learning</strong>. I’ve previously interned at
+            <strong> Amazon</strong> and <strong>Sparksoft</strong>, while also contributing to
+            research at <strong>Georgia Tech</strong> under the VIP program. I specialize in
+            <strong> Devices</strong> and <strong>Artificial Intelligence</strong>, hoping to eventually work in a field where I can combine both. 
           </p>
+
+          <p>
+            Outside of code, I’m a huge <strong>food enthusiast</strong> —
+            always exploring new spots, dialing in recipes, and hunting for the
+            perfect cup of matcha 🍵. If you have recs, let me know!
+          </p>
+
+          <p>
+            I’m also <strong>really into music</strong> 🎧 — you’ll usually find me
+            cycling between <strong>R&B</strong>, <strong>Rap</strong>, and <strong>House</strong>,
+            but I love discovering new music.
+          </p>
+          <div className="stats-row">
+            {CURRENTLY.map((item) => (
+              <div className="stat-card glass" key={item.label}>
+                <h4>{item.label}</h4>
+                <p>{item.value}</p>
+              </div>
+            ))}
+          </div>
           <div className="stats-row">
             <div className="stat-card glass">
               <h4>🎧 Top Artist</h4>
@@ -35,6 +73,19 @@ export default function About() {
               <h4>⏱ Minutes</h4>
               <p>42,367</p>
             </div>
+          </div>
+          <div className="spotify-card glass" style={{ marginTop: 16 }}>
+            <h4 style={{ marginBottom: 8 }}>One of my favorite playlists, I've made:</h4>
+            <iframe
+              title="Spotify Embed"
+              style={{ borderRadius: 12, width: "100%", height: 152 }}
+              src={SPOTIFY_EMBED_URL}
+              width="100%"
+              height="280"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
           </div>
         </div>
       </motion.div>

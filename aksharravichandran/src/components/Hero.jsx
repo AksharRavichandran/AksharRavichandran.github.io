@@ -12,15 +12,15 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h1>
-          Building delightful software with precision
+          hi, i'm Akshar
           <span className="neon">.</span>
         </h1>
         <p className="subtitle">
-          CS @ Georgia Tech • Software Engineering • Quant Finance • ML
+          CS @ Georgia Tech • Prev SDE @ Amzaon • Software Engineering • Quant Finance 
         </p>
         <div className="hero-cta">
-          <a href="#projects" className="btn btn-primary">View Projects</a>
-          <a href="#footer" className="btn btn-ghost">Contact</a>
+          <a href="#projects" className="btn btn-primary">View My Projects</a>
+          <a href="#footer" className="btn btn-ghost">Contact Me</a>
         </div>
       </motion.div>
     </header>

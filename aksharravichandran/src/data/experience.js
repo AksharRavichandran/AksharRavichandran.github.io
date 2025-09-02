@@ -1,11 +1,13 @@
+import amazonLogo from "../assets/amazon.png";
+import sparksoftLogo from "../assets/sparksoft.png";
+import vipLogo from "../assets/vip.jpeg";
+
 export const experience = [
   {
     company: "Amazon",
     role: "Software Engineering Intern",
     period: "Summer 2024",
-    // Place a logo in /public/logos and reference it like "/logos/amazon.png"
-    // You can also use a full URL.
-    logo: "/logos/amazon.svg",
+    logo: amazonLogo,
     highlights: [
       "Shipped features to production serving 1M+ customers",
       "Designed and implemented a scalable microservice with AWS",
@@ -16,7 +18,7 @@ export const experience = [
     company: "Sparksoft",
     role: "Software Engineering Intern",
     period: "2023 – 2024",
-    logo: "/logos/sparksoft.svg",
+    logo: sparksoftLogo,
     highlights: [
       "Built internal tooling that reduced triage time by 40%",
       "Led migration to a typed API layer across services",
@@ -27,7 +29,7 @@ export const experience = [
     company: "Georgia Tech",
     role: "Research Assistant",
     period: "2022 – 2023",
-    logo: "/logos/georgia-tech.svg",
+    logo: vipLogo,
     highlights: [
       "Developed ML pipelines for quantitative analysis",
       "Published results across two internal research reports",
