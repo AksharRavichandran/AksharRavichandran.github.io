@@ -1,25 +1,59 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import wordsPdf from "../assets/722_Words_That_Unite_The_World.pdf";
+import eventPdf from "../assets/EventDrivenAnalysis.pdf";
 
-const sampleProjects = [
+const projects = [
   {
-    title: "Market Alpha Scanner",
-    desc: "Quant toolkit for factor screens and backtests.",
-    tags: ["Python", "Pandas", "Backtrader"],
-    github: "https://github.com/yourname/alpha-scanner",
-    doc: "https://yourdomain.com/alpha-scanner-notes",
+    title: "Words That Unite the World",
+    desc: "Co-authored research project creating a World Central Banks (WCB) dataset, compiling monetary policy communications from central banks across the globe.  and benchmarked transformer-based models and LLMs to analyze policy stance.",
+    tags: [
+      "Python",
+      "NLP",
+      "Transformers",
+      "LLMs",
+      "Financial Analytics",
+      "Benchmarking"
+    ],
+    doc: wordsPdf,
   },
   {
-    title: "Realtime Dashboard",
-    desc: "Streaming analytics UI with alerts and drill-downs.",
-    tags: ["React", "WebSocket", "Vite"],
-    github: "https://github.com/yourname/realtime-dashboard",
+    title: "Event-Driven Learning of Systematic Behaviours in Stock Markets",
+    desc: "Replicated study to analyze the impact of financial news on stock price movements using event extraction and sentiment classification. Leveraged BERT/ALBERT to predict S&P 500 market reactions to news events.",
+    tags: ["Python", "BERT", "ALBERT",  "NLP", "Event Driven Analysis"],
+    doc: eventPdf,
   },
   {
-    title: "ML Service",
-    desc: "Inference microservice with A/B routing and tracing.",
-    tags: ["FastAPI", "Docker", "Grafana"],
-    doc: "https://yourdomain.com/ml-service-doc",
+    title: "Apartments For U",
+    desc: "Built a AIP workflow that aggregates apartment data and scores listings using an XGBoost model, providing a recommendation system for finding ideal places to live.",
+    tags: ["Python", "Palantir AIP", "Data Ontology", "XGBoost"],
+    youtube: "https://www.youtube.com/watch?v=tr7z_phszNg",
+  },
+  {
+    title: "Spotify Wrapped",
+    desc: "A Django web app integrating Spotify and OpenAI APIs to deliver personalized listening insights. Captures user data, genres, artists, and tracks, storing snapshots of Spotify 'Wrapped' statistics.",
+    tags:[
+      "Django",
+      "Python",
+      "Spotify API",
+      "OpenAI API"
+    ],
+    youtube: "https://sites.google.com/view/atlfoodfinder21/team?authuser=0"
+  },
+  {
+    title: "NCAA Basketball Analytics",
+    desc: "Built a Python-based web scraper using Pandas to collect data of NCAA basketball games. Collaborated with a DSGT team to develop a win probability model.",
+    tags: [
+      "Python",
+      "Pandas",
+      "Web Scraping",
+      "Data Analysis"
+    ]
+  },
+  {
+    title: "Intraday Beta Estimation",
+    desc: "In progress...",
+    tags: ["Python", "Kalman Filtering", "Pandas", "NumPy"],
   },
 ];
 
@@ -50,60 +84,133 @@ function DocIcon({ className = "icon" }) {
 }
 
 export default function Projects() {
+  const trackRef = useRef(null);
+  const [canLeft, setCanLeft] = useState(false);
+  const [canRight, setCanRight] = useState(false);
+
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+
+    const update = () => {
+      const maxScroll = el.scrollWidth - el.clientWidth;
+      setCanLeft(el.scrollLeft > 4);
+      setCanRight(el.scrollLeft < maxScroll - 4);
+    };
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => {
+      el.removeEventListener("scroll", update);
+      ro.disconnect();
+    };
+  }, []);
+
+  const pan = (dir) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const amount = Math.max(280, Math.floor(el.clientWidth * 0.9));
+    el.scrollBy({ left: dir * amount, behavior: "smooth" });
+  };
+
   return (
     <section id="projects" className="section">
       <div className="section-header">
         <h2>Projects</h2>
         <div className="section-underline" />
       </div>
-      <div className="cards-grid">
-        {sampleProjects.map((p, idx) => (
-          <motion.article
-            key={p.title}
-            className="project-card glass"
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: idx * 0.06 }}
-          >
-            <h3>{p.title}</h3>
-            <p className="muted">{p.desc}</p>
-            <div className="tags">
-              {p.tags.map((t) => (
-                <span className="tag" key={t}>{t}</span>
-              ))}
-            </div>
-            {(p.github || p.doc) && (
-              <div className="proj-actions">
-                {p.github && (
-                  <a
-                    className="icon-btn"
-                    href={p.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${p.title} on GitHub`}
-                    title="GitHub"
-                  >
-                    <GitHubIcon />
-                  </a>
-                )}
-                {p.doc && (
-                  <a
-                    className="icon-btn"
-                    href={p.doc}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${p.title} documentation`}
-                    title="Documentation"
-                  >
-                    <DocIcon />
-                  </a>
-                )}
+      <div className="carousel">
+        <button
+          className="carousel-arrow left"
+          aria-label="Previous projects"
+          onClick={() => pan(-1)}
+          disabled={!canLeft}
+        >
+          &#10094;
+        </button>
+        <div className="carousel-track" ref={trackRef}>
+          {projects.map((p, idx) => (
+            <motion.article
+              key={p.title}
+              className="project-card glass"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.06 }}
+            >
+              <h3>{p.title}</h3>
+              <p className="muted">{p.desc}</p>
+              <div className="tags">
+                {p.tags.map((t) => (
+                  <span className="tag" key={t}>{t}</span>
+                ))}
               </div>
-            )}
-          </motion.article>
-        ))}
+              {(p.github || p.doc || p.youtube) && (
+                <div className="proj-actions">
+                  {p.github && (
+                    <a
+                      className="icon-btn"
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${p.title} on GitHub`}
+                      title="GitHub"
+                    >
+                      <GitHubIcon />
+                    </a>
+                  )}
+                  {p.doc && (
+                    <a
+                      className="icon-btn"
+                      href={p.doc}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${p.title} documentation`}
+                      title="Documentation"
+                    >
+                      <DocIcon />
+                    </a>
+                  )}
+                  {p.youtube && (
+                    <a
+                      className="icon-btn"
+                      href={p.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${p.title} on YouTube`}
+                      title="YouTube"
+                    >
+                      <YouTubeIcon />
+                    </a>
+                  )}
+                </div>
+              )}
+            </motion.article>
+          ))}
+        </div>
+        <button
+          className="carousel-arrow right"
+          aria-label="Next projects"
+          onClick={() => pan(1)}
+          disabled={!canRight}
+        >
+          &#10095;
+        </button>
       </div>
     </section>
+  );
+}
+
+function YouTubeIcon({ className = "icon" }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden
+    >
+      <path d="M23.5 6.2a3.04 3.04 0 0 0-2.14-2.15C19.8 3.5 12 3.5 12 3.5s-7.8 0-9.36.55A3.04 3.04 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12c0 1.98.2 3.94.5 5.8.28 1.05 1.1 1.88 2.14 2.16C4.2 20.5 12 20.5 12 20.5s7.8 0 9.36-.55a3.04 3.04 0 0 0 2.14-2.15c.3-1.85.5-3.82.5-5.8 0-1.98-.2-3.94-.5-5.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+    </svg>
   );
 }

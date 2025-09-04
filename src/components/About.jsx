@@ -37,7 +37,7 @@ export default function About() {
             passionate about <strong>software engineering</strong>, <strong>quantitative finance</strong>,
             and <strong>machine learning</strong>. I’ve previously interned at
             <strong> Amazon</strong> and <strong>Sparksoft</strong>, while also contributing to
-            research at <strong>Georgia Tech</strong> under the VIP program. I specialize in
+            research at Georgia Tech under the <strong>VIP program</strong>. I specialize in
             <strong> Devices</strong> and <strong>Artificial Intelligence</strong>, hoping to eventually work in a field where I can combine both. 
           </p>
 
@@ -60,7 +60,7 @@ export default function About() {
               </div>
             ))}
           </div>
-          <div className="stats-row">
+          {/* <div className="stats-row">
             <div className="stat-card glass">
               <h4>🎧 Top Artist</h4>
               <p>Drake</p>
@@ -73,15 +73,15 @@ export default function About() {
               <h4>⏱ Minutes</h4>
               <p>42,367</p>
             </div>
-          </div>
+          </div> */}
           <div className="spotify-card glass" style={{ marginTop: 16 }}>
             <h4 style={{ marginBottom: 8 }}>One of my favorite playlists, I've made:</h4>
             <iframe
               title="Spotify Embed"
-              style={{ borderRadius: 12, width: "100%", height: 152 }}
+              className="spotify-embed"
               src={SPOTIFY_EMBED_URL}
               width="100%"
-              height="280"
+              height="100%"
               frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"

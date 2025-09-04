@@ -5,35 +5,35 @@ import vipLogo from "../assets/vip.jpeg";
 export const experience = [
   {
     company: "Amazon",
-    role: "Software Engineering Intern",
-    period: "Summer 2024",
+    role: "Software Developing Engineer Intern",
+    period: "Summer 2025",
     logo: amazonLogo,
     highlights: [
-      "Shipped features to production serving 1M+ customers",
-      "Designed and implemented a scalable microservice with AWS",
-      "Improved latency by 28% via caching + query optimization",
+      "Developed one stop shop internal portal using React and Amazon’s Harmony Framework",
+      "Improved certification management for PMs and SDEs supporting Amazon Business sellers",
+      "Established a production ready service and build a prodlink to connect my services onto multiple network fabrics"
     ],
   },
   {
     company: "Sparksoft",
     role: "Software Engineering Intern",
-    period: "2023 – 2024",
+    period: "Jun 2024 - Nov 2024",
     logo: sparksoftLogo,
     highlights: [
-      "Built internal tooling that reduced triage time by 40%",
-      "Led migration to a typed API layer across services",
-      "Authored CI checks to boost reliability and test coverage",
+      "Maintained and enhanced the CMS Enterprise Portal, a critical Angular-based platform supporting Medicare under the Centers for Medicare & Medicaid Services.",
+      "Resolved many bugs and performance issues, improving stability and user experience for portal users.",
+      "Collaborated with cross-functional teams to optimize feature workflows and deliver client-facing updates"
     ],
   },
   {
-    company: "Georgia Tech",
+    company: "Georgia Tech - Vertically Integrated Project",
     role: "Research Assistant",
-    period: "2022 – 2023",
+    period: "Jan 2024 – Present",
     logo: vipLogo,
     highlights: [
-      "Developed ML pipelines for quantitative analysis",
-      "Published results across two internal research reports",
-      "Presented findings to cross‑functional academic teams",
+      "Monetary Policy Sentiment Analysis by training and benchmarking of LLMS to classify policy statements.",
+      "Annotated and classified sentences from Reserve Bank of India (RBI) and Central Bank of Republic of China (Taiwan) meeting minutes.",
+      "Performed Financial Datasets Analysis by evaluating datasets of financial news and press releases and improved them datasets using Polars and Panda."
     ],
   },
 ];

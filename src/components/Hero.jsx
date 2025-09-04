@@ -12,11 +12,11 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h1>
-          hi, i'm Akshar
+          Hi, i'm Akshar
           <span className="neon">.</span>
         </h1>
         <p className="subtitle">
-          CS @ Georgia Tech • Prev SDE @ Amzaon • Software Engineering • Quant Finance 
+          CS @ Georgia Tech • Prev SDE @ Amazon • Software Engineer
         </p>
         <div className="hero-cta">
           <a href="#projects" className="btn btn-primary">View My Projects</a>
