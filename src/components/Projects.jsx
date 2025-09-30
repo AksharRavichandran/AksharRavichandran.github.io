@@ -87,6 +87,8 @@ export default function Projects() {
   const trackRef = useRef(null);
   const [canLeft, setCanLeft] = useState(false);
   const [canRight, setCanRight] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimeoutRef = useRef(null);
 
   useEffect(() => {
     const el = trackRef.current;
@@ -97,13 +99,21 @@ export default function Projects() {
       setCanLeft(el.scrollLeft > 4);
       setCanRight(el.scrollLeft < maxScroll - 4);
     };
+    const onScroll = () => {
+      update();
+      setIsScrolling(true);
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+      scrollTimeoutRef.current = setTimeout(() => setIsScrolling(false), 250);
+    };
+
     update();
-    el.addEventListener("scroll", update, { passive: true });
+    el.addEventListener("scroll", onScroll, { passive: true });
     const ro = new ResizeObserver(update);
     ro.observe(el);
     return () => {
-      el.removeEventListener("scroll", update);
+      el.removeEventListener("scroll", onScroll);
       ro.disconnect();
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
     };
   }, []);
 
@@ -120,7 +130,7 @@ export default function Projects() {
         <h2>Projects</h2>
         <div className="section-underline" />
       </div>
-      <div className="carousel">
+      <div className={`carousel ${isScrolling ? "scrolling" : ""}`}>
         <button
           className="carousel-arrow left"
           aria-label="Previous projects"

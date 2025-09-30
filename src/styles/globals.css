@@ -150,8 +150,10 @@ body {
 
 /* Footer */
 .footer { margin-top: 40px; }
-.footer-inner { max-width: 960px; margin: 0 auto; padding: 28px; text-align: center; }
+.footer-inner { max-width: 960px; margin: 0 auto; padding: 12px; text-align: center; }
 .footer-actions { margin: 16px 0 10px; display: flex; gap: 12px; justify-content: center; }
+/* Reduce overall footer section padding (shorter outline) */
+.footer.section { padding-top: 28px; padding-bottom: 28px; }
 
 /* Responsive */
 @media (max-width: 960px) {
@@ -165,7 +167,7 @@ body {
 
 /* --- Overrides & Additions --- */
 /* Projects: carousel layout and arrows */
-.carousel { position: relative; }
+.carousel { position: relative; isolation: isolate; }
 .carousel-track {
   display: flex;
   gap: 18px;
@@ -173,10 +175,12 @@ body {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 2px 2px;
+  position: relative;
+  z-index: 0; /* keep below arrows */
 }
 .carousel-track::-webkit-scrollbar { display: none; }
 .carousel-track { -ms-overflow-style: none; scrollbar-width: none; }
-.project-card { padding: 18px; scroll-snap-align: start; flex: 0 0 100%; }
+.project-card { padding: 18px; scroll-snap-align: start; flex: 0 0 100%; position: relative; z-index: 0; }
 @media (min-width: 640px) { .carousel-track .project-card { flex-basis: calc(50% - 9px); } }
 @media (min-width: 960px) { .carousel-track .project-card { flex-basis: calc(33.333% - 12px); } }
 .carousel-arrow {
@@ -195,11 +199,20 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: all .15s ease;
+  z-index: 10; /* sit above cards */
 }
 .carousel-arrow:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 0 18px rgba(122,125,255,.25) inset; }
 .carousel-arrow:disabled { opacity: .35; cursor: default; }
 .carousel-arrow.left { left: 6px; }
 .carousel-arrow.right { right: 6px; }
+
+/* Make arrows transparent when not actively scrolling */
+.carousel:not(.scrolling) .carousel-arrow {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: .35;
+}
 
 /* Spotify: responsive embed sizing */
 .spotify-embed { width: 100%; height: 360px; border: 0; border-radius: 12px; display: block; }
