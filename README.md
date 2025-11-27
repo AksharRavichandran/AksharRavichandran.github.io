@@ -27,3 +27,7 @@ Build for production:
 ```bash
 npm run build
 ```
+
+## Deployment
+
+This repository deploys via GitHub Pages using Actions. On pushes to `main`, the site is built with Vite to `dist/` and published to Pages automatically. The old `docs/` folder is no longer used.

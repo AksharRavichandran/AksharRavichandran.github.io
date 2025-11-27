@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview --outDir docs",
+    "preview": "vite preview --outDir dist",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
