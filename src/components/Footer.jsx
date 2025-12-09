@@ -1,5 +1,5 @@
 import React from "react";
-import resumePdf from "../assets/AksharRavichandran25-26.pdf";
+import resumePdf from "../assets/AksharRavichandranGrad25-26.pdf";
 
 export default function Footer() {
   return (

@@ -33,7 +33,7 @@ export default function About() {
         <div className="about-right glass">
           <h2>About Me</h2>
           <p>
-            I’m <strong>Akshar Ravichandran</strong> — a CS major at <strong>Georgia Tech</strong>,
+            I’m <strong>Akshar Ravichandran</strong> a CS major at <strong>Georgia Tech</strong>,
             passionate about <strong>software engineering</strong>, <strong>quantitative finance</strong>,
             and <strong>machine learning</strong>. I’ve previously interned at
             <strong> Amazon</strong> and <strong>Sparksoft</strong>, while also contributing to
@@ -42,13 +42,13 @@ export default function About() {
           </p>
 
           <p>
-            Outside of code, I’m a huge <strong>food enthusiast</strong> —
+            Outside of code, I’m a huge <strong>food enthusiast</strong>
             always exploring new spots, dialing in recipes, and hunting for the
             perfect cup of matcha 🍵. If you have recs, let me know!
           </p>
 
           <p>
-            I’m also <strong>really into music</strong> 🎧 — you’ll usually find me
+            I’m also <strong>really into music</strong> 🎧 you’ll usually find me
             cycling between <strong>R&B</strong>, <strong>Rap</strong>, and <strong>House</strong>,
             but I love discovering new music.
           </p>
