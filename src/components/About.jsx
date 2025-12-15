@@ -42,8 +42,7 @@ export default function About() {
           </p>
 
           <p>
-            Outside of code, I’m a huge <strong>food enthusiast</strong>
-            always exploring new spots, dialing in recipes, and hunting for the
+            Outside of code, I’m a huge <strong>food enthusiast</strong> always exploring new spots, dialing in recipes, and hunting for the
             perfect cup of matcha 🍵. If you have recs, let me know!
           </p>
 
