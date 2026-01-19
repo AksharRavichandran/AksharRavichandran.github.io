@@ -34,7 +34,7 @@ export default function About() {
         <div className="about-right glass">
           <h2>About Me</h2>
           <p>
-            I’m Akshar Ravichandran a Computer Science major at Georgia Tech, specializing in devices and artificial intelligence. I'm
+            I’m Akshar Ravichandran, a Computer Science major at Georgia Tech specializing in devices and artificial intelligence. I'm
             passionate about software engineering, quantitative finance,
             and machine learning. I’ve previously interned at
             Amazon and Sparksoft, while also contributing to
