@@ -19,9 +19,9 @@ export default function Hero() {
           CS @ Georgia Tech • Prev SDE @ Amazon • Software Engineer
         </p>
         <div className="hero-pills">
-          <span className="pill">Full-stack engineering</span>
-          <span className="pill">Quantitative finance</span>
-          <span className="pill">Machine learning</span>
+          <span className="pill">Full-stack Engineering</span>
+          <span className="pill">Quantitative Finance</span>
+          <span className="pill">Machine Learning</span>
         </div>
         <div className="hero-cta">
           <a href="#projects" className="btn btn-primary">View My Projects</a>
