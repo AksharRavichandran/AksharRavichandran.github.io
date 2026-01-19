@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import wordsPdf from "../assets/722_Words_That_Unite_The_World.pdf";
 import eventPdf from "../assets/EventDrivenAnalysis.pdf";
+import roadForecastPdf from "../assets/Road_Condition_Forecasting___Final_Report.pdf";
 
 const projects = [
   {
@@ -22,6 +23,19 @@ const projects = [
     desc: "Replicated study to analyze the impact of financial news on stock price movements using event extraction and sentiment classification. Leveraged BERT/ALBERT to predict S&P 500 market reactions to news events.",
     tags: ["Python", "BERT", "ALBERT",  "NLP", "Event Driven Analysis"],
     doc: eventPdf,
+  },
+  {
+    title: "Prediction Pipeline",
+    desc: "Built a pavement deterioration forecasting pipeline using 40k+ roadway, traffic, climate, and structural features across 5+ datasets. Trained Ridge/Lasso, PCA-linear regression, Random Forest, and XGBoost to reach 0.065 RMSE for next-year MRI, then simulated multi-year deterioration to flag at-risk segments aligned to repaving cycles.",
+    tags: [
+      "Python",
+      "Forecasting",
+      "XGBoost",
+      "Random Forest",
+      "PCA Regression",
+      "Infrastructure"
+    ],
+    doc: roadForecastPdf,
   },
   {
     title: "Apartments For U",
@@ -52,8 +66,14 @@ const projects = [
   },
   {
     title: "Intraday Beta Estimation",
-    desc: "In progress...",
+    desc: "Built an intraday beta estimation pipeline for portfolio risk analysis; details are confidential under the Investment Committee.",
     tags: ["Python", "Kalman Filtering", "Pandas", "NumPy"],
+  },
+  {
+    title: "NFL Analytics",
+    desc: "In progress...",
+    tags: ["Python", "Data Analysis", "Sports Analytics"],
+    github: "https://github.com/AksharRavichandran/NFLAnalytics",
   },
 ];
 

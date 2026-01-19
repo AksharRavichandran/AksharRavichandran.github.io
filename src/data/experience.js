@@ -1,8 +1,20 @@
 import amazonLogo from "../assets/amazon.png";
 import sparksoftLogo from "../assets/sparksoft.png";
 import vipLogo from "../assets/vip.jpeg";
+import schellerLogo from "../assets/scheller.jpeg";
 
 export const experience = [
+  {
+    company: "Scheller College of Business",
+    role: "Research Assistant",
+    period: "Dec 2025 – Present",
+    logo: schellerLogo,
+    highlights: [
+      "Building an LLM benchmark to extract sentiment, stance, and narratives from X and Reddit for prediction market signal testing",
+      "Studying lead-lag effects between such social discourse and Polymarket price/volume shifts",
+      "Exploring the impact of predicitons markets to their respective related equities"
+    ],
+  },
   {
     company: "Amazon",
     role: "Software Developing Engineer Intern",
@@ -36,4 +48,5 @@ export const experience = [
       "Performed Financial Datasets Analysis by evaluating datasets of financial news and press releases and improved them datasets using Polars and Panda."
     ],
   },
+
 ];
