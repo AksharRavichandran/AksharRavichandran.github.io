@@ -128,8 +128,12 @@ body {
 .about-container { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: stretch; }
 .about-left .profile { width: 100%; height: 300px; object-fit: cover; border-radius: 16px; border: 2px solid rgba(122,125,255,.5); box-shadow: 0 0 28px rgba(122,125,255,.25) inset; }
 .about-right { padding: 32px; }
-.about-right p { font-size: 20px; line-height: 1.7; }
-@media (max-width: 960px) { .about-right p { font-size: 19px; } }
+.about-right p {
+  font-size: 19px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text);
+}
 .about-music { margin-top: 28px; padding: 28px; }
 .music-section-title { margin: 0 0 16px; font-size: 20px; }
 
