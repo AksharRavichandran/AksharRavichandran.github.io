@@ -14,6 +14,7 @@ export const experience = [
       "Studying lead-lag effects between such social discourse and Polymarket price/volume shifts",
       "Exploring the impact of predicitons markets to their respective related equities"
     ],
+    github: "https://github.com/AksharRavichandran/Polymarket_Social_Signals",
   },
   {
     company: "Amazon",
