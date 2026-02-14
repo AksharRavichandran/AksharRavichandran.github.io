@@ -51,29 +51,23 @@ function useSnapScroll(itemsLength) {
     return () => ro.disconnect();
   }, [itemsLength]);
 
-  useEffect(() => {
+  const onWheel = (event) => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container || !itemSizeRef.current) return;
+    event.preventDefault();
 
-    const onWheel = (event) => {
-      if (!itemSizeRef.current) return;
-      event.preventDefault();
-      const direction = event.deltaY > 0 ? 1 : -1;
-      const next = Math.max(
-        0,
-        Math.min(
-          container.scrollHeight - container.clientHeight,
-          container.scrollTop + direction * itemSizeRef.current
-        )
-      );
-      container.scrollTo({ top: next, behavior: "smooth" });
-    };
+    const direction = event.deltaY > 0 ? 1 : -1;
+    const next = Math.max(
+      0,
+      Math.min(
+        container.scrollHeight - container.clientHeight,
+        container.scrollTop + direction * itemSizeRef.current
+      )
+    );
+    container.scrollTo({ top: next, behavior: "smooth" });
+  };
 
-    container.addEventListener("wheel", onWheel, { passive: false });
-    return () => container.removeEventListener("wheel", onWheel);
-  }, []);
-
-  return { containerRef, listRef };
+  return { containerRef, listRef, onWheel };
 }
 
 // Top Tracks Card Component
@@ -151,7 +145,7 @@ function TopTracksCard({ tracks }) {
           </button>
 
           {/* Render ONLY the 5 visible tracks */}
-          <div className="music-carousel-container" ref={snap.containerRef}>
+          <div className="music-carousel-container" ref={snap.containerRef} onWheel={snap.onWheel}>
             <ol
               className={`music-carousel-list${isPaging ? ` paging-${pageDir}` : ""}`}
               ref={snap.listRef}
@@ -285,7 +279,7 @@ function TopArtistsCard({ artists }) {
           </button>
 
           {/* Render ONLY the 5 visible artists */}
-          <div className="music-carousel-container" ref={snap.containerRef}>
+          <div className="music-carousel-container" ref={snap.containerRef} onWheel={snap.onWheel}>
             <ol
               className={`music-carousel-list${isPaging ? ` paging-${pageDir}` : ""}`}
               ref={snap.listRef}

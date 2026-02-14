@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpeg";
 import TopMusic from "./TopMusic";
-import StravaStats from "./StravaStats";
 
 // Update these to your own details
 const SPOTIFY_EMBED_URL =
@@ -52,7 +51,7 @@ export default function About() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, delay: 0.1 }}
       >
-        <h3 className="music-section-title">The motivation behind my work:</h3>
+        <h3 className="music-section-title">The foundation to all of my work:</h3>
         <div className="music-grid">
           <TopMusic />
           <div className="spotify-card glass">
@@ -67,7 +66,6 @@ export default function About() {
             />
           </div>
         </div>
-        <StravaStats />
       </motion.div>
     </section>
   );
