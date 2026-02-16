@@ -90,8 +90,6 @@ export default function StravaStats() {
   return (
     <div className="strava-card glass">
       <div className="strava-header">
-        <h4>Strava</h4>
-        <span className="muted small">Live run stats</span>
       </div>
       {status === "loading" && <p className="muted">Loading latest runs…</p>}
       {status === "error" && (
