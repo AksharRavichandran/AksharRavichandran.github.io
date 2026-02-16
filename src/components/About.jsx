@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpeg";
 import TopMusic from "./TopMusic";
+import StravaStats from "./StravaStats";
 
 // Update these to your own details
 const SPOTIFY_EMBED_URL =
@@ -66,6 +67,7 @@ export default function About() {
             />
           </div>
         </div>
+        <StravaStats />
       </motion.div>
     </section>
   );
