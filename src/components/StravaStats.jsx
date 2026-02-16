@@ -12,7 +12,7 @@ export default function StravaStats() {
 
     const load = async () => {
       try {
-        const endpoint = import.meta.env.VITE_STRAVA_API_URL || "/api/strava";
+        const endpoint = "https://strava-proxy-two.vercel.app/api/strava";
         const resp = await fetch(endpoint);
         if (!resp.ok) throw new Error("Failed to load Strava stats.");
         const json = await resp.json();
