@@ -1351,7 +1351,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "BAILE INoLVIDABLE",
-      "popularity": 97,
+      "popularity": 98,
       "preview_url": null,
       "track_number": 3,
       "type": "track",
@@ -1800,7 +1800,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "E85",
-      "popularity": 86,
+      "popularity": 87,
       "preview_url": null,
       "track_number": 1,
       "type": "track",
@@ -1812,13 +1812,13 @@
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/6hpztnbgmaneFFGGnEOVjd"
+              "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
             },
-            "href": "https://api.spotify.com/v1/artists/6hpztnbgmaneFFGGnEOVjd",
-            "id": "6hpztnbgmaneFFGGnEOVjd",
-            "name": "sosocamo",
+            "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
+            "id": "4q3ewBCX7sLwd24euuV69X",
+            "name": "Bad Bunny",
             "type": "artist",
-            "uri": "spotify:artist:6hpztnbgmaneFFGGnEOVjd"
+            "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X"
           }
         ],
         "available_markets": [
@@ -2009,45 +2009,55 @@
           "XK"
         ],
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/1UKK69dkl1m29OhETYyfcv"
+          "spotify": "https://open.spotify.com/album/3RQQmkQEvNCY4prGKE6oc5"
         },
-        "href": "https://api.spotify.com/v1/albums/1UKK69dkl1m29OhETYyfcv",
-        "id": "1UKK69dkl1m29OhETYyfcv",
+        "href": "https://api.spotify.com/v1/albums/3RQQmkQEvNCY4prGKE6oc5",
+        "id": "3RQQmkQEvNCY4prGKE6oc5",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273f09da6140793f3e9a1ad37ef",
+            "url": "https://i.scdn.co/image/ab67616d0000b27349d694203245f241a1bcaa72",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02f09da6140793f3e9a1ad37ef",
+            "url": "https://i.scdn.co/image/ab67616d00001e0249d694203245f241a1bcaa72",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851f09da6140793f3e9a1ad37ef",
+            "url": "https://i.scdn.co/image/ab67616d0000485149d694203245f241a1bcaa72",
             "width": 64
           }
         ],
         "is_playable": true,
-        "name": "no service",
-        "release_date": "2025-06-27",
+        "name": "Un Verano Sin Ti",
+        "release_date": "2022-05-06",
         "release_date_precision": "day",
-        "total_tracks": 13,
+        "total_tracks": 23,
         "type": "album",
-        "uri": "spotify:album:1UKK69dkl1m29OhETYyfcv"
+        "uri": "spotify:album:3RQQmkQEvNCY4prGKE6oc5"
       },
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/6hpztnbgmaneFFGGnEOVjd"
+            "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
           },
-          "href": "https://api.spotify.com/v1/artists/6hpztnbgmaneFFGGnEOVjd",
-          "id": "6hpztnbgmaneFFGGnEOVjd",
-          "name": "sosocamo",
+          "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
+          "id": "4q3ewBCX7sLwd24euuV69X",
+          "name": "Bad Bunny",
           "type": "artist",
-          "uri": "spotify:artist:6hpztnbgmaneFFGGnEOVjd"
+          "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1mcTU81TzQhprhouKaTkpq"
+          },
+          "href": "https://api.spotify.com/v1/artists/1mcTU81TzQhprhouKaTkpq",
+          "id": "1mcTU81TzQhprhouKaTkpq",
+          "name": "Rauw Alejandro",
+          "type": "artist",
+          "uri": "spotify:artist:1mcTU81TzQhprhouKaTkpq"
         }
       ],
       "available_markets": [
@@ -2238,24 +2248,24 @@
         "XK"
       ],
       "disc_number": 1,
-      "duration_ms": 146327,
+      "duration_ms": 227628,
       "explicit": true,
       "external_ids": {
-        "isrc": "CA5KR2536539"
+        "isrc": "QM6MZ2214885"
       },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/5mWlHXCzDzMd1plGzBqPVT"
+        "spotify": "https://open.spotify.com/track/4tYFy8ALRjIZvnvSLw5lxN"
       },
-      "href": "https://api.spotify.com/v1/tracks/5mWlHXCzDzMd1plGzBqPVT",
-      "id": "5mWlHXCzDzMd1plGzBqPVT",
+      "href": "https://api.spotify.com/v1/tracks/4tYFy8ALRjIZvnvSLw5lxN",
+      "id": "4tYFy8ALRjIZvnvSLw5lxN",
       "is_local": false,
       "is_playable": true,
-      "name": "don’t panic",
-      "popularity": 64,
+      "name": "Party",
+      "popularity": 82,
       "preview_url": null,
-      "track_number": 3,
+      "track_number": 11,
       "type": "track",
-      "uri": "spotify:track:5mWlHXCzDzMd1plGzBqPVT"
+      "uri": "spotify:track:4tYFy8ALRjIZvnvSLw5lxN"
     },
     {
       "album": {
@@ -3148,24 +3158,24 @@
         "XK"
       ],
       "disc_number": 1,
-      "duration_ms": 99700,
+      "duration_ms": 146327,
       "explicit": true,
       "external_ids": {
-        "isrc": "QZTB52424071"
+        "isrc": "CA5KR2536539"
       },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/2VOt88FoSGjSOuzLaeqz5k"
+        "spotify": "https://open.spotify.com/track/5mWlHXCzDzMd1plGzBqPVT"
       },
-      "href": "https://api.spotify.com/v1/tracks/2VOt88FoSGjSOuzLaeqz5k",
-      "id": "2VOt88FoSGjSOuzLaeqz5k",
+      "href": "https://api.spotify.com/v1/tracks/5mWlHXCzDzMd1plGzBqPVT",
+      "id": "5mWlHXCzDzMd1plGzBqPVT",
       "is_local": false,
       "is_playable": true,
-      "name": "keep steady",
-      "popularity": 77,
+      "name": "don’t panic",
+      "popularity": 63,
       "preview_url": null,
-      "track_number": 8,
+      "track_number": 3,
       "type": "track",
-      "uri": "spotify:track:2VOt88FoSGjSOuzLaeqz5k"
+      "uri": "spotify:track:5mWlHXCzDzMd1plGzBqPVT"
     },
     {
       "album": {
@@ -3173,150 +3183,13 @@
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/1mSJCvDX0W7Dn7S9C6vmvI"
+              "spotify": "https://open.spotify.com/artist/0EyhkwP3UnwGFBy6xwKjSy"
             },
-            "href": "https://api.spotify.com/v1/artists/1mSJCvDX0W7Dn7S9C6vmvI",
-            "id": "1mSJCvDX0W7Dn7S9C6vmvI",
-            "name": "Anna of the North",
+            "href": "https://api.spotify.com/v1/artists/0EyhkwP3UnwGFBy6xwKjSy",
+            "id": "0EyhkwP3UnwGFBy6xwKjSy",
+            "name": "EsDeeKid",
             "type": "artist",
-            "uri": "spotify:artist:1mSJCvDX0W7Dn7S9C6vmvI"
-          }
-        ],
-        "available_markets": [
-          "AG",
-          "BB",
-          "BS",
-          "BZ",
-          "CA",
-          "DM",
-          "DO",
-          "GD",
-          "HT",
-          "JM",
-          "KN",
-          "LC",
-          "MX",
-          "PA",
-          "PR",
-          "TT",
-          "US",
-          "VC"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/5kopWecrOCWIxpgpukVfct"
-        },
-        "href": "https://api.spotify.com/v1/albums/5kopWecrOCWIxpgpukVfct",
-        "id": "5kopWecrOCWIxpgpukVfct",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273ee52821d214e70851ac26702",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02ee52821d214e70851ac26702",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851ee52821d214e70851ac26702",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "name": "Lovers",
-        "release_date": "2017-09-08",
-        "release_date_precision": "day",
-        "total_tracks": 10,
-        "type": "album",
-        "uri": "spotify:album:5kopWecrOCWIxpgpukVfct"
-      },
-      "artists": [
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/1mSJCvDX0W7Dn7S9C6vmvI"
-          },
-          "href": "https://api.spotify.com/v1/artists/1mSJCvDX0W7Dn7S9C6vmvI",
-          "id": "1mSJCvDX0W7Dn7S9C6vmvI",
-          "name": "Anna of the North",
-          "type": "artist",
-          "uri": "spotify:artist:1mSJCvDX0W7Dn7S9C6vmvI"
-        }
-      ],
-      "available_markets": [
-        "AG",
-        "BB",
-        "BS",
-        "BZ",
-        "CA",
-        "DM",
-        "DO",
-        "GD",
-        "HT",
-        "JM",
-        "KN",
-        "LC",
-        "MX",
-        "PA",
-        "PR",
-        "TT",
-        "US",
-        "VC"
-      ],
-      "disc_number": 1,
-      "duration_ms": 215773,
-      "explicit": false,
-      "external_ids": {
-        "isrc": "USLGZ1700007"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/track/6q8onrzcka32nGVrnWYGBQ"
-      },
-      "href": "https://api.spotify.com/v1/tracks/6q8onrzcka32nGVrnWYGBQ",
-      "id": "6q8onrzcka32nGVrnWYGBQ",
-      "is_local": false,
-      "is_playable": true,
-      "name": "Lovers",
-      "popularity": 70,
-      "preview_url": null,
-      "track_number": 3,
-      "type": "track",
-      "uri": "spotify:track:6q8onrzcka32nGVrnWYGBQ"
-    },
-    {
-      "album": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/4Gso3d4CscCijv0lmajZWs"
-            },
-            "href": "https://api.spotify.com/v1/artists/4Gso3d4CscCijv0lmajZWs",
-            "id": "4Gso3d4CscCijv0lmajZWs",
-            "name": "Don Toliver",
-            "type": "artist",
-            "uri": "spotify:artist:4Gso3d4CscCijv0lmajZWs"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/3WQnwswrc0FaQ6AqenFuFE"
-            },
-            "href": "https://api.spotify.com/v1/artists/3WQnwswrc0FaQ6AqenFuFE",
-            "id": "3WQnwswrc0FaQ6AqenFuFE",
-            "name": "Indo2x",
-            "type": "artist",
-            "uri": "spotify:artist:3WQnwswrc0FaQ6AqenFuFE"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/53kUGCuekuXoSYPISirZpl"
-            },
-            "href": "https://api.spotify.com/v1/artists/53kUGCuekuXoSYPISirZpl",
-            "id": "53kUGCuekuXoSYPISirZpl",
-            "name": "Ziahfyah",
-            "type": "artist",
-            "uri": "spotify:artist:53kUGCuekuXoSYPISirZpl"
+            "uri": "spotify:artist:0EyhkwP3UnwGFBy6xwKjSy"
           }
         ],
         "available_markets": [
@@ -3506,65 +3379,45 @@
           "XK"
         ],
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/5mO75nU1r7JvkCO8oOmHhF"
+          "spotify": "https://open.spotify.com/album/1TP95xOGiWqdVOu4hGbuug"
         },
-        "href": "https://api.spotify.com/v1/albums/5mO75nU1r7JvkCO8oOmHhF",
-        "id": "5mO75nU1r7JvkCO8oOmHhF",
+        "href": "https://api.spotify.com/v1/albums/1TP95xOGiWqdVOu4hGbuug",
+        "id": "1TP95xOGiWqdVOu4hGbuug",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2735fb5216d83c180d0c2f75f5f",
+            "url": "https://i.scdn.co/image/ab67616d0000b273cff4bd68d5d0dd9a0a748045",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e025fb5216d83c180d0c2f75f5f",
+            "url": "https://i.scdn.co/image/ab67616d00001e02cff4bd68d5d0dd9a0a748045",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048515fb5216d83c180d0c2f75f5f",
+            "url": "https://i.scdn.co/image/ab67616d00004851cff4bd68d5d0dd9a0a748045",
             "width": 64
           }
         ],
         "is_playable": true,
-        "name": "NO IDEA #jerseyclub (Ziahfyah & Indo2x Remix)",
-        "release_date": "2022-11-13",
+        "name": "Rebel",
+        "release_date": "2025-06-20",
         "release_date_precision": "day",
-        "total_tracks": 1,
+        "total_tracks": 11,
         "type": "album",
-        "uri": "spotify:album:5mO75nU1r7JvkCO8oOmHhF"
+        "uri": "spotify:album:1TP95xOGiWqdVOu4hGbuug"
       },
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/4Gso3d4CscCijv0lmajZWs"
+            "spotify": "https://open.spotify.com/artist/0EyhkwP3UnwGFBy6xwKjSy"
           },
-          "href": "https://api.spotify.com/v1/artists/4Gso3d4CscCijv0lmajZWs",
-          "id": "4Gso3d4CscCijv0lmajZWs",
-          "name": "Don Toliver",
+          "href": "https://api.spotify.com/v1/artists/0EyhkwP3UnwGFBy6xwKjSy",
+          "id": "0EyhkwP3UnwGFBy6xwKjSy",
+          "name": "EsDeeKid",
           "type": "artist",
-          "uri": "spotify:artist:4Gso3d4CscCijv0lmajZWs"
-        },
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3WQnwswrc0FaQ6AqenFuFE"
-          },
-          "href": "https://api.spotify.com/v1/artists/3WQnwswrc0FaQ6AqenFuFE",
-          "id": "3WQnwswrc0FaQ6AqenFuFE",
-          "name": "Indo2x",
-          "type": "artist",
-          "uri": "spotify:artist:3WQnwswrc0FaQ6AqenFuFE"
-        },
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/53kUGCuekuXoSYPISirZpl"
-          },
-          "href": "https://api.spotify.com/v1/artists/53kUGCuekuXoSYPISirZpl",
-          "id": "53kUGCuekuXoSYPISirZpl",
-          "name": "Ziahfyah",
-          "type": "artist",
-          "uri": "spotify:artist:53kUGCuekuXoSYPISirZpl"
+          "uri": "spotify:artist:0EyhkwP3UnwGFBy6xwKjSy"
         }
       ],
       "available_markets": [
@@ -3754,24 +3607,24 @@
         "XK"
       ],
       "disc_number": 1,
-      "duration_ms": 156943,
+      "duration_ms": 146666,
       "explicit": true,
       "external_ids": {
-        "isrc": "USAT22401425"
+        "isrc": "US38Y2546738"
       },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/7gNXY29SaVv9rN4z2oQhvz"
+        "spotify": "https://open.spotify.com/track/554qQSs9lpRVq6TlaaiIKT"
       },
-      "href": "https://api.spotify.com/v1/tracks/7gNXY29SaVv9rN4z2oQhvz",
-      "id": "7gNXY29SaVv9rN4z2oQhvz",
+      "href": "https://api.spotify.com/v1/tracks/554qQSs9lpRVq6TlaaiIKT",
+      "id": "554qQSs9lpRVq6TlaaiIKT",
       "is_local": false,
       "is_playable": true,
-      "name": "NO IDEA #jerseyclub - Ziahfyah & Indo2x Remix",
-      "popularity": 61,
+      "name": "4 Raws",
+      "popularity": 91,
       "preview_url": null,
       "track_number": 1,
       "type": "track",
-      "uri": "spotify:track:7gNXY29SaVv9rN4z2oQhvz"
+      "uri": "spotify:track:554qQSs9lpRVq6TlaaiIKT"
     },
     {
       "album": {
@@ -3779,13 +3632,130 @@
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/6qgnBH6iDM91ipVXv28OMu"
+              "spotify": "https://open.spotify.com/artist/1mSJCvDX0W7Dn7S9C6vmvI"
             },
-            "href": "https://api.spotify.com/v1/artists/6qgnBH6iDM91ipVXv28OMu",
-            "id": "6qgnBH6iDM91ipVXv28OMu",
-            "name": "KAYTRANADA",
+            "href": "https://api.spotify.com/v1/artists/1mSJCvDX0W7Dn7S9C6vmvI",
+            "id": "1mSJCvDX0W7Dn7S9C6vmvI",
+            "name": "Anna of the North",
             "type": "artist",
-            "uri": "spotify:artist:6qgnBH6iDM91ipVXv28OMu"
+            "uri": "spotify:artist:1mSJCvDX0W7Dn7S9C6vmvI"
+          }
+        ],
+        "available_markets": [
+          "AG",
+          "BB",
+          "BS",
+          "BZ",
+          "CA",
+          "DM",
+          "DO",
+          "GD",
+          "HT",
+          "JM",
+          "KN",
+          "LC",
+          "MX",
+          "PA",
+          "PR",
+          "TT",
+          "US",
+          "VC"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5kopWecrOCWIxpgpukVfct"
+        },
+        "href": "https://api.spotify.com/v1/albums/5kopWecrOCWIxpgpukVfct",
+        "id": "5kopWecrOCWIxpgpukVfct",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ee52821d214e70851ac26702",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ee52821d214e70851ac26702",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ee52821d214e70851ac26702",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Lovers",
+        "release_date": "2017-09-08",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:5kopWecrOCWIxpgpukVfct"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1mSJCvDX0W7Dn7S9C6vmvI"
+          },
+          "href": "https://api.spotify.com/v1/artists/1mSJCvDX0W7Dn7S9C6vmvI",
+          "id": "1mSJCvDX0W7Dn7S9C6vmvI",
+          "name": "Anna of the North",
+          "type": "artist",
+          "uri": "spotify:artist:1mSJCvDX0W7Dn7S9C6vmvI"
+        }
+      ],
+      "available_markets": [
+        "AG",
+        "BB",
+        "BS",
+        "BZ",
+        "CA",
+        "DM",
+        "DO",
+        "GD",
+        "HT",
+        "JM",
+        "KN",
+        "LC",
+        "MX",
+        "PA",
+        "PR",
+        "TT",
+        "US",
+        "VC"
+      ],
+      "disc_number": 1,
+      "duration_ms": 215773,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USLGZ1700007"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6q8onrzcka32nGVrnWYGBQ"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6q8onrzcka32nGVrnWYGBQ",
+      "id": "6q8onrzcka32nGVrnWYGBQ",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Lovers",
+      "popularity": 70,
+      "preview_url": null,
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:6q8onrzcka32nGVrnWYGBQ"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6hpztnbgmaneFFGGnEOVjd"
+            },
+            "href": "https://api.spotify.com/v1/artists/6hpztnbgmaneFFGGnEOVjd",
+            "id": "6hpztnbgmaneFFGGnEOVjd",
+            "name": "sosocamo",
+            "type": "artist",
+            "uri": "spotify:artist:6hpztnbgmaneFFGGnEOVjd"
           }
         ],
         "available_markets": [
@@ -3796,6 +3766,7 @@
           "BO",
           "BR",
           "BG",
+          "CA",
           "CL",
           "CO",
           "CR",
@@ -3975,55 +3946,45 @@
           "XK"
         ],
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/5FQ4sOGqRWUA5wO20AwPcO"
+          "spotify": "https://open.spotify.com/album/1UKK69dkl1m29OhETYyfcv"
         },
-        "href": "https://api.spotify.com/v1/albums/5FQ4sOGqRWUA5wO20AwPcO",
-        "id": "5FQ4sOGqRWUA5wO20AwPcO",
+        "href": "https://api.spotify.com/v1/albums/1UKK69dkl1m29OhETYyfcv",
+        "id": "1UKK69dkl1m29OhETYyfcv",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2732b9aca3204e667980ce6a939",
+            "url": "https://i.scdn.co/image/ab67616d0000b273f09da6140793f3e9a1ad37ef",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e022b9aca3204e667980ce6a939",
+            "url": "https://i.scdn.co/image/ab67616d00001e02f09da6140793f3e9a1ad37ef",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048512b9aca3204e667980ce6a939",
+            "url": "https://i.scdn.co/image/ab67616d00004851f09da6140793f3e9a1ad37ef",
             "width": 64
           }
         ],
         "is_playable": true,
-        "name": "BUBBA",
-        "release_date": "2019-12-13",
+        "name": "no service",
+        "release_date": "2025-06-27",
         "release_date_precision": "day",
-        "total_tracks": 17,
+        "total_tracks": 13,
         "type": "album",
-        "uri": "spotify:album:5FQ4sOGqRWUA5wO20AwPcO"
+        "uri": "spotify:album:1UKK69dkl1m29OhETYyfcv"
       },
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/6qgnBH6iDM91ipVXv28OMu"
+            "spotify": "https://open.spotify.com/artist/6hpztnbgmaneFFGGnEOVjd"
           },
-          "href": "https://api.spotify.com/v1/artists/6qgnBH6iDM91ipVXv28OMu",
-          "id": "6qgnBH6iDM91ipVXv28OMu",
-          "name": "KAYTRANADA",
+          "href": "https://api.spotify.com/v1/artists/6hpztnbgmaneFFGGnEOVjd",
+          "id": "6hpztnbgmaneFFGGnEOVjd",
+          "name": "sosocamo",
           "type": "artist",
-          "uri": "spotify:artist:6qgnBH6iDM91ipVXv28OMu"
-        },
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/2d6ggH1oVt4z2zCuY2u5DW"
-          },
-          "href": "https://api.spotify.com/v1/artists/2d6ggH1oVt4z2zCuY2u5DW",
-          "id": "2d6ggH1oVt4z2zCuY2u5DW",
-          "name": "Durand Bernarr",
-          "type": "artist",
-          "uri": "spotify:artist:2d6ggH1oVt4z2zCuY2u5DW"
+          "uri": "spotify:artist:6hpztnbgmaneFFGGnEOVjd"
         }
       ],
       "available_markets": [
@@ -4034,6 +3995,7 @@
         "BO",
         "BR",
         "BG",
+        "CA",
         "CL",
         "CO",
         "CR",
@@ -4213,67 +4175,34 @@
         "XK"
       ],
       "disc_number": 1,
-      "duration_ms": 181160,
-      "explicit": false,
+      "duration_ms": 99700,
+      "explicit": true,
       "external_ids": {
-        "isrc": "USRC11903731"
+        "isrc": "QZTB52424071"
       },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/2flqiTbuPeDZXxgEW67rxw"
+        "spotify": "https://open.spotify.com/track/2VOt88FoSGjSOuzLaeqz5k"
       },
-      "href": "https://api.spotify.com/v1/tracks/2flqiTbuPeDZXxgEW67rxw",
-      "id": "2flqiTbuPeDZXxgEW67rxw",
+      "href": "https://api.spotify.com/v1/tracks/2VOt88FoSGjSOuzLaeqz5k",
+      "id": "2VOt88FoSGjSOuzLaeqz5k",
       "is_local": false,
       "is_playable": true,
-      "name": "Freefall (feat. Durand Bernarr)",
-      "popularity": 60,
+      "name": "keep steady",
+      "popularity": 77,
       "preview_url": null,
-      "track_number": 13,
+      "track_number": 8,
       "type": "track",
-      "uri": "spotify:track:2flqiTbuPeDZXxgEW67rxw"
+      "uri": "spotify:track:2VOt88FoSGjSOuzLaeqz5k"
     }
   ],
   "artists": [
-    {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/artist/6hpztnbgmaneFFGGnEOVjd"
-      },
-      "followers": {
-        "href": null,
-        "total": 147037
-      },
-      "genres": [],
-      "href": "https://api.spotify.com/v1/artists/6hpztnbgmaneFFGGnEOVjd",
-      "id": "6hpztnbgmaneFFGGnEOVjd",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebffd32ebbad7754b0faf2b0b5",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174ffd32ebbad7754b0faf2b0b5",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178ffd32ebbad7754b0faf2b0b5",
-          "width": 160
-        }
-      ],
-      "name": "sosocamo",
-      "popularity": 66,
-      "type": "artist",
-      "uri": "spotify:artist:6hpztnbgmaneFFGGnEOVjd"
-    },
     {
       "external_urls": {
         "spotify": "https://open.spotify.com/artist/4Gso3d4CscCijv0lmajZWs"
       },
       "followers": {
         "href": null,
-        "total": 8225315
+        "total": 8256996
       },
       "genres": [],
       "href": "https://api.spotify.com/v1/artists/4Gso3d4CscCijv0lmajZWs",
@@ -4306,7 +4235,7 @@
       },
       "followers": {
         "href": null,
-        "total": 86989213
+        "total": 87057742
       },
       "genres": [],
       "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
@@ -4329,7 +4258,7 @@
         }
       ],
       "name": "Justin Bieber",
-      "popularity": 92,
+      "popularity": 91,
       "type": "artist",
       "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
     },
@@ -4339,7 +4268,7 @@
       },
       "followers": {
         "href": null,
-        "total": 109465455
+        "total": 109965462
       },
       "genres": [
         "reggaeton",
@@ -4373,36 +4302,71 @@
     },
     {
       "external_urls": {
-        "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
+        "spotify": "https://open.spotify.com/artist/6hpztnbgmaneFFGGnEOVjd"
       },
       "followers": {
         "href": null,
-        "total": 118376527
+        "total": 149374
       },
       "genres": [],
-      "href": "https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ",
-      "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+      "href": "https://api.spotify.com/v1/artists/6hpztnbgmaneFFGGnEOVjd",
+      "id": "6hpztnbgmaneFFGGnEOVjd",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5eb9e528993a2820267b97f6aae",
+          "url": "https://i.scdn.co/image/ab6761610000e5ebffd32ebbad7754b0faf2b0b5",
           "width": 640
         },
         {
           "height": 320,
-          "url": "https://i.scdn.co/image/ab676161000051749e528993a2820267b97f6aae",
+          "url": "https://i.scdn.co/image/ab67616100005174ffd32ebbad7754b0faf2b0b5",
           "width": 320
         },
         {
           "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f1789e528993a2820267b97f6aae",
+          "url": "https://i.scdn.co/image/ab6761610000f178ffd32ebbad7754b0faf2b0b5",
           "width": 160
         }
       ],
-      "name": "The Weeknd",
-      "popularity": 94,
+      "name": "sosocamo",
+      "popularity": 66,
       "type": "artist",
-      "uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ"
+      "uri": "spotify:artist:6hpztnbgmaneFFGGnEOVjd"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3tlXnStJ1fFhdScmQeLpuG"
+      },
+      "followers": {
+        "href": null,
+        "total": 8308659
+      },
+      "genres": [
+        "r&b"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3tlXnStJ1fFhdScmQeLpuG",
+      "id": "3tlXnStJ1fFhdScmQeLpuG",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb582fbf712f5b6a9bf65d9b84",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174582fbf712f5b6a9bf65d9b84",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178582fbf712f5b6a9bf65d9b84",
+          "width": 160
+        }
+      ],
+      "name": "Brent Faiyaz",
+      "popularity": 82,
+      "type": "artist",
+      "uri": "spotify:artist:3tlXnStJ1fFhdScmQeLpuG"
     },
     {
       "external_urls": {
@@ -4410,7 +4374,7 @@
       },
       "followers": {
         "href": null,
-        "total": 107062529
+        "total": 107206062
       },
       "genres": [
         "rap"
@@ -4435,9 +4399,42 @@
         }
       ],
       "name": "Drake",
-      "popularity": 96,
+      "popularity": 95,
       "type": "artist",
       "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
+      },
+      "followers": {
+        "href": null,
+        "total": 118551202
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ",
+      "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb9e528993a2820267b97f6aae",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051749e528993a2820267b97f6aae",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1789e528993a2820267b97f6aae",
+          "width": 160
+        }
+      ],
+      "name": "The Weeknd",
+      "popularity": 93,
+      "type": "artist",
+      "uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ"
     },
     {
       "external_urls": {
@@ -4445,7 +4442,7 @@
       },
       "followers": {
         "href": null,
-        "total": 1886901
+        "total": 1889183
       },
       "genres": [],
       "href": "https://api.spotify.com/v1/artists/6qgnBH6iDM91ipVXv28OMu",
@@ -4478,7 +4475,7 @@
       },
       "followers": {
         "href": null,
-        "total": 42609398
+        "total": 42655459
       },
       "genres": [
         "rap"
@@ -4513,7 +4510,7 @@
       },
       "followers": {
         "href": null,
-        "total": 10906576
+        "total": 10927377
       },
       "genres": [
         "dark r&b",
@@ -4540,43 +4537,10 @@
         }
       ],
       "name": "PARTYNEXTDOOR",
-      "popularity": 84,
+      "popularity": 83,
       "type": "artist",
       "uri": "spotify:artist:2HPaUgqeutzr3jx5a9WyDV"
-    },
-    {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/artist/0EyhkwP3UnwGFBy6xwKjSy"
-      },
-      "followers": {
-        "href": null,
-        "total": 1450604
-      },
-      "genres": [],
-      "href": "https://api.spotify.com/v1/artists/0EyhkwP3UnwGFBy6xwKjSy",
-      "id": "0EyhkwP3UnwGFBy6xwKjSy",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebfe6d53e126b70d1c2594b434",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174fe6d53e126b70d1c2594b434",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178fe6d53e126b70d1c2594b434",
-          "width": 160
-        }
-      ],
-      "name": "EsDeeKid",
-      "popularity": 84,
-      "type": "artist",
-      "uri": "spotify:artist:0EyhkwP3UnwGFBy6xwKjSy"
     }
   ],
-  "lastUpdated": "2026-02-13"
+  "lastUpdated": "2026-02-18"
 }
