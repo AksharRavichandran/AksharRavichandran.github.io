@@ -113,9 +113,6 @@ function TopTracksCard({ tracks }) {
     <Card>
       <CardHeader>
         <CardTitle>
-          <span role="img" aria-hidden>
-            🎵
-          </span>
           Top Tracks
         </CardTitle>
         {spotifyData.lastUpdated && (
@@ -247,9 +244,6 @@ function TopArtistsCard({ artists }) {
     <Card>
       <CardHeader>
         <CardTitle>
-          <span role="img" aria-hidden>
-            ⭐
-          </span>
           Top Artists
         </CardTitle>
         {spotifyData.lastUpdated && (

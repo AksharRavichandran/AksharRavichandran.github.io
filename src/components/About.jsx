@@ -6,12 +6,7 @@ import StravaStats from "./StravaStats";
 
 // Update these to your own details
 const SPOTIFY_EMBED_URL =
-  "https://open.spotify.com/embed/playlist/6AHFDICqERuGKomhF5hdNB?utm_source=generator"; 
-const CURRENTLY = [
-  { label: "Working on", value: "Intraday Beta Estimation Strategy" },
-  { label: "Learning", value: "Kalman Filtering" },
-  { label: "Craving", value: "Thai Food" },
-];
+  "https://open.spotify.com/embed/playlist/5gWOsJFdToIBRQFCBWh65d?utm_source=generator";
 
 export default function About() {
   return (

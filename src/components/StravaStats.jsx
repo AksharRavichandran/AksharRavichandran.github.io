@@ -59,7 +59,7 @@ export default function StravaStats() {
     }
 
     layerRef.current = L.polyline(points, {
-      color: "#7a7dff",
+      color: "#8c6a2f",
       weight: 4,
       opacity: 0.9,
       lineCap: "round",
