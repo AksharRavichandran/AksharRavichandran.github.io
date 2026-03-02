@@ -109,7 +109,7 @@ export default function StravaStats() {
           </div>
           <div className="strava-stat">
             <span className="eyebrow">30 Days</span>
-            <span className="strava-value">{data.weekMiles}</span>
+            <span className="strava-value">{data.monthMiles}</span>
             <span className="muted small">Run mileage</span>
           </div>
         </div>
