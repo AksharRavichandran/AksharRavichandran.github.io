@@ -108,7 +108,7 @@ export default function StravaStats() {
             <span className="muted small">Last run pace</span>
           </div>
           <div className="strava-stat">
-            <span className="eyebrow">7 Days</span>
+            <span className="eyebrow">30 Days</span>
             <span className="strava-value">{data.weekMiles}</span>
             <span className="muted small">Run mileage</span>
           </div>
