@@ -932,6 +932,89 @@
         "artists": [
           {
             "external_urls": {
+              "spotify": "https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y"
+            },
+            "href": "https://api.spotify.com/v1/artists/07YZf4WDAMNwqr4jfgOZ8y",
+            "id": "07YZf4WDAMNwqr4jfgOZ8y",
+            "name": "Jason Derulo",
+            "type": "artist",
+            "uri": "spotify:artist:07YZf4WDAMNwqr4jfgOZ8y"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0aVJmVAeEx78nAA1rAKYf7"
+        },
+        "href": "https://api.spotify.com/v1/albums/0aVJmVAeEx78nAA1rAKYf7",
+        "id": "0aVJmVAeEx78nAA1rAKYf7",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273eb3092620e6816700d502bb8",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02eb3092620e6816700d502bb8",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851eb3092620e6816700d502bb8",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Jason Derulo",
+        "release_date": "2010-02-24",
+        "release_date_precision": "day",
+        "total_tracks": 9,
+        "type": "album",
+        "uri": "spotify:album:0aVJmVAeEx78nAA1rAKYf7"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y"
+          },
+          "href": "https://api.spotify.com/v1/artists/07YZf4WDAMNwqr4jfgOZ8y",
+          "id": "07YZf4WDAMNwqr4jfgOZ8y",
+          "name": "Jason Derulo",
+          "type": "artist",
+          "uri": "spotify:artist:07YZf4WDAMNwqr4jfgOZ8y"
+        }
+      ],
+      "available_markets": [
+        "US"
+      ],
+      "disc_number": 1,
+      "duration_ms": 215746,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USWB10905329"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6BaxqcoEM9r3LXisTyJjST"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6BaxqcoEM9r3LXisTyJjST",
+      "id": "6BaxqcoEM9r3LXisTyJjST",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Ridin' Solo",
+      "popularity": 70,
+      "preview_url": null,
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:6BaxqcoEM9r3LXisTyJjST"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
               "spotify": "https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x"
             },
             "href": "https://api.spotify.com/v1/artists/5K4W6rqBFWDnAN6FQUkS6x",
@@ -1842,13 +1925,13 @@
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/73sIBHcqh3Z3NyqHKZ7FOL"
+              "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
             },
-            "href": "https://api.spotify.com/v1/artists/73sIBHcqh3Z3NyqHKZ7FOL",
-            "id": "73sIBHcqh3Z3NyqHKZ7FOL",
-            "name": "Childish Gambino",
+            "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
+            "id": "4q3ewBCX7sLwd24euuV69X",
+            "name": "Bad Bunny",
             "type": "artist",
-            "uri": "spotify:artist:73sIBHcqh3Z3NyqHKZ7FOL"
+            "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X"
           }
         ],
         "available_markets": [
@@ -2039,45 +2122,45 @@
           "XK"
         ],
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/01MRGgNbfWrE291tQjw9ta"
+          "spotify": "https://open.spotify.com/album/5K79FLRUCSysQnVESLcTdb"
         },
-        "href": "https://api.spotify.com/v1/albums/01MRGgNbfWrE291tQjw9ta",
-        "id": "01MRGgNbfWrE291tQjw9ta",
+        "href": "https://api.spotify.com/v1/albums/5K79FLRUCSysQnVESLcTdb",
+        "id": "5K79FLRUCSysQnVESLcTdb",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2736182cfe2e2a090d125c81dc0",
+            "url": "https://i.scdn.co/image/ab67616d0000b273bbd45c8d36e0e045ef640411",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e026182cfe2e2a090d125c81dc0",
+            "url": "https://i.scdn.co/image/ab67616d00001e02bbd45c8d36e0e045ef640411",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048516182cfe2e2a090d125c81dc0",
+            "url": "https://i.scdn.co/image/ab67616d00004851bbd45c8d36e0e045ef640411",
             "width": 64
           }
         ],
         "is_playable": true,
-        "name": "Camp",
-        "release_date": "2011-11-15",
+        "name": "DeBÍ TiRAR MáS FOToS",
+        "release_date": "2025-01-05",
         "release_date_precision": "day",
-        "total_tracks": 13,
+        "total_tracks": 17,
         "type": "album",
-        "uri": "spotify:album:01MRGgNbfWrE291tQjw9ta"
+        "uri": "spotify:album:5K79FLRUCSysQnVESLcTdb"
       },
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/73sIBHcqh3Z3NyqHKZ7FOL"
+            "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
           },
-          "href": "https://api.spotify.com/v1/artists/73sIBHcqh3Z3NyqHKZ7FOL",
-          "id": "73sIBHcqh3Z3NyqHKZ7FOL",
-          "name": "Childish Gambino",
+          "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
+          "id": "4q3ewBCX7sLwd24euuV69X",
+          "name": "Bad Bunny",
           "type": "artist",
-          "uri": "spotify:artist:73sIBHcqh3Z3NyqHKZ7FOL"
+          "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X"
         }
       ],
       "available_markets": [
@@ -2268,24 +2351,24 @@
         "XK"
       ],
       "disc_number": 1,
-      "duration_ms": 317293,
+      "duration_ms": 156364,
       "explicit": true,
       "external_ids": {
-        "isrc": "USYAH1100353"
+        "isrc": "QMFMF2447056"
       },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/7ghKr0pCYyPPyp7t1FH8k4"
+        "spotify": "https://open.spotify.com/track/59D4DOkspUbWyMmbAPQkxZ"
       },
-      "href": "https://api.spotify.com/v1/tracks/7ghKr0pCYyPPyp7t1FH8k4",
-      "id": "7ghKr0pCYyPPyp7t1FH8k4",
+      "href": "https://api.spotify.com/v1/tracks/59D4DOkspUbWyMmbAPQkxZ",
+      "id": "59D4DOkspUbWyMmbAPQkxZ",
       "is_local": false,
       "is_playable": true,
-      "name": "Les",
-      "popularity": 89,
+      "name": "VOY A LLeVARTE PA PR",
+      "popularity": 92,
       "preview_url": null,
-      "track_number": 8,
+      "track_number": 2,
       "type": "track",
-      "uri": "spotify:track:7ghKr0pCYyPPyp7t1FH8k4"
+      "uri": "spotify:track:59D4DOkspUbWyMmbAPQkxZ"
     },
     {
       "album": {
@@ -2293,13 +2376,13 @@
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA"
+              "spotify": "https://open.spotify.com/artist/1mcTU81TzQhprhouKaTkpq"
             },
-            "href": "https://api.spotify.com/v1/artists/20wkVLutqVOYrc0kxFs7rA",
-            "id": "20wkVLutqVOYrc0kxFs7rA",
-            "name": "Daniel Caesar",
+            "href": "https://api.spotify.com/v1/artists/1mcTU81TzQhprhouKaTkpq",
+            "id": "1mcTU81TzQhprhouKaTkpq",
+            "name": "Rauw Alejandro",
             "type": "artist",
-            "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+            "uri": "spotify:artist:1mcTU81TzQhprhouKaTkpq"
           }
         ],
         "available_markets": [
@@ -2382,6 +2465,7 @@
           "JO",
           "PS",
           "IN",
+          "BY",
           "KZ",
           "MD",
           "UA",
@@ -2433,6 +2517,7 @@
           "NE",
           "PW",
           "PG",
+          "PR",
           "WS",
           "SM",
           "ST",
@@ -2488,55 +2573,55 @@
           "XK"
         ],
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/0qGQrHicD7qXuz5VMlDuCe"
+          "spotify": "https://open.spotify.com/album/0aX0UXrHG2ceYIxTQcqJdA"
         },
-        "href": "https://api.spotify.com/v1/albums/0qGQrHicD7qXuz5VMlDuCe",
-        "id": "0qGQrHicD7qXuz5VMlDuCe",
+        "href": "https://api.spotify.com/v1/albums/0aX0UXrHG2ceYIxTQcqJdA",
+        "id": "0aX0UXrHG2ceYIxTQcqJdA",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273e242f18dafe885fcf425fe1f",
+            "url": "https://i.scdn.co/image/ab67616d0000b273a6224f2f93c0ab4b2e01b44b",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02e242f18dafe885fcf425fe1f",
+            "url": "https://i.scdn.co/image/ab67616d00001e02a6224f2f93c0ab4b2e01b44b",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851e242f18dafe885fcf425fe1f",
+            "url": "https://i.scdn.co/image/ab67616d00004851a6224f2f93c0ab4b2e01b44b",
             "width": 64
           }
         ],
         "is_playable": true,
-        "name": "NEVER ENOUGH (Bonus Version)",
-        "release_date": "2023-04-10",
+        "name": "Cosa Nuestra",
+        "release_date": "2024-11-15",
         "release_date_precision": "day",
         "total_tracks": 18,
         "type": "album",
-        "uri": "spotify:album:0qGQrHicD7qXuz5VMlDuCe"
+        "uri": "spotify:album:0aX0UXrHG2ceYIxTQcqJdA"
       },
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA"
+            "spotify": "https://open.spotify.com/artist/1mcTU81TzQhprhouKaTkpq"
           },
-          "href": "https://api.spotify.com/v1/artists/20wkVLutqVOYrc0kxFs7rA",
-          "id": "20wkVLutqVOYrc0kxFs7rA",
-          "name": "Daniel Caesar",
+          "href": "https://api.spotify.com/v1/artists/1mcTU81TzQhprhouKaTkpq",
+          "id": "1mcTU81TzQhprhouKaTkpq",
+          "name": "Rauw Alejandro",
           "type": "artist",
-          "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+          "uri": "spotify:artist:1mcTU81TzQhprhouKaTkpq"
         },
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/1sBkRIssrMs1AbVkOJbc7a"
+            "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
           },
-          "href": "https://api.spotify.com/v1/artists/1sBkRIssrMs1AbVkOJbc7a",
-          "id": "1sBkRIssrMs1AbVkOJbc7a",
-          "name": "Rick Ross",
+          "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
+          "id": "4q3ewBCX7sLwd24euuV69X",
+          "name": "Bad Bunny",
           "type": "artist",
-          "uri": "spotify:artist:1sBkRIssrMs1AbVkOJbc7a"
+          "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X"
         }
       ],
       "available_markets": [
@@ -2619,6 +2704,7 @@
         "JO",
         "PS",
         "IN",
+        "BY",
         "KZ",
         "MD",
         "UA",
@@ -2670,6 +2756,7 @@
         "NE",
         "PW",
         "PG",
+        "PR",
         "WS",
         "SM",
         "ST",
@@ -2725,24 +2812,475 @@
         "XK"
       ],
       "disc_number": 1,
-      "duration_ms": 236739,
+      "duration_ms": 191018,
       "explicit": true,
       "external_ids": {
-        "isrc": "USUG12302295"
+        "isrc": "USQX92404984"
       },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/7DthGkMhQH9REePi7nBUm4"
+        "spotify": "https://open.spotify.com/track/0l0vcZMU7AOeQmUIREoI2U"
       },
-      "href": "https://api.spotify.com/v1/tracks/7DthGkMhQH9REePi7nBUm4",
-      "id": "7DthGkMhQH9REePi7nBUm4",
+      "href": "https://api.spotify.com/v1/tracks/0l0vcZMU7AOeQmUIREoI2U",
+      "id": "0l0vcZMU7AOeQmUIREoI2U",
       "is_local": false,
       "is_playable": true,
-      "name": "Valentina (feat. Rick Ross) - Bonus",
-      "popularity": 61,
+      "name": "Qué Pasaría...",
+      "popularity": 91,
       "preview_url": null,
-      "track_number": 18,
+      "track_number": 3,
       "type": "track",
-      "uri": "spotify:track:7DthGkMhQH9REePi7nBUm4"
+      "uri": "spotify:track:0l0vcZMU7AOeQmUIREoI2U"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM"
+            },
+            "href": "https://api.spotify.com/v1/artists/2h93pZq0e7k5yf4dywlkpM",
+            "id": "2h93pZq0e7k5yf4dywlkpM",
+            "name": "Frank Ocean",
+            "type": "artist",
+            "uri": "spotify:artist:2h93pZq0e7k5yf4dywlkpM"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "AU",
+          "AT",
+          "BE",
+          "BO",
+          "BR",
+          "BG",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DK",
+          "DO",
+          "DE",
+          "EC",
+          "EE",
+          "SV",
+          "FI",
+          "FR",
+          "GR",
+          "GT",
+          "HN",
+          "HK",
+          "HU",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LT",
+          "LU",
+          "MY",
+          "MT",
+          "MX",
+          "NL",
+          "NZ",
+          "NI",
+          "NO",
+          "PA",
+          "PY",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "SG",
+          "SK",
+          "ES",
+          "SE",
+          "CH",
+          "TW",
+          "TR",
+          "UY",
+          "US",
+          "GB",
+          "AD",
+          "LI",
+          "MC",
+          "ID",
+          "JP",
+          "TH",
+          "VN",
+          "RO",
+          "IL",
+          "ZA",
+          "SA",
+          "AE",
+          "BH",
+          "QA",
+          "OM",
+          "KW",
+          "EG",
+          "MA",
+          "DZ",
+          "TN",
+          "LB",
+          "JO",
+          "PS",
+          "IN",
+          "BY",
+          "KZ",
+          "MD",
+          "UA",
+          "AL",
+          "BA",
+          "HR",
+          "ME",
+          "MK",
+          "RS",
+          "SI",
+          "KR",
+          "BD",
+          "PK",
+          "LK",
+          "GH",
+          "KE",
+          "NG",
+          "TZ",
+          "UG",
+          "AG",
+          "AM",
+          "BS",
+          "BB",
+          "BZ",
+          "BT",
+          "BW",
+          "BF",
+          "CV",
+          "CW",
+          "DM",
+          "FJ",
+          "GM",
+          "GE",
+          "GD",
+          "GW",
+          "GY",
+          "HT",
+          "JM",
+          "KI",
+          "LS",
+          "LR",
+          "MW",
+          "MV",
+          "ML",
+          "MH",
+          "FM",
+          "NA",
+          "NR",
+          "NE",
+          "PW",
+          "PG",
+          "PR",
+          "WS",
+          "SM",
+          "ST",
+          "SN",
+          "SC",
+          "SL",
+          "SB",
+          "KN",
+          "LC",
+          "VC",
+          "SR",
+          "TL",
+          "TO",
+          "TT",
+          "TV",
+          "VU",
+          "AZ",
+          "BN",
+          "BI",
+          "KH",
+          "CM",
+          "TD",
+          "KM",
+          "GQ",
+          "SZ",
+          "GA",
+          "GN",
+          "KG",
+          "LA",
+          "MO",
+          "MR",
+          "MN",
+          "NP",
+          "RW",
+          "TG",
+          "UZ",
+          "ZW",
+          "BJ",
+          "MG",
+          "MU",
+          "MZ",
+          "AO",
+          "CI",
+          "DJ",
+          "ZM",
+          "CD",
+          "CG",
+          "IQ",
+          "LY",
+          "TJ",
+          "VE",
+          "ET",
+          "XK"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3mH6qwIy9crq0I9YQbOuDf"
+        },
+        "href": "https://api.spotify.com/v1/albums/3mH6qwIy9crq0I9YQbOuDf",
+        "id": "3mH6qwIy9crq0I9YQbOuDf",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c5649add07ed3720be9d5526",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c5649add07ed3720be9d5526",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Blonde",
+        "release_date": "2016-08-20",
+        "release_date_precision": "day",
+        "total_tracks": 17,
+        "type": "album",
+        "uri": "spotify:album:3mH6qwIy9crq0I9YQbOuDf"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM"
+          },
+          "href": "https://api.spotify.com/v1/artists/2h93pZq0e7k5yf4dywlkpM",
+          "id": "2h93pZq0e7k5yf4dywlkpM",
+          "name": "Frank Ocean",
+          "type": "artist",
+          "uri": "spotify:artist:2h93pZq0e7k5yf4dywlkpM"
+        }
+      ],
+      "available_markets": [
+        "AR",
+        "AU",
+        "AT",
+        "BE",
+        "BO",
+        "BR",
+        "BG",
+        "CA",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DK",
+        "DO",
+        "DE",
+        "EC",
+        "EE",
+        "SV",
+        "FI",
+        "FR",
+        "GR",
+        "GT",
+        "HN",
+        "HK",
+        "HU",
+        "IS",
+        "IE",
+        "IT",
+        "LV",
+        "LT",
+        "LU",
+        "MY",
+        "MT",
+        "MX",
+        "NL",
+        "NZ",
+        "NI",
+        "NO",
+        "PA",
+        "PY",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "SG",
+        "SK",
+        "ES",
+        "SE",
+        "CH",
+        "TW",
+        "TR",
+        "UY",
+        "US",
+        "GB",
+        "AD",
+        "LI",
+        "MC",
+        "ID",
+        "JP",
+        "TH",
+        "VN",
+        "RO",
+        "IL",
+        "ZA",
+        "SA",
+        "AE",
+        "BH",
+        "QA",
+        "OM",
+        "KW",
+        "EG",
+        "MA",
+        "DZ",
+        "TN",
+        "LB",
+        "JO",
+        "PS",
+        "IN",
+        "BY",
+        "KZ",
+        "MD",
+        "UA",
+        "AL",
+        "BA",
+        "HR",
+        "ME",
+        "MK",
+        "RS",
+        "SI",
+        "KR",
+        "BD",
+        "PK",
+        "LK",
+        "GH",
+        "KE",
+        "NG",
+        "TZ",
+        "UG",
+        "AG",
+        "AM",
+        "BS",
+        "BB",
+        "BZ",
+        "BT",
+        "BW",
+        "BF",
+        "CV",
+        "CW",
+        "DM",
+        "FJ",
+        "GM",
+        "GE",
+        "GD",
+        "GW",
+        "GY",
+        "HT",
+        "JM",
+        "KI",
+        "LS",
+        "LR",
+        "MW",
+        "MV",
+        "ML",
+        "MH",
+        "FM",
+        "NA",
+        "NR",
+        "NE",
+        "PW",
+        "PG",
+        "PR",
+        "WS",
+        "SM",
+        "ST",
+        "SN",
+        "SC",
+        "SL",
+        "SB",
+        "KN",
+        "LC",
+        "VC",
+        "SR",
+        "TL",
+        "TO",
+        "TT",
+        "TV",
+        "VU",
+        "AZ",
+        "BN",
+        "BI",
+        "KH",
+        "CM",
+        "TD",
+        "KM",
+        "GQ",
+        "SZ",
+        "GA",
+        "GN",
+        "KG",
+        "LA",
+        "MO",
+        "MR",
+        "MN",
+        "NP",
+        "RW",
+        "TG",
+        "UZ",
+        "ZW",
+        "BJ",
+        "MG",
+        "MU",
+        "MZ",
+        "AO",
+        "CI",
+        "DJ",
+        "ZM",
+        "CD",
+        "CG",
+        "IQ",
+        "LY",
+        "TJ",
+        "VE",
+        "ET",
+        "XK"
+      ],
+      "disc_number": 1,
+      "duration_ms": 307151,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "QZ5C81600009"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7eqoqGkKwgOaWNNHx90uEZ"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7eqoqGkKwgOaWNNHx90uEZ",
+      "id": "7eqoqGkKwgOaWNNHx90uEZ",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Nights",
+      "popularity": 89,
+      "preview_url": null,
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:7eqoqGkKwgOaWNNHx90uEZ"
     },
     {
       "album": {
@@ -3211,13 +3749,13 @@
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
+              "spotify": "https://open.spotify.com/artist/4tMm1dU6Gn04VAZ9ClHcIZ"
             },
-            "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
-            "id": "4q3ewBCX7sLwd24euuV69X",
-            "name": "Bad Bunny",
+            "href": "https://api.spotify.com/v1/artists/4tMm1dU6Gn04VAZ9ClHcIZ",
+            "id": "4tMm1dU6Gn04VAZ9ClHcIZ",
+            "name": "Jacquees",
             "type": "artist",
-            "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X"
+            "uri": "spotify:artist:4tMm1dU6Gn04VAZ9ClHcIZ"
           }
         ],
         "available_markets": [
@@ -3300,7 +3838,6 @@
           "JO",
           "PS",
           "IN",
-          "BY",
           "KZ",
           "MD",
           "UA",
@@ -3327,7 +3864,6 @@
           "BZ",
           "BT",
           "BW",
-          "BF",
           "CV",
           "CW",
           "DM",
@@ -3352,7 +3888,6 @@
           "NE",
           "PW",
           "PG",
-          "PR",
           "WS",
           "SM",
           "ST",
@@ -3370,7 +3905,6 @@
           "TV",
           "VU",
           "AZ",
-          "BN",
           "BI",
           "KH",
           "CM",
@@ -3385,10 +3919,8 @@
           "MO",
           "MR",
           "MN",
-          "NP",
           "RW",
           "TG",
-          "UZ",
           "ZW",
           "BJ",
           "MG",
@@ -3408,45 +3940,45 @@
           "XK"
         ],
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/5K79FLRUCSysQnVESLcTdb"
+          "spotify": "https://open.spotify.com/album/4OloUHZpVVLawhX0DpBSrW"
         },
-        "href": "https://api.spotify.com/v1/albums/5K79FLRUCSysQnVESLcTdb",
-        "id": "5K79FLRUCSysQnVESLcTdb",
+        "href": "https://api.spotify.com/v1/albums/4OloUHZpVVLawhX0DpBSrW",
+        "id": "4OloUHZpVVLawhX0DpBSrW",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273bbd45c8d36e0e045ef640411",
+            "url": "https://i.scdn.co/image/ab67616d0000b273299995b90d0710682b1008ac",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02bbd45c8d36e0e045ef640411",
+            "url": "https://i.scdn.co/image/ab67616d00001e02299995b90d0710682b1008ac",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851bbd45c8d36e0e045ef640411",
+            "url": "https://i.scdn.co/image/ab67616d00004851299995b90d0710682b1008ac",
             "width": 64
           }
         ],
         "is_playable": true,
-        "name": "DeBÍ TiRAR MáS FOToS",
-        "release_date": "2025-01-05",
+        "name": "King of R&B",
+        "release_date": "2019-11-08",
         "release_date_precision": "day",
-        "total_tracks": 17,
+        "total_tracks": 18,
         "type": "album",
-        "uri": "spotify:album:5K79FLRUCSysQnVESLcTdb"
+        "uri": "spotify:album:4OloUHZpVVLawhX0DpBSrW"
       },
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
+            "spotify": "https://open.spotify.com/artist/4tMm1dU6Gn04VAZ9ClHcIZ"
           },
-          "href": "https://api.spotify.com/v1/artists/4q3ewBCX7sLwd24euuV69X",
-          "id": "4q3ewBCX7sLwd24euuV69X",
-          "name": "Bad Bunny",
+          "href": "https://api.spotify.com/v1/artists/4tMm1dU6Gn04VAZ9ClHcIZ",
+          "id": "4tMm1dU6Gn04VAZ9ClHcIZ",
+          "name": "Jacquees",
           "type": "artist",
-          "uri": "spotify:artist:4q3ewBCX7sLwd24euuV69X"
+          "uri": "spotify:artist:4tMm1dU6Gn04VAZ9ClHcIZ"
         }
       ],
       "available_markets": [
@@ -3529,7 +4061,6 @@
         "JO",
         "PS",
         "IN",
-        "BY",
         "KZ",
         "MD",
         "UA",
@@ -3556,7 +4087,6 @@
         "BZ",
         "BT",
         "BW",
-        "BF",
         "CV",
         "CW",
         "DM",
@@ -3581,7 +4111,6 @@
         "NE",
         "PW",
         "PG",
-        "PR",
         "WS",
         "SM",
         "ST",
@@ -3599,7 +4128,6 @@
         "TV",
         "VU",
         "AZ",
-        "BN",
         "BI",
         "KH",
         "CM",
@@ -3614,10 +4142,8 @@
         "MO",
         "MR",
         "MN",
-        "NP",
         "RW",
         "TG",
-        "UZ",
         "ZW",
         "BJ",
         "MG",
@@ -3637,993 +4163,34 @@
         "XK"
       ],
       "disc_number": 1,
-      "duration_ms": 156364,
+      "duration_ms": 242813,
       "explicit": true,
       "external_ids": {
-        "isrc": "QMFMF2447056"
+        "isrc": "USCM51900440"
       },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/59D4DOkspUbWyMmbAPQkxZ"
+        "spotify": "https://open.spotify.com/track/4XbQfQIKdpnUxGQ183u6IO"
       },
-      "href": "https://api.spotify.com/v1/tracks/59D4DOkspUbWyMmbAPQkxZ",
-      "id": "59D4DOkspUbWyMmbAPQkxZ",
+      "href": "https://api.spotify.com/v1/tracks/4XbQfQIKdpnUxGQ183u6IO",
+      "id": "4XbQfQIKdpnUxGQ183u6IO",
       "is_local": false,
       "is_playable": true,
-      "name": "VOY A LLeVARTE PA PR",
-      "popularity": 93,
+      "name": "Round II",
+      "popularity": 46,
       "preview_url": null,
       "track_number": 2,
       "type": "track",
-      "uri": "spotify:track:59D4DOkspUbWyMmbAPQkxZ"
-    },
-    {
-      "album": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/2HPaUgqeutzr3jx5a9WyDV"
-            },
-            "href": "https://api.spotify.com/v1/artists/2HPaUgqeutzr3jx5a9WyDV",
-            "id": "2HPaUgqeutzr3jx5a9WyDV",
-            "name": "PARTYNEXTDOOR",
-            "type": "artist",
-            "uri": "spotify:artist:2HPaUgqeutzr3jx5a9WyDV"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
-            },
-            "href": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
-            "id": "3TVXtAsR1Inumwj472S9r4",
-            "name": "Drake",
-            "type": "artist",
-            "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
-          }
-        ],
-        "available_markets": [
-          "AR",
-          "AU",
-          "AT",
-          "BE",
-          "BO",
-          "BR",
-          "BG",
-          "CA",
-          "CL",
-          "CO",
-          "CR",
-          "CY",
-          "CZ",
-          "DK",
-          "DO",
-          "DE",
-          "EC",
-          "EE",
-          "SV",
-          "FI",
-          "FR",
-          "GR",
-          "GT",
-          "HN",
-          "HK",
-          "HU",
-          "IS",
-          "IE",
-          "IT",
-          "LV",
-          "LT",
-          "LU",
-          "MY",
-          "MT",
-          "MX",
-          "NL",
-          "NZ",
-          "NI",
-          "NO",
-          "PA",
-          "PY",
-          "PE",
-          "PH",
-          "PL",
-          "PT",
-          "SG",
-          "SK",
-          "ES",
-          "SE",
-          "CH",
-          "TW",
-          "TR",
-          "UY",
-          "US",
-          "GB",
-          "AD",
-          "LI",
-          "MC",
-          "ID",
-          "JP",
-          "TH",
-          "VN",
-          "RO",
-          "IL",
-          "ZA",
-          "SA",
-          "AE",
-          "BH",
-          "QA",
-          "OM",
-          "KW",
-          "EG",
-          "MA",
-          "DZ",
-          "TN",
-          "LB",
-          "JO",
-          "PS",
-          "IN",
-          "BY",
-          "KZ",
-          "MD",
-          "UA",
-          "AL",
-          "BA",
-          "HR",
-          "ME",
-          "MK",
-          "RS",
-          "SI",
-          "KR",
-          "BD",
-          "PK",
-          "LK",
-          "GH",
-          "KE",
-          "NG",
-          "TZ",
-          "UG",
-          "AG",
-          "AM",
-          "BS",
-          "BB",
-          "BZ",
-          "BT",
-          "BW",
-          "BF",
-          "CV",
-          "CW",
-          "DM",
-          "FJ",
-          "GM",
-          "GE",
-          "GD",
-          "GW",
-          "GY",
-          "HT",
-          "JM",
-          "KI",
-          "LS",
-          "LR",
-          "MW",
-          "MV",
-          "ML",
-          "MH",
-          "FM",
-          "NA",
-          "NR",
-          "NE",
-          "PW",
-          "PG",
-          "PR",
-          "WS",
-          "SM",
-          "ST",
-          "SN",
-          "SC",
-          "SL",
-          "SB",
-          "KN",
-          "LC",
-          "VC",
-          "SR",
-          "TL",
-          "TO",
-          "TT",
-          "TV",
-          "VU",
-          "AZ",
-          "BN",
-          "BI",
-          "KH",
-          "CM",
-          "TD",
-          "KM",
-          "GQ",
-          "SZ",
-          "GA",
-          "GN",
-          "KG",
-          "LA",
-          "MO",
-          "MR",
-          "MN",
-          "NP",
-          "RW",
-          "TG",
-          "UZ",
-          "ZW",
-          "BJ",
-          "MG",
-          "MU",
-          "MZ",
-          "AO",
-          "CI",
-          "DJ",
-          "ZM",
-          "CD",
-          "CG",
-          "IQ",
-          "LY",
-          "TJ",
-          "VE",
-          "ET",
-          "XK"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/6Rl6YoCarF2GHPSQmmFjuR"
-        },
-        "href": "https://api.spotify.com/v1/albums/6Rl6YoCarF2GHPSQmmFjuR",
-        "id": "6Rl6YoCarF2GHPSQmmFjuR",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273b5a28a256eae6dc0424fef59",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02b5a28a256eae6dc0424fef59",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851b5a28a256eae6dc0424fef59",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "name": "$ome $exy $ongs 4 U",
-        "release_date": "2025-02-14",
-        "release_date_precision": "day",
-        "total_tracks": 21,
-        "type": "album",
-        "uri": "spotify:album:6Rl6YoCarF2GHPSQmmFjuR"
-      },
-      "artists": [
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
-          },
-          "href": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
-          "id": "3TVXtAsR1Inumwj472S9r4",
-          "name": "Drake",
-          "type": "artist",
-          "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
-        }
-      ],
-      "available_markets": [
-        "AR",
-        "AU",
-        "AT",
-        "BE",
-        "BO",
-        "BR",
-        "BG",
-        "CA",
-        "CL",
-        "CO",
-        "CR",
-        "CY",
-        "CZ",
-        "DK",
-        "DO",
-        "DE",
-        "EC",
-        "EE",
-        "SV",
-        "FI",
-        "FR",
-        "GR",
-        "GT",
-        "HN",
-        "HK",
-        "HU",
-        "IS",
-        "IE",
-        "IT",
-        "LV",
-        "LT",
-        "LU",
-        "MY",
-        "MT",
-        "MX",
-        "NL",
-        "NZ",
-        "NI",
-        "NO",
-        "PA",
-        "PY",
-        "PE",
-        "PH",
-        "PL",
-        "PT",
-        "SG",
-        "SK",
-        "ES",
-        "SE",
-        "CH",
-        "TW",
-        "TR",
-        "UY",
-        "US",
-        "GB",
-        "AD",
-        "LI",
-        "MC",
-        "ID",
-        "JP",
-        "TH",
-        "VN",
-        "RO",
-        "IL",
-        "ZA",
-        "SA",
-        "AE",
-        "BH",
-        "QA",
-        "OM",
-        "KW",
-        "EG",
-        "MA",
-        "DZ",
-        "TN",
-        "LB",
-        "JO",
-        "PS",
-        "IN",
-        "BY",
-        "KZ",
-        "MD",
-        "UA",
-        "AL",
-        "BA",
-        "HR",
-        "ME",
-        "MK",
-        "RS",
-        "SI",
-        "KR",
-        "BD",
-        "PK",
-        "LK",
-        "GH",
-        "KE",
-        "NG",
-        "TZ",
-        "UG",
-        "AG",
-        "AM",
-        "BS",
-        "BB",
-        "BZ",
-        "BT",
-        "BW",
-        "BF",
-        "CV",
-        "CW",
-        "DM",
-        "FJ",
-        "GM",
-        "GE",
-        "GD",
-        "GW",
-        "GY",
-        "HT",
-        "JM",
-        "KI",
-        "LS",
-        "LR",
-        "MW",
-        "MV",
-        "ML",
-        "MH",
-        "FM",
-        "NA",
-        "NR",
-        "NE",
-        "PW",
-        "PG",
-        "PR",
-        "WS",
-        "SM",
-        "ST",
-        "SN",
-        "SC",
-        "SL",
-        "SB",
-        "KN",
-        "LC",
-        "VC",
-        "SR",
-        "TL",
-        "TO",
-        "TT",
-        "TV",
-        "VU",
-        "AZ",
-        "BN",
-        "BI",
-        "KH",
-        "CM",
-        "TD",
-        "KM",
-        "GQ",
-        "SZ",
-        "GA",
-        "GN",
-        "KG",
-        "LA",
-        "MO",
-        "MR",
-        "MN",
-        "NP",
-        "RW",
-        "TG",
-        "UZ",
-        "ZW",
-        "BJ",
-        "MG",
-        "MU",
-        "MZ",
-        "AO",
-        "CI",
-        "DJ",
-        "ZM",
-        "CD",
-        "CG",
-        "IQ",
-        "LY",
-        "TJ",
-        "VE",
-        "ET",
-        "XK"
-      ],
-      "disc_number": 1,
-      "duration_ms": 244931,
-      "explicit": true,
-      "external_ids": {
-        "isrc": "USLD91772029"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/track/2xxb5zW09uwbgyLprALi9E"
-      },
-      "href": "https://api.spotify.com/v1/tracks/2xxb5zW09uwbgyLprALi9E",
-      "id": "2xxb5zW09uwbgyLprALi9E",
-      "is_local": false,
-      "is_playable": true,
-      "name": "RAINING IN HOUSTON",
-      "popularity": 69,
-      "preview_url": null,
-      "track_number": 11,
-      "type": "track",
-      "uri": "spotify:track:2xxb5zW09uwbgyLprALi9E"
-    },
-    {
-      "album": {
-        "album_type": "compilation",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/3aQeKQSyrW4qWr35idm0cy"
-            },
-            "href": "https://api.spotify.com/v1/artists/3aQeKQSyrW4qWr35idm0cy",
-            "id": "3aQeKQSyrW4qWr35idm0cy",
-            "name": "T-Pain",
-            "type": "artist",
-            "uri": "spotify:artist:3aQeKQSyrW4qWr35idm0cy"
-          }
-        ],
-        "available_markets": [
-          "AR",
-          "AU",
-          "AT",
-          "BE",
-          "BO",
-          "BR",
-          "BG",
-          "CA",
-          "CL",
-          "CO",
-          "CR",
-          "CY",
-          "CZ",
-          "DK",
-          "DO",
-          "DE",
-          "EC",
-          "EE",
-          "SV",
-          "FI",
-          "FR",
-          "GR",
-          "GT",
-          "HN",
-          "HK",
-          "HU",
-          "IS",
-          "IE",
-          "IT",
-          "LV",
-          "LT",
-          "LU",
-          "MY",
-          "MT",
-          "MX",
-          "NL",
-          "NZ",
-          "NI",
-          "NO",
-          "PA",
-          "PY",
-          "PE",
-          "PH",
-          "PL",
-          "PT",
-          "SG",
-          "SK",
-          "ES",
-          "SE",
-          "CH",
-          "TW",
-          "TR",
-          "UY",
-          "US",
-          "GB",
-          "AD",
-          "LI",
-          "MC",
-          "ID",
-          "JP",
-          "TH",
-          "VN",
-          "RO",
-          "IL",
-          "ZA",
-          "SA",
-          "AE",
-          "BH",
-          "QA",
-          "OM",
-          "KW",
-          "EG",
-          "MA",
-          "DZ",
-          "TN",
-          "LB",
-          "JO",
-          "PS",
-          "IN",
-          "BY",
-          "KZ",
-          "MD",
-          "UA",
-          "AL",
-          "BA",
-          "HR",
-          "ME",
-          "MK",
-          "RS",
-          "SI",
-          "KR",
-          "BD",
-          "PK",
-          "LK",
-          "GH",
-          "KE",
-          "NG",
-          "TZ",
-          "UG",
-          "AG",
-          "AM",
-          "BS",
-          "BB",
-          "BZ",
-          "BT",
-          "BW",
-          "BF",
-          "CV",
-          "CW",
-          "DM",
-          "FJ",
-          "GM",
-          "GE",
-          "GD",
-          "GW",
-          "GY",
-          "HT",
-          "JM",
-          "KI",
-          "LS",
-          "LR",
-          "MW",
-          "MV",
-          "ML",
-          "MH",
-          "FM",
-          "NA",
-          "NR",
-          "NE",
-          "PW",
-          "PG",
-          "PR",
-          "WS",
-          "SM",
-          "ST",
-          "SN",
-          "SC",
-          "SL",
-          "SB",
-          "KN",
-          "LC",
-          "VC",
-          "SR",
-          "TL",
-          "TO",
-          "TT",
-          "TV",
-          "VU",
-          "AZ",
-          "BN",
-          "BI",
-          "KH",
-          "CM",
-          "TD",
-          "KM",
-          "GQ",
-          "SZ",
-          "GA",
-          "GN",
-          "KG",
-          "LA",
-          "MO",
-          "MR",
-          "MN",
-          "NP",
-          "RW",
-          "TG",
-          "UZ",
-          "ZW",
-          "BJ",
-          "MG",
-          "MU",
-          "MZ",
-          "AO",
-          "CI",
-          "DJ",
-          "ZM",
-          "CD",
-          "CG",
-          "IQ",
-          "LY",
-          "TJ",
-          "VE",
-          "ET",
-          "XK"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/184XWylq7ZF0Hn7da4Tr6W"
-        },
-        "href": "https://api.spotify.com/v1/albums/184XWylq7ZF0Hn7da4Tr6W",
-        "id": "184XWylq7ZF0Hn7da4Tr6W",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2733d537424bb92aa2283f62595",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e023d537424bb92aa2283f62595",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048513d537424bb92aa2283f62595",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "name": "Happy Hour: The Greatest Hits",
-        "release_date": "2014",
-        "release_date_precision": "year",
-        "total_tracks": 13,
-        "type": "album",
-        "uri": "spotify:album:184XWylq7ZF0Hn7da4Tr6W"
-      },
-      "artists": [
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3aQeKQSyrW4qWr35idm0cy"
-          },
-          "href": "https://api.spotify.com/v1/artists/3aQeKQSyrW4qWr35idm0cy",
-          "id": "3aQeKQSyrW4qWr35idm0cy",
-          "name": "T-Pain",
-          "type": "artist",
-          "uri": "spotify:artist:3aQeKQSyrW4qWr35idm0cy"
-        },
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/5ndkK3dpZLKtBklKjxNQwT"
-          },
-          "href": "https://api.spotify.com/v1/artists/5ndkK3dpZLKtBklKjxNQwT",
-          "id": "5ndkK3dpZLKtBklKjxNQwT",
-          "name": "B.o.B",
-          "type": "artist",
-          "uri": "spotify:artist:5ndkK3dpZLKtBklKjxNQwT"
-        }
-      ],
-      "available_markets": [
-        "AR",
-        "AU",
-        "AT",
-        "BE",
-        "BO",
-        "BR",
-        "BG",
-        "CA",
-        "CL",
-        "CO",
-        "CR",
-        "CY",
-        "CZ",
-        "DK",
-        "DO",
-        "DE",
-        "EC",
-        "EE",
-        "SV",
-        "FI",
-        "FR",
-        "GR",
-        "GT",
-        "HN",
-        "HK",
-        "HU",
-        "IS",
-        "IE",
-        "IT",
-        "LV",
-        "LT",
-        "LU",
-        "MY",
-        "MT",
-        "MX",
-        "NL",
-        "NZ",
-        "NI",
-        "NO",
-        "PA",
-        "PY",
-        "PE",
-        "PH",
-        "PL",
-        "PT",
-        "SG",
-        "SK",
-        "ES",
-        "SE",
-        "CH",
-        "TW",
-        "TR",
-        "UY",
-        "US",
-        "GB",
-        "AD",
-        "LI",
-        "MC",
-        "ID",
-        "JP",
-        "TH",
-        "VN",
-        "RO",
-        "IL",
-        "ZA",
-        "SA",
-        "AE",
-        "BH",
-        "QA",
-        "OM",
-        "KW",
-        "EG",
-        "MA",
-        "DZ",
-        "TN",
-        "LB",
-        "JO",
-        "PS",
-        "IN",
-        "BY",
-        "KZ",
-        "MD",
-        "UA",
-        "AL",
-        "BA",
-        "HR",
-        "ME",
-        "MK",
-        "RS",
-        "SI",
-        "KR",
-        "BD",
-        "PK",
-        "LK",
-        "GH",
-        "KE",
-        "NG",
-        "TZ",
-        "UG",
-        "AG",
-        "AM",
-        "BS",
-        "BB",
-        "BZ",
-        "BT",
-        "BW",
-        "BF",
-        "CV",
-        "CW",
-        "DM",
-        "FJ",
-        "GM",
-        "GE",
-        "GD",
-        "GW",
-        "GY",
-        "HT",
-        "JM",
-        "KI",
-        "LS",
-        "LR",
-        "MW",
-        "MV",
-        "ML",
-        "MH",
-        "FM",
-        "NA",
-        "NR",
-        "NE",
-        "PW",
-        "PG",
-        "PR",
-        "WS",
-        "SM",
-        "ST",
-        "SN",
-        "SC",
-        "SL",
-        "SB",
-        "KN",
-        "LC",
-        "VC",
-        "SR",
-        "TL",
-        "TO",
-        "TT",
-        "TV",
-        "VU",
-        "AZ",
-        "BN",
-        "BI",
-        "KH",
-        "CM",
-        "TD",
-        "KM",
-        "GQ",
-        "SZ",
-        "GA",
-        "GN",
-        "KG",
-        "LA",
-        "MO",
-        "MR",
-        "MN",
-        "NP",
-        "RW",
-        "TG",
-        "UZ",
-        "ZW",
-        "BJ",
-        "MG",
-        "MU",
-        "MZ",
-        "AO",
-        "CI",
-        "DJ",
-        "ZM",
-        "CD",
-        "CG",
-        "IQ",
-        "LY",
-        "TJ",
-        "VE",
-        "ET",
-        "XK"
-      ],
-      "disc_number": 1,
-      "duration_ms": 231093,
-      "explicit": true,
-      "external_ids": {
-        "isrc": "USRC11301140"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/track/6lbhWl34Il0WXm5pX1fM9E"
-      },
-      "href": "https://api.spotify.com/v1/tracks/6lbhWl34Il0WXm5pX1fM9E",
-      "id": "6lbhWl34Il0WXm5pX1fM9E",
-      "is_local": false,
-      "is_playable": true,
-      "name": "Up Down (Do This All Day) (feat. B.o.B)",
-      "popularity": 82,
-      "preview_url": null,
-      "track_number": 1,
-      "type": "track",
-      "uri": "spotify:track:6lbhWl34Il0WXm5pX1fM9E"
+      "uri": "spotify:track:4XbQfQIKdpnUxGQ183u6IO"
     }
   ],
   "artists": [
-    {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/artist/2HPaUgqeutzr3jx5a9WyDV"
-      },
-      "followers": {
-        "href": null,
-        "total": 11221334
-      },
-      "genres": [
-        "dark r&b",
-        "r&b",
-        "trap soul"
-      ],
-      "href": "https://api.spotify.com/v1/artists/2HPaUgqeutzr3jx5a9WyDV",
-      "id": "2HPaUgqeutzr3jx5a9WyDV",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5eb957320981e31e862bc2fb844",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174957320981e31e862bc2fb844",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178957320981e31e862bc2fb844",
-          "width": 160
-        }
-      ],
-      "name": "PARTYNEXTDOOR",
-      "popularity": 84,
-      "type": "artist",
-      "uri": "spotify:artist:2HPaUgqeutzr3jx5a9WyDV"
-    },
     {
       "external_urls": {
         "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
       },
       "followers": {
         "href": null,
-        "total": 88216126
+        "total": 88444653
       },
       "genres": [],
       "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
@@ -4646,146 +4213,9 @@
         }
       ],
       "name": "Justin Bieber",
-      "popularity": 92,
+      "popularity": 93,
       "type": "artist",
       "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
-    },
-    {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
-      },
-      "followers": {
-        "href": null,
-        "total": 109258438
-      },
-      "genres": [
-        "rap"
-      ],
-      "href": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
-      "id": "3TVXtAsR1Inumwj472S9r4",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab676161000051744293385d324db8558179afd9",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f1784293385d324db8558179afd9",
-          "width": 160
-        }
-      ],
-      "name": "Drake",
-      "popularity": 97,
-      "type": "artist",
-      "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
-    },
-    {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
-      },
-      "followers": {
-        "href": null,
-        "total": 120913216
-      },
-      "genres": [],
-      "href": "https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ",
-      "id": "1Xyo4u8uXC1ZmMpatF05PJ",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5eb9e528993a2820267b97f6aae",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab676161000051749e528993a2820267b97f6aae",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f1789e528993a2820267b97f6aae",
-          "width": 160
-        }
-      ],
-      "name": "The Weeknd",
-      "popularity": 94,
-      "type": "artist",
-      "uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ"
-    },
-    {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/artist/4Gso3d4CscCijv0lmajZWs"
-      },
-      "followers": {
-        "href": null,
-        "total": 8617710
-      },
-      "genres": [],
-      "href": "https://api.spotify.com/v1/artists/4Gso3d4CscCijv0lmajZWs",
-      "id": "4Gso3d4CscCijv0lmajZWs",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebc52b798deb89eb8414a51b7b",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174c52b798deb89eb8414a51b7b",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178c52b798deb89eb8414a51b7b",
-          "width": 160
-        }
-      ],
-      "name": "Don Toliver",
-      "popularity": 91,
-      "type": "artist",
-      "uri": "spotify:artist:4Gso3d4CscCijv0lmajZWs"
-    },
-    {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/artist/2EMAnMvWE2eb56ToJVfCWs"
-      },
-      "followers": {
-        "href": null,
-        "total": 10965177
-      },
-      "genres": [
-        "trap soul",
-        "r&b"
-      ],
-      "href": "https://api.spotify.com/v1/artists/2EMAnMvWE2eb56ToJVfCWs",
-      "id": "2EMAnMvWE2eb56ToJVfCWs",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebb0ff28b9d4bed74c66901b2b",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174b0ff28b9d4bed74c66901b2b",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178b0ff28b9d4bed74c66901b2b",
-          "width": 160
-        }
-      ],
-      "name": "Bryson Tiller",
-      "popularity": 79,
-      "type": "artist",
-      "uri": "spotify:artist:2EMAnMvWE2eb56ToJVfCWs"
     },
     {
       "external_urls": {
@@ -4793,7 +4223,7 @@
       },
       "followers": {
         "href": null,
-        "total": 114083241
+        "total": 114346737
       },
       "genres": [
         "reggaeton",
@@ -4827,11 +4257,221 @@
     },
     {
       "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2HPaUgqeutzr3jx5a9WyDV"
+      },
+      "followers": {
+        "href": null,
+        "total": 11241997
+      },
+      "genres": [
+        "dark r&b",
+        "r&b",
+        "trap soul"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2HPaUgqeutzr3jx5a9WyDV",
+      "id": "2HPaUgqeutzr3jx5a9WyDV",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb957320981e31e862bc2fb844",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174957320981e31e862bc2fb844",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178957320981e31e862bc2fb844",
+          "width": 160
+        }
+      ],
+      "name": "PARTYNEXTDOOR",
+      "popularity": 84,
+      "type": "artist",
+      "uri": "spotify:artist:2HPaUgqeutzr3jx5a9WyDV"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
+      },
+      "followers": {
+        "href": null,
+        "total": 109413269
+      },
+      "genres": [
+        "rap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
+      "id": "3TVXtAsR1Inumwj472S9r4",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051744293385d324db8558179afd9",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1784293385d324db8558179afd9",
+          "width": 160
+        }
+      ],
+      "name": "Drake",
+      "popularity": 97,
+      "type": "artist",
+      "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM"
+      },
+      "followers": {
+        "href": null,
+        "total": 22049758
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/2h93pZq0e7k5yf4dywlkpM",
+      "id": "2h93pZq0e7k5yf4dywlkpM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebee3123e593174208f9754fab",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174ee3123e593174208f9754fab",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178ee3123e593174208f9754fab",
+          "width": 160
+        }
+      ],
+      "name": "Frank Ocean",
+      "popularity": 87,
+      "type": "artist",
+      "uri": "spotify:artist:2h93pZq0e7k5yf4dywlkpM"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2EMAnMvWE2eb56ToJVfCWs"
+      },
+      "followers": {
+        "href": null,
+        "total": 10972882
+      },
+      "genres": [
+        "trap soul",
+        "r&b"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2EMAnMvWE2eb56ToJVfCWs",
+      "id": "2EMAnMvWE2eb56ToJVfCWs",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb0ff28b9d4bed74c66901b2b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174b0ff28b9d4bed74c66901b2b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178b0ff28b9d4bed74c66901b2b",
+          "width": 160
+        }
+      ],
+      "name": "Bryson Tiller",
+      "popularity": 80,
+      "type": "artist",
+      "uri": "spotify:artist:2EMAnMvWE2eb56ToJVfCWs"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4Gso3d4CscCijv0lmajZWs"
+      },
+      "followers": {
+        "href": null,
+        "total": 8649336
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/4Gso3d4CscCijv0lmajZWs",
+      "id": "4Gso3d4CscCijv0lmajZWs",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebc52b798deb89eb8414a51b7b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174c52b798deb89eb8414a51b7b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178c52b798deb89eb8414a51b7b",
+          "width": 160
+        }
+      ],
+      "name": "Don Toliver",
+      "popularity": 91,
+      "type": "artist",
+      "uri": "spotify:artist:4Gso3d4CscCijv0lmajZWs"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4tMm1dU6Gn04VAZ9ClHcIZ"
+      },
+      "followers": {
+        "href": null,
+        "total": 3671474
+      },
+      "genres": [
+        "r&b",
+        "trap soul"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4tMm1dU6Gn04VAZ9ClHcIZ",
+      "id": "4tMm1dU6Gn04VAZ9ClHcIZ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb3243b248b95343e0053c030a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051743243b248b95343e0053c030a",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1783243b248b95343e0053c030a",
+          "width": 160
+        }
+      ],
+      "name": "Jacquees",
+      "popularity": 68,
+      "type": "artist",
+      "uri": "spotify:artist:4tMm1dU6Gn04VAZ9ClHcIZ"
+    },
+    {
+      "external_urls": {
         "spotify": "https://open.spotify.com/artist/4qXC0i02bSFstECuXP2ZpL"
       },
       "followers": {
         "href": null,
-        "total": 605780
+        "total": 606793
       },
       "genres": [],
       "href": "https://api.spotify.com/v1/artists/4qXC0i02bSFstECuXP2ZpL",
@@ -4860,72 +4500,37 @@
     },
     {
       "external_urls": {
-        "spotify": "https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM"
+        "spotify": "https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y"
       },
       "followers": {
         "href": null,
-        "total": 22001857
+        "total": 12603459
       },
       "genres": [],
-      "href": "https://api.spotify.com/v1/artists/2h93pZq0e7k5yf4dywlkpM",
-      "id": "2h93pZq0e7k5yf4dywlkpM",
+      "href": "https://api.spotify.com/v1/artists/07YZf4WDAMNwqr4jfgOZ8y",
+      "id": "07YZf4WDAMNwqr4jfgOZ8y",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebee3123e593174208f9754fab",
+          "url": "https://i.scdn.co/image/ab6761610000e5ebfb65e1af01cf95c25bd29ed1",
           "width": 640
         },
         {
           "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174ee3123e593174208f9754fab",
+          "url": "https://i.scdn.co/image/ab67616100005174fb65e1af01cf95c25bd29ed1",
           "width": 320
         },
         {
           "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178ee3123e593174208f9754fab",
+          "url": "https://i.scdn.co/image/ab6761610000f178fb65e1af01cf95c25bd29ed1",
           "width": 160
         }
       ],
-      "name": "Frank Ocean",
-      "popularity": 86,
+      "name": "Jason Derulo",
+      "popularity": 79,
       "type": "artist",
-      "uri": "spotify:artist:2h93pZq0e7k5yf4dywlkpM"
-    },
-    {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/artist/3tlXnStJ1fFhdScmQeLpuG"
-      },
-      "followers": {
-        "href": null,
-        "total": 8512678
-      },
-      "genres": [
-        "r&b"
-      ],
-      "href": "https://api.spotify.com/v1/artists/3tlXnStJ1fFhdScmQeLpuG",
-      "id": "3tlXnStJ1fFhdScmQeLpuG",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5eb582fbf712f5b6a9bf65d9b84",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174582fbf712f5b6a9bf65d9b84",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178582fbf712f5b6a9bf65d9b84",
-          "width": 160
-        }
-      ],
-      "name": "Brent Faiyaz",
-      "popularity": 84,
-      "type": "artist",
-      "uri": "spotify:artist:3tlXnStJ1fFhdScmQeLpuG"
+      "uri": "spotify:artist:07YZf4WDAMNwqr4jfgOZ8y"
     }
   ],
-  "lastUpdated": "2026-04-10"
+  "lastUpdated": "2026-04-14"
 }
