@@ -1,20 +1,81 @@
-import React from "react";
-import { Link } from "react-scroll";
+import React, { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+
+const AIRPORT_CLOCKS = [
+  { code: "MAA", timeZone: "Asia/Kolkata", name: "Chennai (MAA)" },
+  { code: "BWI", timeZone: "America/New_York", name: "Baltimore–Washington (BWI)" },
+  { code: "ATL", timeZone: "America/New_York", name: "Atlanta (ATL)" },
+];
+
+function formatLocalTime(date, timeZone) {
+  return new Intl.DateTimeFormat("en-GB", {
+    timeZone,
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).format(date);
+}
+
+function AirportClocks() {
+  const [now, setNow] = useState(() => new Date());
+
+  useEffect(() => {
+    const id = window.setInterval(() => setNow(new Date()), 1000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <div className="nav-airport-times" aria-label="Local times by airport">
+      {AIRPORT_CLOCKS.map(({ code, timeZone, name }) => (
+        <span key={code} className="nav-airport-line">
+          <span className="nav-airport-clock">{formatLocalTime(now, timeZone)}</span>{" "}
+          <abbr title={name} className="nav-airport-code">
+            {code}
+          </abbr>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function navClass({ isActive }) {
+  return isActive ? "nav-active" : undefined;
+}
 
 export default function Navbar() {
   return (
-    <nav className="navbar glass">
+    <nav className="navbar navbar--top">
       <div className="nav-inner">
-        <h1 className="logo">Akshar Ravichandran</h1>
-        <ul className="nav-links">
-          <li><Link to="hero" smooth duration={600} offset={-80}>Home</Link></li>
-          <li><Link to="about" smooth duration={600} offset={-80}>About</Link></li>
-          <li><Link to="experience" smooth duration={600} offset={-80}>Experience</Link></li>
-          <li><Link to="projects" smooth duration={600} offset={-80}>Projects</Link></li>
-          <li><Link to="footer" smooth duration={600} offset={-80}>Contact</Link></li>
-        </ul>
+        <div className="nav-top">
+          <h1 className="logo">
+            <Link to="/">Akshar Ravichandran</Link>
+          </h1>
+          <ul className="nav-links">
+            <li>
+              <NavLink to="/" className={navClass} end>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className={navClass}>
+                Me
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/work" className={navClass}>
+                Work
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className={navClass}>
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+        <AirportClocks />
       </div>
-      <div className="neon-underline" />
     </nav>
   );
 }

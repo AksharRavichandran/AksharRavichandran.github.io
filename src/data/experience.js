@@ -5,9 +5,13 @@ import schellerLogo from "../assets/scheller.jpeg";
 
 export const experience = [
   {
+    id: "scheller-ra",
     company: "Scheller College of Business",
     role: "Research Assistant",
     period: "Dec 2025 – Present",
+    location: "Atlanta, GA",
+    remote: "Hybrid",
+    jobType: "Research",
     logo: schellerLogo,
     highlights: [
       "Building an LLM benchmark to extract sentiment, stance, and narratives from X and Reddit for prediction market signal testing",
@@ -17,9 +21,13 @@ export const experience = [
     github: "https://github.com/AksharRavichandran/Polymarket_Social_Signals",
   },
   {
+    id: "amazon-sde-intern",
     company: "Amazon",
     role: "Software Developing Engineer Intern",
     period: "Summer 2025",
+    location: "Seattle, WA",
+    remote: "No",
+    jobType: "Internship",
     logo: amazonLogo,
     highlights: [
       "Developed one stop shop internal portal using React and Amazon’s Harmony Framework",
@@ -28,9 +36,13 @@ export const experience = [
     ],
   },
   {
+    id: "sparksoft-intern",
     company: "Sparksoft",
     role: "Software Engineering Intern",
     period: "Jun 2024 - Nov 2024",
+    location: "Remote",
+    remote: "Yes",
+    jobType: "Internship",
     logo: sparksoftLogo,
     highlights: [
       "Maintained and enhanced the CMS Enterprise Portal, a critical Angular-based platform supporting Medicare under the Centers for Medicare & Medicaid Services.",
@@ -39,9 +51,13 @@ export const experience = [
     ],
   },
   {
+    id: "gt-vip-ra",
     company: "Georgia Tech - Vertically Integrated Project",
     role: "Research Assistant",
     period: "Jan 2024 – Present",
+    location: "Atlanta, GA",
+    remote: "Hybrid",
+    jobType: "Research",
     logo: vipLogo,
     highlights: [
       "Monetary Policy Sentiment Analysis by training and benchmarking of LLMS to classify policy statements.",

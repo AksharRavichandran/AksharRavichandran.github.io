@@ -1,69 +1,52 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profileImg from "../assets/profile.jpeg";
+import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
 import TopMusic from "./TopMusic";
 import StravaStats from "./StravaStats";
 
-// Update these to your own details
 const SPOTIFY_EMBED_URL =
   "https://open.spotify.com/embed/playlist/5gWOsJFdToIBRQFCBWh65d?utm_source=generator";
 
+const storyLegible =
+  "text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.95),0_2px_10px_rgba(0,0,0,0.8),0_4px_20px_rgba(0,0,0,0.5)]";
+
 export default function About() {
   return (
-    <section id="about" className="section about">
-      <motion.div
-        className="about-container"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7 }}
+    <section id="about" className="about about--story">
+      <ScrollExpandMedia
+        hideMedia
+        embedded
+        animateTitleChars
+        title="About Me"
+        scrollHintArrow
       >
-        <div className="about-left">
-          {/* Place your image at public/profile.jpg or update src below */}
-          <img
-            className="profile glass"
-            src={profileImg}
-            alt="Akshar Ravichandran portrait"
-            loading="lazy"
-          />
-        </div>
-        <div className="about-right glass">
-          <h2>About Me</h2>
-          <p>
-            I’m Akshar Ravichandran, a Computer Science major at Georgia Tech specializing in devices and artificial intelligence. I'm
-            passionate about software engineering, quantitative finance,
-            and machine learning. I’ve previously interned at
-            Amazon and Sparksoft, while also contributing to
-            research at Georgia Tech under the VIP program and the Scheller College of Business.
-            While my experiences span across multiple domains, they all tie back to my core interests in building, learning, and problem solving.
-            I hope enjoy exploring my work!
-          </p>
-        </div>
-      </motion.div>
-      <motion.div
-        className="about-music glass"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, delay: 0.1 }}
-      >
-        <h3 className="music-section-title">The motivation behind my work:</h3>
-        <div className="music-grid">
-          <TopMusic />
-          <div className="spotify-card glass">
-            <h4 style={{ marginBottom: 8 }}>One of my favorite playlists, I've made:</h4>
-            <iframe
-              title="Spotify Embed"
-              className="spotify-embed"
-              src={SPOTIFY_EMBED_URL}
-              width="100%"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            />
+        <motion.div
+          className="about-music glass mx-auto mt-12 w-full max-w-[min(1100px,92vw)] px-6 py-8 md:px-8"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className={`music-section-title ${storyLegible}`}>The motivation behind my work</h3>
+          <div className="music-grid">
+            <TopMusic />
+            <div className="spotify-card glass">
+              <h4 className={storyLegible} style={{ marginBottom: 8 }}>
+                One of my favorite playlists I&apos;ve made:
+              </h4>
+              <iframe
+                title="Spotify Embed"
+                className="spotify-embed"
+                src={SPOTIFY_EMBED_URL}
+                width="100%"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              />
+            </div>
           </div>
-        </div>
-        <StravaStats />
-      </motion.div>
+          <StravaStats />
+        </motion.div>
+      </ScrollExpandMedia>
     </section>
   );
 }
