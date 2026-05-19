@@ -5,7 +5,7 @@ import bwiImage from "../assets/bwi.jpg";
 
 export default function AboutPage() {
   return (
-    <main className="page-main about-page relative isolate flex min-h-0 flex-1 flex-col">
+    <main className="page-main about-page about-page--viewport relative isolate flex min-h-0 flex-1 flex-col overflow-hidden">
       <div className="pointer-events-none fixed inset-0 z-0">
         <GradientBackground
           className="brightness-[0.72] contrast-[1.02]"
@@ -25,7 +25,7 @@ export default function AboutPage() {
         className="pointer-events-none fixed inset-0 z-[1] bg-[radial-gradient(ellipse_110%_75%_at_50%_12%,rgba(255,255,255,0.08),transparent_58%)]"
         aria-hidden
       />
-      <div className="relative z-[2]">
+      <div className="relative z-[2] flex min-h-0 flex-1 flex-col">
         <About />
       </div>
     </main>

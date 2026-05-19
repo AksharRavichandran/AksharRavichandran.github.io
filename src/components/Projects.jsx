@@ -22,8 +22,18 @@ function buildJobs() {
   }));
 }
 
-export default function Projects() {
+export default function Projects({ embedded = false }) {
   const jobs = useMemo(() => buildJobs(), []);
+
+  const list = <JobListingProjects jobs={jobs} className="!max-w-none px-0" />;
+
+  if (embedded) {
+    return (
+      <div id="projects" className="work-tab-panel w-full min-w-0">
+        {list}
+      </div>
+    );
+  }
 
   return (
     <section
@@ -37,8 +47,9 @@ export default function Projects() {
           <span className="section-underline" aria-hidden />
         </header>
         <p className="muted mb-8 text-sm leading-relaxed md:text-[0.9375rem]">
+          Titles only — open a row for details and links.
         </p>
-        <JobListingProjects jobs={jobs} className="!max-w-none px-0" />
+        {list}
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +20,12 @@ import { cn } from "@/lib/utils";
  * @param {boolean} [props.textBlend]
  * @param {boolean} [props.hideMedia] — text-only hero; scroll still reveals children
  * @param {string} [props.contentSectionClassName] — merged onto the scroll-reveal content wrapper
+ * @param {number} [props.unlockAt] — scroll progress (0–1) to reveal children; default 1 (full travel)
+ * @param {number} [props.wheelMultiplier] — wheel delta scale (higher = faster unlock)
+ * @param {number} [props.touchBoost] — multiplies touch scroll factors when not expanded
+ * @param {number} [props.revealDuration] — opacity transition for revealed section (seconds)
+ * @param {string} [props.heroAreaClassName] — merged onto the hero viewport stack (title + hint)
+ * @param {import('react').ReactNode} [props.heroContent] — replaces default title / typewriter / scroll hint when set
  * @param {import('react').ReactNode} [props.children]
  */
 export default function ScrollExpandMedia({
@@ -36,6 +42,12 @@ export default function ScrollExpandMedia({
   animateTitleChars = false,
   textBlend = false,
   contentSectionClassName,
+  unlockAt = 1,
+  wheelMultiplier = 0.0009,
+  touchBoost = 1,
+  revealDuration = 0.7,
+  heroAreaClassName,
+  heroContent,
   children,
 }) {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -50,6 +62,12 @@ export default function ScrollExpandMedia({
   const titleIntroRef = useRef(null);
   const titleInView = useInView(titleIntroRef, { once: true, amount: 0.4, margin: "0px 0px -12% 0px" });
 
+  const resolvedUnlock = Math.min(1, Math.max(0.04, unlockAt));
+  const hideLockLower = useMemo(
+    () => (resolvedUnlock < 1 ? Math.max(0.06, resolvedUnlock * 0.55) : 0.75),
+    [resolvedUnlock],
+  );
+
   useEffect(() => {
     setScrollProgress(0);
     setShowContent(false);
@@ -62,17 +80,19 @@ export default function ScrollExpandMedia({
     const handleWheel = (e) => {
       if (mediaFullyExpanded && e.deltaY < 0 && window.scrollY <= 5) {
         setMediaFullyExpanded(false);
+        setScrollProgress(0);
+        setShowContent(false);
         e.preventDefault();
       } else if (!mediaFullyExpanded) {
         e.preventDefault();
-        const scrollDelta = e.deltaY * 0.0009;
+        const scrollDelta = e.deltaY * wheelMultiplier;
         const newProgress = Math.min(Math.max(scrollProgress + scrollDelta, 0), 1);
         setScrollProgress(newProgress);
 
-        if (newProgress >= 1) {
+        if (newProgress >= resolvedUnlock) {
           setMediaFullyExpanded(true);
           setShowContent(true);
-        } else if (newProgress < 0.75) {
+        } else if (newProgress < hideLockLower) {
           setShowContent(false);
         }
       }
@@ -90,18 +110,20 @@ export default function ScrollExpandMedia({
 
       if (mediaFullyExpanded && deltaY < -20 && window.scrollY <= 5) {
         setMediaFullyExpanded(false);
+        setScrollProgress(0);
+        setShowContent(false);
         e.preventDefault();
       } else if (!mediaFullyExpanded) {
         e.preventDefault();
-        const scrollFactor = deltaY < 0 ? 0.008 : 0.005;
+        const scrollFactor = (deltaY < 0 ? 0.008 : 0.005) * touchBoost;
         const scrollDelta = deltaY * scrollFactor;
         const newProgress = Math.min(Math.max(scrollProgress + scrollDelta, 0), 1);
         setScrollProgress(newProgress);
 
-        if (newProgress >= 1) {
+        if (newProgress >= resolvedUnlock) {
           setMediaFullyExpanded(true);
           setShowContent(true);
-        } else if (newProgress < 0.75) {
+        } else if (newProgress < hideLockLower) {
           setShowContent(false);
         }
 
@@ -132,7 +154,7 @@ export default function ScrollExpandMedia({
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleTouchEnd);
     };
-  }, [scrollProgress, mediaFullyExpanded, touchStartY]);
+  }, [scrollProgress, mediaFullyExpanded, touchStartY, resolvedUnlock, hideLockLower, wheelMultiplier, touchBoost]);
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -202,6 +224,7 @@ export default function ScrollExpandMedia({
                 hideMedia
                   ? "justify-center pb-[max(2rem,env(safe-area-inset-bottom))] pt-[max(0.75rem,env(safe-area-inset-top))]"
                   : "justify-start pt-[clamp(0.75rem,2.5vw,1.5rem)] sm:pt-10",
+                heroAreaClassName,
               )}
             >
               {!hideMedia ? (
@@ -280,6 +303,14 @@ export default function ScrollExpandMedia({
               </div>
               ) : null}
 
+              {heroContent ? (
+                <div
+                  ref={titleIntroRef}
+                  className="pointer-events-auto relative z-10 mx-auto flex w-full max-w-[min(720px,96vw)] flex-col items-center justify-center text-center"
+                >
+                  {heroContent}
+                </div>
+              ) : (
               <div
                 className={`scroll-expand-hero-copy home-hero-scene pointer-events-none relative z-10 ${
                   textBlend ? "mix-blend-difference" : ""
@@ -335,6 +366,7 @@ export default function ScrollExpandMedia({
                   ) : null}
                 </div>
               </div>
+              )}
             </div>
 
             <motion.section
@@ -344,7 +376,7 @@ export default function ScrollExpandMedia({
               )}
               initial={{ opacity: 0 }}
               animate={{ opacity: showContent ? 1 : 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: revealDuration, ease: [0.22, 1, 0.36, 1] }}
             >
               {children}
             </motion.section>
