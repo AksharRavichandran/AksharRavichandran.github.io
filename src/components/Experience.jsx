@@ -30,18 +30,8 @@ function buildJobs() {
   }));
 }
 
-export default function Experience({ embedded = false }) {
+export default function Experience() {
   const jobs = useMemo(() => buildJobs(), []);
-
-  const list = <JobListingExperience jobs={jobs} className="!max-w-none px-0" />;
-
-  if (embedded) {
-    return (
-      <div id="experience" className="work-tab-panel w-full min-w-0">
-        {list}
-      </div>
-    );
-  }
 
   return (
     <section
@@ -55,9 +45,8 @@ export default function Experience({ embedded = false }) {
           <span className="section-underline" aria-hidden />
         </header>
         <p className="muted mb-8 text-sm leading-relaxed md:text-[0.9375rem]">
-          Titles only in the list — click one for description, tags, and links.
         </p>
-        {list}
+        <JobListingExperience jobs={jobs} className="!max-w-none px-0" />
       </div>
     </section>
   );

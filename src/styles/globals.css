@@ -12,8 +12,6 @@
   --accent: #64748b; /* slate — UI chrome, no bronze */
   --accent-2: #cbd5e1; /* light slate */
   --shadow: 0 10px 30px rgba(0,0,0,0.45);
-  /* About: tab panel max-height = viewport minus sticky header stack (nav + clocks + gap) */
-  --about-header-reserve: max(9.25rem, calc(env(safe-area-inset-top, 0px) + 7.25rem));
 }
 
 html, body, #root {
@@ -619,27 +617,23 @@ body {
 
 /* Work / About (photo backgrounds): lift body copy & glass off dark overlays */
 .work-page,
-.about-page,
-.contact-page {
+.about-page {
   color: #f7f7f2;
   --photo-route-muted: #d6d0c5;
 }
 
 .work-page .muted,
-.about-page .muted,
-.contact-page .muted {
+.about-page .muted {
   color: var(--photo-route-muted);
 }
 
 .work-page .section-header h2,
-.about-page .section-header h2,
-.contact-page .section-header h2 {
+.about-page .section-header h2 {
   color: #fafaf8;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.work-page .glass,
-.contact-page .glass {
+.work-page .glass {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow:
@@ -669,303 +663,17 @@ body {
   color: #f0ebe3;
 }
 
-/* About — same horizontal rhythm as home hero */
+/* About — scroll-story layout (hero is full-bleed; no horizontal section padding) */
 .about.about--story {
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 0.75rem;
-}
-
-/* About: fill column below nav — no document scroll; only tab panel scrolls */
-.about-page.about-page--viewport {
-  min-height: 0;
-  max-height: calc(100dvh - var(--about-header-reserve));
-  max-height: calc(100svh - var(--about-header-reserve));
-}
-
-.about-page .section.home-hero-section.about.about--story.about-hero-fill {
-  display: flex !important;
-  flex-direction: column;
-  flex: 1 1 0%;
-  min-height: 0 !important;
-  max-height: 100%;
-  overflow: hidden;
-  align-content: unset;
-  padding-top: clamp(0.5rem, 1.5vw, 1rem);
-  padding-bottom: 0.75rem;
-}
-
-/* About scene: override home grid scene gap so title + card fit without page scroll */
-.about-page .home-hero-scene.about-hero-scene-wide {
-  width: min(960px, 97vw);
-  max-height: 100%;
-  min-height: 0;
-  gap: 0.75rem;
-}
-
-.about-page .home-hero-card.about-tabs-in-card {
-  min-height: 0;
-}
-
-/* Work — same viewport hero + tab card as About */
-.work.work--story {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0.75rem;
-}
-
-.work-page.work-page--viewport {
-  min-height: 0;
-  max-height: calc(100dvh - var(--about-header-reserve));
-  max-height: calc(100svh - var(--about-header-reserve));
-}
-
-.work-page .section.home-hero-section.work.work--story.work-hero-fill {
-  display: flex !important;
-  flex-direction: column;
-  flex: 1 1 0%;
-  min-height: 0 !important;
-  max-height: 100%;
-  overflow: hidden;
-  align-content: unset;
-  padding-top: clamp(0.5rem, 1.5vw, 1rem);
-  padding-bottom: 0.75rem;
-}
-
-.work-page .home-hero-scene.work-hero-scene-wide {
-  width: min(960px, 97vw);
-  max-height: 100%;
-  min-height: 0;
-  gap: 0.75rem;
-}
-
-.work-page .home-hero-card.work-tabs-in-card {
-  min-height: 0;
-}
-
-/* Contact — same viewport hero + glass card rhythm as Work / About */
-.contact.contact--story {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0.75rem;
-}
-
-.contact-page.contact-page--viewport {
-  min-height: 0;
-  max-height: calc(100dvh - var(--about-header-reserve));
-  max-height: calc(100svh - var(--about-header-reserve));
-}
-
-.contact-page .section.home-hero-section.contact.contact--story.contact-hero-fill {
-  display: flex !important;
-  flex-direction: column;
-  flex: 1 1 0%;
-  min-height: 0 !important;
-  max-height: 100%;
-  overflow: hidden;
-  align-content: unset;
-  padding-top: clamp(0.5rem, 1.5vw, 1rem);
-  padding-bottom: 0.75rem;
-}
-
-/* Contact: same max width rhythm as the home hero scene (not Work/About wide rail) */
-.contact-page .home-hero-scene.contact-hero-scene-narrow {
-  width: min(560px, 92vw);
-  max-width: 100%;
-  max-height: 100%;
-  min-height: 0;
-}
-
-.contact-page .home-hero-card.contact-content-card {
-  min-height: 0;
-}
-
-.contact-page .contact-dict-lede.dictionary-entry {
-  margin-bottom: 0.65rem;
-}
-
-.contact-page .contact-dict-nav {
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-.contact-page .contact-dict-link-list {
-  list-style-type: decimal;
-  list-style-position: outside;
-  padding-left: 1.35rem;
-}
-
-.contact-page .contact-dict-link-list li::marker {
-  font-weight: 700;
-  color: var(--accent-2);
-}
-
-.contact-page .contact-dict-link-list li {
-  margin-bottom: 0.65rem;
-}
-
-.contact-page .contact-dict-link {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.65rem 1rem;
-  width: 100%;
-  max-width: 100%;
-  padding: 0.5rem 0.35rem 0.5rem 0;
-  text-decoration: none;
-  color: rgba(255, 248, 240, 0.82);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.32);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  transition: color 0.22s ease, border-color 0.22s ease;
-}
-
-.contact-page .contact-dict-link:hover {
-  color: rgba(255, 252, 248, 0.94);
-  border-bottom-color: rgba(255, 255, 255, 0.12);
-}
-
-.contact-page .contact-dict-link:hover .contact-dict-link-body strong {
-  font-weight: 600;
-}
-
-.contact-page .contact-dict-link:hover .contact-dict-link-gloss,
-.contact-page .contact-dict-link:focus-visible .contact-dict-link-gloss {
-  font-weight: 600;
-  color: rgba(255, 245, 235, 0.72);
-}
-
-.contact-page .contact-dict-link:focus-visible .contact-dict-link-body strong {
-  font-weight: 600;
-}
-
-.contact-page .contact-dict-link:focus-visible {
-  outline: 1px solid rgba(255, 255, 255, 0.35);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-.contact-page .contact-dict-link-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.15rem;
-  min-width: 0;
-  flex: 1 1 12rem;
-  font-family: "Source Serif 4", ui-serif, Georgia, "Times New Roman", serif;
-  font-size: 0.98rem;
-  line-height: 1.42;
-}
-
-.contact-page .contact-dict-link-body strong {
-  color: rgba(255, 254, 251, 0.9);
-  font-weight: 500;
-}
-
-.contact-page .contact-dict-link-gloss {
-  display: block;
-  font-size: 0.86rem;
-  font-style: italic;
-  font-weight: 400;
-  color: rgba(255, 245, 235, 0.55);
-  transition: color 0.22s ease, font-weight 0.22s ease;
-}
-
-.contact-page .contact-dict-link-icon {
-  display: inline-flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  color: rgba(253, 253, 251, 0.7);
-  opacity: 0.78;
-  transform: scale(1);
-  transform-origin: center;
-  transition:
-    opacity 0.22s ease,
-    color 0.22s ease,
-    transform 0.22s ease;
-}
-
-.contact-page .contact-dict-link:hover .contact-dict-link-icon,
-.contact-page .contact-dict-link:focus-visible .contact-dict-link-icon {
-  color: rgba(253, 253, 251, 0.94);
-  opacity: 1;
-  transform: scale(1.08);
-}
-
-.contact-page .contact-dict-link-icon svg {
-  width: 22px;
-  height: 22px;
-  display: block;
+  padding-top: 0;
+  padding-bottom: clamp(48px, 8vw, 96px);
 }
 
 .about-story-chapter + .about-story-chapter {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 2.5rem;
-}
-
-/* About — dictionary story inside tabs */
-.about-page .about-story-dict.dictionary-entry {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 40px rgba(0, 0, 0, 0.25);
-}
-
-.about-tab-story-body {
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
-@media (min-width: 640px) {
-  .about-tab-story-body {
-    padding-left: 6px;
-    padding-right: 8px;
-  }
-}
-
-.about-inspirations-stack .music-section-title {
-  color: #fafaf8;
-}
-
-/* About + Work — tabs: plain text row (no divider); font matches each page’s body copy */
-.about-page .about-tabs-in-card [role="tablist"],
-.work-page .work-tabs-in-card [role="tablist"] {
-  gap: 0.35rem 1.25rem;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.about-page .about-tabs-in-card [role="tablist"] button,
-.work-page .work-tabs-in-card [role="tablist"] button {
-  text-shadow: none;
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  font-synthesis: none;
-}
-
-.about-page .about-tabs-in-card [role="tablist"] button {
-  /* Match navbar logo / site body (corner name) */
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, "Apple Color Emoji",
-    "Segoe UI Emoji";
-}
-
-.work-page .work-tabs-in-card [role="tablist"] button {
-  font-family: "Inter", "Noto Sans Tamil", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
-}
-
-.about-page .about-tabs-in-card [role="tablist"] button:hover,
-.work-page .work-tabs-in-card [role="tablist"] button:hover {
-  border: none !important;
-  background: transparent !important;
-}
-
-.about-page .about-tabs-in-card [role="tablist"] button[aria-selected="true"],
-.work-page .work-tabs-in-card [role="tablist"] button[aria-selected="true"] {
-  color: #ffffff;
-  font-weight: 700;
 }
 
 .music-section-title { margin: 0 0 16px; font-size: 20px; }
