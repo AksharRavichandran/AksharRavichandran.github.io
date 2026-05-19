@@ -6,14 +6,8 @@ const SPOTIFY_EMBED_URL =
   "https://open.spotify.com/embed/playlist/5gWOsJFdToIBRQFCBWh65d?utm_source=generator";
 const SPOTIFY_PLAYLIST_URL = "https://open.spotify.com/playlist/5gWOsJFdToIBRQFCBWh65d";
 
-/* Background — personal story */
-const IMG_BALTIMORE =
-  "https://images.unsplash.com/photo-1576489028103-0113f8e220cc?q=80&w=2000&auto=format&fit=crop";
-const IMG_HOUSEHOLD =
-  "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2000&auto=format&fit=crop";
-const IMG_GEORGIA_TECH =
-  "https://images.unsplash.com/photo-1541339907198-e08756dedfbf?q=80&w=2000&auto=format&fit=crop";
-
+const IMG_ORIGIN =
+  "https://images.unsplash.com/photo-1493552152660-f915ab47ae9d?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const IMG_THREAD =
   "https://images.unsplash.com/photo-1506543730435-e2c1d4553a84?q=80&w=2362&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const IMG_COMPASS =
@@ -64,84 +58,55 @@ function BackgroundTab() {
   return (
     <div className="about-tab-story-body text-left">
       <p className={`mb-8 text-sm font-medium uppercase tracking-[0.2em] text-white/80 ${legible}`}>
-        Where I started — city, household, and first campus.
+        A short atlas — three words, three threads. Replace with your own story.
       </p>
       <StoryWord
-        word="Baltimore"
-        pron={<span lang="en">/ˈbɔːl.tɪ.mɔːr/</span>}
-        pos="proper noun"
-        ety={
-          <>
-            Named for Cecil Calvert, 2nd Baron Baltimore; the title comes from the Calvert family estate{" "}
-            <em>Baltimore</em> in County Longford, Ireland.
-          </>
-        }
+        word="Origin"
+        pron={<span lang="en">/ˈɒr.ɪ.dʒɪn/</span>}
+        pos="noun"
+        ety={<>From Latin <em>origo</em>, “beginning, source.”</>}
         defs={[
           <>
-            A major city in Maryland on the Chesapeake Bay — port city, Inner Harbor, and the cultural anchor
-            of the Baltimore–Washington corridor.
+            The <strong>places</strong> and chapters that set your defaults — cities, schools, families, first
+            languages.
           </>,
           <>
-            I was born here, an <strong>only child</strong>. Growing up in Baltimore meant learning early how
-            to be self-reliant — and how much strength you can draw from a small, close family when life gets
-            heavy.
+            On a CV it is the answer to <em>why this path</em>; on a site it is the human frame around the
+            projects.
           </>,
         ]}
-        media={{ src: IMG_BALTIMORE, alt: "Baltimore skyline and harbor at dusk" }}
+        media={{ src: IMG_ORIGIN, alt: "Warm city skyline at dusk" }}
       />
       <StoryWord
-        word="household"
-        pron={<span lang="en">/ˈhaʊs.hoʊld/</span>}
+        word="Thread"
+        pron={<span lang="en">/θred/</span>}
         pos="noun"
-        ety={
-          <>
-            From Old English <em>hūs</em> “house” + <em>hold</em> “holding, possession” — the people and life
-            under one roof.
-          </>
-        }
+        ety={<>Old English <em>thrǣd</em>; cognate with “threat” only by sound — here, continuity.</>}
         defs={[
           <>
-            A house and its occupants regarded as a single unit; the daily economy of meals, bills, care, and
-            shared responsibility.
+            A <strong>through-line</strong> in work: datasets, systems, teams, or ideas you keep pulling forward.
           </>,
           <>
-            I grew up in a household that <strong>depended on each other</strong>. We each faced our own
-            challenges, but we worked through them together — that is where I first learned what teamwork
-            actually means.
-          </>,
-          <>
-            My dad&apos;s <strong>multiple sclerosis</strong> and my mom keeping the household running taught me
-            two things I still carry: <strong>determination</strong> in the long fight, and{" "}
-            <strong>patience</strong> when progress is slow — watching someone you love adapt, and watching
-            someone you love hold everything else steady.
+            Recruiters look for a thread that connects internships, research, and side projects into one craft.
           </>,
         ]}
-        media={{ src: IMG_HOUSEHOLD, alt: "Family gathered together at home" }}
+        media={{ src: IMG_THREAD, alt: "Abstract path and texture" }}
       />
       <StoryWord
-        word="Yellow Jacket"
-        pron={<span lang="en">/ˈjɛl.oʊ ˌdʒæk.ɪt/</span>}
+        word="Hearth"
+        pron={<span lang="en">/hɑːθ/</span>}
         pos="noun"
-        ety={
-          <>
-            The stinging wasp with yellow-and-black markings; at{" "}
-            <strong>Georgia Institute of Technology</strong>, the nickname for students, athletes, and the
-            campus community — gold and white, mascot <em>Buzz</em>.
-          </>
-        }
+        ety={<>Old English <em>heorð</em>, the fire at the center of a hall.</>}
         defs={[
           <>
-            Colloquially, a <strong>Georgia Tech student</strong> or member of its athletics programs; also the
-            informal name for the Institute&apos;s competitive spirit and engineering-heavy culture in Atlanta.
+            Where you <strong>recharge</strong> — people, rituals, or corners of the internet that keep you
+            curious.
           </>,
           <>
-            I attended <strong>Georgia Tech</strong> for my first year of college — my introduction to rigorous
-            coursework, late nights in collaboration, and a campus that expects you to build, test, and iterate.
-            Being among the Yellow Jackets shaped how I approach hard problems: precise, persistent, and willing
-            to ask for help when the problem outgrows one person.
+            Optional on a résumé, essential on a personal site: it signals sustainability, not just hustle.
           </>,
         ]}
-        media={{ src: IMG_GEORGIA_TECH, alt: "University campus walkways and buildings" }}
+        media={{ src: IMG_COMPASS, alt: "Mountain horizon at golden hour" }}
       />
     </div>
   );
