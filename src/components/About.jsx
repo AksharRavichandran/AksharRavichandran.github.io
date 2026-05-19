@@ -1,52 +1,40 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
-import TopMusic from "./TopMusic";
-import StravaStats from "./StravaStats";
-
-const SPOTIFY_EMBED_URL =
-  "https://open.spotify.com/embed/playlist/5gWOsJFdToIBRQFCBWh65d?utm_source=generator";
-
-const storyLegible =
-  "text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.95),0_2px_10px_rgba(0,0,0,0.8),0_4px_20px_rgba(0,0,0,0.5)]";
+import { AnimatedTabs } from "@/components/ui/animated-tabs";
+import AboutCyclingHero from "@/components/about/AboutCyclingHero";
+import { buildAboutStoryTabs } from "@/components/about/AboutStoryTabs";
 
 export default function About() {
+  const storyTabs = buildAboutStoryTabs();
+
   return (
-    <section id="about" className="about about--story">
-      <ScrollExpandMedia
-        hideMedia
-        embedded
-        animateTitleChars
-        title="About Me"
-        scrollHintArrow
+    <section
+      id="about"
+      className="section home-hero-section about about--story about-hero-fill flex min-h-0 flex-1 flex-col overflow-hidden"
+    >
+      <motion.div
+        className="home-hero-scene about-hero-scene-wide flex min-h-0 flex-1 flex-col overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <motion.div
-          className="about-music glass mx-auto mt-12 w-full max-w-[min(1100px,92vw)] px-6 py-8 md:px-8"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3 className={`music-section-title ${storyLegible}`}>The motivation behind my work</h3>
-          <div className="music-grid">
-            <TopMusic />
-            <div className="spotify-card glass">
-              <h4 className={storyLegible} style={{ marginBottom: 8 }}>
-                One of my favorite playlists I&apos;ve made:
-              </h4>
-              <iframe
-                title="Spotify Embed"
-                className="spotify-embed"
-                src={SPOTIFY_EMBED_URL}
-                width="100%"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <StravaStats />
-        </motion.div>
-      </ScrollExpandMedia>
+        <div className="home-hero-scene-intro shrink-0">
+          <AboutCyclingHero />
+        </div>
+
+        <div className="home-hero-card about-tabs-in-card flex min-h-0 w-full flex-1 flex-col overflow-hidden">
+          <AnimatedTabs
+            layoutIdPrefix="about"
+            integratedCard
+            large
+            fillHeight
+            defaultTab="background"
+            tabs={storyTabs}
+            className="w-full max-w-none min-h-0 flex-1 gap-4"
+            panelClassName="!px-0 !pb-1 sm:!px-1 md:!pt-3"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }
