@@ -65,7 +65,7 @@ export default function JobListingExperience({ jobs, className, onJobClick }) {
             <motion.div
               ref={modalRef}
               layoutId={`exp-item-${activeItem.id}`}
-              className="pointer-events-auto flex max-h-[min(640px,85vh)] w-[min(520px,92vw)] cursor-default flex-col gap-4 overflow-y-auto rounded-2xl border border-white/[0.16] bg-[rgba(34,36,46,0.97)] p-6 shadow-2xl backdrop-blur-xl"
+              className="pointer-events-auto flex max-h-[min(640px,85vh)] w-[min(520px,92vw)] cursor-default flex-col gap-4 overflow-y-auto rounded-2xl border border-black/12 bg-[rgba(248,245,238,0.98)] p-6 shadow-[0_24px_60px_rgba(40,30,20,0.28)] backdrop-blur-xl"
               onClick={(e) => e.stopPropagation()}
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -79,19 +79,19 @@ export default function JobListingExperience({ jobs, className, onJobClick }) {
                 <div className="flex min-w-0 flex-1 flex-col gap-0.5">
                   <motion.div
                     layoutId={`exp-company-${activeItem.id}`}
-                    className="text-[1.02rem] font-semibold leading-snug tracking-tight text-[#fafaf8] md:text-[1.08rem]"
+                    className="text-[1.02rem] font-semibold leading-snug tracking-tight text-[#14110e] md:text-[1.08rem]"
                   >
                     {activeItem.company}
                   </motion.div>
                   <motion.p
                     layoutId={`exp-title-${activeItem.id}`}
-                    className="text-[0.875rem] leading-snug text-zinc-200"
+                    className="text-[0.875rem] leading-snug text-[#3f3a32]"
                   >
                     {activeItem.title} / {activeItem.period}
                   </motion.p>
                   <motion.div
                     layoutId={`exp-extras-${activeItem.id}`}
-                    className="text-[0.75rem] font-medium tracking-wide text-zinc-400"
+                    className="text-[0.75rem] font-medium tracking-wide text-[#6b6357]"
                   >
                     {extrasLine(activeItem)}
                   </motion.div>
@@ -103,9 +103,9 @@ export default function JobListingExperience({ jobs, className, onJobClick }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0, transition: { duration: 0.06 } }}
                 transition={{ delay: 0.05 }}
-                className="text-[0.9375rem] leading-[1.65] text-zinc-100"
+                className="text-[0.9375rem] leading-[1.65] text-[#2a2620]"
               >
-                <ul className="m-0 list-disc space-y-2.5 pl-5 marker:text-zinc-400">
+                <ul className="m-0 list-disc space-y-2.5 pl-5 marker:text-[#8a3d3d]">
                   {activeItem.highlights.map((line, i) => (
                     <li key={i}>{line}</li>
                   ))}
@@ -113,9 +113,9 @@ export default function JobListingExperience({ jobs, className, onJobClick }) {
               </motion.div>
 
               {activeItem.github ? (
-                <div className="flex border-t border-white/15 pt-3">
+                <div className="flex border-t border-black/12 pt-3">
                   <a
-                    className="inline-flex items-center gap-2 rounded-lg border border-white/22 bg-white/[0.08] px-3 py-2 text-sm font-medium text-zinc-100 transition-colors hover:border-white/40 hover:bg-white/[0.12] hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-lg border border-black/15 bg-black/[0.04] px-3 py-2 text-sm font-medium text-[#2a2620] transition-colors hover:border-[#8a3d3d] hover:bg-black/[0.07] hover:text-[#8a3d3d]"
                     href={activeItem.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -138,7 +138,7 @@ export default function JobListingExperience({ jobs, className, onJobClick }) {
               tabIndex={0}
               key={role.id}
               layoutId={`exp-item-${role.id}`}
-              className="group flex w-full cursor-pointer flex-row items-center gap-4 rounded-xl border border-white/[0.14] bg-[rgba(34,36,46,0.88)] p-3.5 text-left shadow-lg shadow-black/30 backdrop-blur-md transition-[border-color,background-color] duration-200 hover:border-white/30 hover:bg-[rgba(44,46,58,0.92)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[rgba(5,5,5,0.5)] md:gap-5 md:p-4"
+              className="group flex w-full cursor-pointer flex-row items-center gap-4 rounded-[3px] border border-black/12 bg-[rgba(255,255,255,0.5)] p-3.5 text-left shadow-[0_8px_22px_rgba(40,30,20,0.1)] transition-[border-color,background-color] duration-200 hover:border-[#8a3d3d]/40 hover:bg-[rgba(255,255,255,0.78)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8a3d3d]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f6f2e7] md:gap-5 md:p-4"
               aria-label={`Open details: ${role.company}`}
               onClick={() => {
                 setActiveItem(role);
@@ -158,19 +158,19 @@ export default function JobListingExperience({ jobs, className, onJobClick }) {
               <div className="flex min-w-0 flex-1 flex-col items-start gap-0.5">
                 <motion.span
                   layoutId={`exp-company-${role.id}`}
-                  className="text-[0.98rem] font-semibold leading-snug tracking-tight text-[#fafaf8] md:text-[1.02rem]"
+                  className="text-[0.98rem] font-semibold leading-snug tracking-tight text-[#14110e] md:text-[1.02rem]"
                 >
                   {role.company}
                 </motion.span>
                 <motion.span
                   layoutId={`exp-title-${role.id}`}
-                  className="text-[0.8125rem] leading-snug text-zinc-200"
+                  className="text-[0.8125rem] leading-snug text-[#3f3a32]"
                 >
                   {role.title} / {role.period}
                 </motion.span>
                 <motion.span
                   layoutId={`exp-extras-${role.id}`}
-                  className="text-[0.75rem] font-medium tracking-wide text-zinc-400"
+                  className="text-[0.75rem] font-medium tracking-wide text-[#6b6357]"
                 >
                   {extrasLine(role)}
                 </motion.span>

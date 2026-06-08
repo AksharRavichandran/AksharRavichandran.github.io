@@ -1,196 +1,350 @@
 import React from "react";
 import TopMusic from "@/components/TopMusic";
 import StravaStats from "@/components/StravaStats";
+import { experience } from "@/data/experience";
+import {
+  AboutDictionaryEntry,
+  AboutHighlight,
+  AboutNarrativeTitle,
+  AboutProse,
+  AboutProseP,
+  AboutStoryBeat,
+  AboutTerm,
+} from "@/components/about/AboutNarrative";
 
 const SPOTIFY_EMBED_URL =
   "https://open.spotify.com/embed/playlist/5gWOsJFdToIBRQFCBWh65d?utm_source=generator";
 const SPOTIFY_PLAYLIST_URL = "https://open.spotify.com/playlist/5gWOsJFdToIBRQFCBWh65d";
 
-const IMG_ORIGIN =
-  "https://images.unsplash.com/photo-1493552152660-f915ab47ae9d?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-const IMG_THREAD =
-  "https://images.unsplash.com/photo-1506543730435-e2c1d4553a84?q=80&w=2362&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-const IMG_COMPASS =
-  "https://images.unsplash.com/photo-1522428938647-2baa7c899f2f?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const IMG_BALTIMORE =
+  "https://images.unsplash.com/photo-1576489028103-0113f8e220cc?q=80&w=1200&auto=format&fit=crop";
 
-const IMG_DESTINY =
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop";
-const IMG_POLYMATH =
-  "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2000&auto=format&fit=crop";
-const IMG_FAMILY =
-  "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2000&auto=format&fit=crop";
+const legible = "text-[#1f1c18]";
 
-const legible = "text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.95),0_2px_10px_rgba(0,0,0,0.8),0_4px_20px_rgba(0,0,0,0.5)]";
-
-function StoryWord({ word, pron, pos, ety, quote, defs, media }) {
-  return (
-    <div className="about-dict-with-media mb-10 grid gap-6 last:mb-0 lg:mb-12 lg:grid-cols-[minmax(0,1fr)_minmax(200px,300px)] lg:items-start lg:gap-8">
-      <article className="dictionary-entry about-story-dict m-0" aria-label={`Dictionary-style entry: ${word}`}>
-        <div className="dictionary-headword">
-          <span className="dictionary-word">{word}</span>
-          {pron ? <span className="dictionary-pron">{pron}</span> : null}
-          <span className="dictionary-pos">{pos}</span>
-        </div>
-        {ety ? <p className="dictionary-ety">{ety}</p> : null}
-        {quote ? (
-          <blockquote className="about-story-quote m-0 mb-4 border-l-2 border-white/25 pl-4 text-[1.02rem] italic leading-relaxed text-white/90">
-            {quote}
-          </blockquote>
-        ) : null}
-        <ol className="dictionary-definitions">
-          {defs.map((d, i) => (
-            <li key={i}>{d}</li>
-          ))}
-        </ol>
-      </article>
-      {media ? (
-        <img
-          src={media.src}
-          alt={media.alt}
-          className="h-52 w-full shrink-0 rounded-xl border border-white/10 object-cover shadow-[0_12px_40px_rgba(0,0,0,0.35)] lg:h-auto lg:max-h-[min(52vh,420px)] lg:min-h-[200px]"
-        />
-      ) : null}
-    </div>
-  );
+function findExp(id) {
+  return experience.find((e) => e.id === id);
 }
 
 function BackgroundTab() {
+  const gtVip = findExp("gt-vip-ra");
+  const amazon = findExp("amazon-sde-intern");
+  const sparksoft = findExp("sparksoft-intern");
+  const scheller = findExp("scheller-ra");
+
   return (
-    <div className="about-tab-story-body text-left">
-      <p className={`mb-8 text-sm font-medium uppercase tracking-[0.2em] text-white/80 ${legible}`}>
-        A short atlas — three words, three threads. Replace with your own story.
-      </p>
-      <StoryWord
-        word="Origin"
-        pron={<span lang="en">/ˈɒr.ɪ.dʒɪn/</span>}
-        pos="noun"
-        ety={<>From Latin <em>origo</em>, “beginning, source.”</>}
-        defs={[
-          <>
-            The <strong>places</strong> and chapters that set your defaults — cities, schools, families, first
-            languages.
-          </>,
-          <>
-            On a CV it is the answer to <em>why this path</em>; on a site it is the human frame around the
-            projects.
-          </>,
-        ]}
-        media={{ src: IMG_ORIGIN, alt: "Warm city skyline at dusk" }}
-      />
-      <StoryWord
-        word="Thread"
-        pron={<span lang="en">/θred/</span>}
-        pos="noun"
-        ety={<>Old English <em>thrǣd</em>; cognate with “threat” only by sound — here, continuity.</>}
-        defs={[
-          <>
-            A <strong>through-line</strong> in work: datasets, systems, teams, or ideas you keep pulling forward.
-          </>,
-          <>
-            Recruiters look for a thread that connects internships, research, and side projects into one craft.
-          </>,
-        ]}
-        media={{ src: IMG_THREAD, alt: "Abstract path and texture" }}
-      />
-      <StoryWord
-        word="Hearth"
-        pron={<span lang="en">/hɑːθ/</span>}
-        pos="noun"
-        ety={<>Old English <em>heorð</em>, the fire at the center of a hall.</>}
-        defs={[
-          <>
-            Where you <strong>recharge</strong> — people, rituals, or corners of the internet that keep you
-            curious.
-          </>,
-          <>
-            Optional on a résumé, essential on a personal site: it signals sustainability, not just hustle.
-          </>,
-        ]}
-        media={{ src: IMG_COMPASS, alt: "Mountain horizon at golden hour" }}
-      />
+    <div className="about-tab-story-body about-narrative text-left">
+      <AboutNarrativeTitle>How I got here</AboutNarrativeTitle>
+
+      <AboutProse>
+        <AboutProseP>
+          This is not a résumé in story form. It is the through-line I notice when I look back: small choices
+          at home, on the track, and in the lab that quietly became habits—and those habits are most of who I am
+          now.
+        </AboutProseP>
+      </AboutProse>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            I grew up in <AboutTerm>Baltimore</AboutTerm> as an only child. Without siblings to lean on, I
+            learned early to figure things out myself and to take responsibility when something needed doing.
+            That independence still shows up when I am stuck on a problem: I will sit with it longer than I
+            should before asking for help, for better and worse.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="Baltimore"
+          pron={<span lang="en">/ˈbɔːl.tɪ.mɔːr/</span>}
+          pos="proper noun"
+          ety={
+            <>
+              Named for Cecil Calvert, 2nd Baron Baltimore; from the Calvert estate{" "}
+              <em>Baltimore</em> in County Longford, Ireland.
+            </>
+          }
+          defs={[
+            <>
+              Where I was born—the city in the background when I learned, as an only child, to be self-reliant
+              before I had language for it.
+            </>,
+          ]}
+          media={{ src: IMG_BALTIMORE, alt: "Baltimore skyline" }}
+        />
+      </AboutStoryBeat>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            When my dad was diagnosed with <AboutTerm>multiple sclerosis</AboutTerm>, I became an extra pair of
+            hands at home—schedules, errands, whatever steadied the day. I could not fix the disease, but I
+            could show up. That is still the filter I use for what is worth building: does it actually help
+            someone, or does it only look good in a demo?
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="multiple sclerosis"
+          pron={<span lang="en">/ˈmʌl.tɪ.pl əl skləˈroʊ.sɪs/</span>}
+          pos="noun"
+          ety={
+            <>
+              Latin <em>multiplex</em> “many” + <em>sclerosis</em> “hardening”—an autoimmune disease affecting
+              the central nervous system.
+            </>
+          }
+          defs={[
+            <>
+              A condition in which the immune system attacks the protective sheath of nerves, often causing
+              fatigue, mobility challenges, and unpredictable symptoms over time.
+            </>,
+            <>
+              In my story, it is the reason I stopped treating engineering as performance and started treating
+              it as care—including the tremor wearable I built for my dad.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            My mom works hard all day and carries a quiet <AboutTerm>determination</AboutTerm> I still try to
+            match. Watching her hold the household together while my dad faced MS taught me patience and
+            teamwork: progress is often slow, shared, and unglamorous. I am less interested in hero moments
+            than in showing up again tomorrow.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="determination"
+          pron={<span lang="en">/dɪˌtɜː.mɪˈneɪ.ʃən/</span>}
+          pos="noun"
+          ety={<>From Latin <em>determinare</em>, “to limit, fix, decide.”</>}
+          defs={[
+            <>
+              Firmness of purpose; continuing toward a goal despite obstacles.
+            </>,
+            <>
+              The standard I inherited at home—the reason I do not quit when a project or season gets tedious.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            At <AboutTerm>Centennial High School</AboutTerm> in Ellicott City I ran track and raced at meets
+            like New Balance Nationals and the Penn Relays. Track did not give me a love of suffering—it gave me
+            a respect for repetition. The person who shows up to practice in bad weather is the same person who
+            debugs firmware at midnight. I did not know that then; I know it now.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="Centennial High School"
+          pron={<span lang="en">/senˈten.i.əl/</span>}
+          pos="proper noun"
+          ety={<>A public high school in Howard County, Maryland; named for the U.S. bicentennial era.</>}
+          defs={[
+            <>
+              Where discipline became a habit before I called it engineering—through years of training, travel,
+              and competition that rewarded consistency over talent on a single day.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            At <AboutTerm>Georgia Tech</AboutTerm> I chose computer science because I loved{" "}
+            <AboutTerm>puzzle-solving</AboutTerm>, not because I already loved writing code. The major stuck
+            when I realized research, internships, and side projects were the same instinct: take something
+            messy, break it apart, test what you think you know, and revise when the pieces do not fit. That is
+            still how I approach hard problems—technical or personal.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="puzzle-solving"
+          pron={<span lang="en">/ˈpʌz.əl ˌsɒl.vɪŋ/</span>}
+          pos="noun"
+          ety={<>The habit of decomposing complexity—cousin to debugging, proof, and design.</>}
+          defs={[
+            <>
+              Splitting an unclear problem into tractable parts, testing hypotheses, and revising when the
+              answer does not hold.
+            </>,
+            <>
+              The reason CS felt like home before I thought of myself as a programmer—and why I still reach
+              for building when words are not enough.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            My <AboutTerm>VIP research</AboutTerm> at Tech bent my path toward{" "}
+            <AboutTerm>academia</AboutTerm>. Working on monetary-policy sentiment, LLM benchmarks, and financial
+            text with faculty and peers taught me to care about questions that outlast a sprint—not because
+            academia is glamorous, but because some problems deserve years of attention. I still carry that
+            patience into industry work: I would rather understand a system than ship the fastest patch.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="academia"
+          pron={<span lang="en">/ˌæk.əˈdiː.mi.ə/</span>}
+          pos="noun"
+          ety={<>From Greek <em>Akademeia</em>, the grove where Plato taught.</>}
+          defs={[
+            <>
+              The world of universities and research—questions pursued for years, not quarters.
+            </>,
+            <>
+              Where I learned to think like a researcher: Georgia Tech&apos;s Vertically Integrated Project
+              program, and the stretch that made research feel like a real path, not a line on a résumé.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
+
+      <AboutProse>
+        <AboutProseP>
+          The project I am proudest of never made it onto a job description. After years of watching my dad
+          live with MS, I built a wrist-mounted wearable to damp tremor with haptic feedback—embedded firmware,
+          sensing, enclosures, and tests at home. It is the clearest example of who I am trying to be: someone
+          who turns care into something you can hold.
+        </AboutProseP>
+        <AboutProseP>
+          The roles below are the public chapters of the same story—each one changed what I reach for next.
+        </AboutProseP>
+      </AboutProse>
+
+      <AboutHighlight
+        name="MS Tremor Wearable · Vibrotactile Feedback Device"
+        logoFallback="MS"
+        tags={["C++", "Arduino ESP32", "I2C", "PWM", "Fusion 360", "Atlanta"]}
+      >
+        Built for my dad: ESP32-S3 firmware, GY-521 over I2C, real-time tremor detection, PWM haptics under
+        5ms latency, Fusion 360 enclosures—about 22% lower mean postural sway across five test cases. The work
+        that best explains why I build.
+      </AboutHighlight>
+
+      {gtVip ? (
+        <AboutHighlight
+          name="Georgia Tech · Vertically Integrated Project"
+          logo={gtVip.logo}
+          logoAlt=""
+          tags={["Research", "LLMs", "Atlanta"]}
+        >
+          Where home taught me to show up and track taught me to repeat—VIP taught me to ask questions that
+          survive a semester. I started taking research seriously as a life path, not a credential.
+        </AboutHighlight>
+      ) : null}
+
+      {amazon ? (
+        <AboutHighlight
+          name={`${amazon.company} · ${amazon.role}`}
+          logo={amazon.logo}
+          logoAlt=""
+          tags={["React", "Harmony", "Internship", "Seattle"]}
+        >
+          Proof I could ship under real constraints: React and Harmony on an internal portal, production services
+          for certification workflows—useful software at scale, not just prototypes.
+        </AboutHighlight>
+      ) : null}
+
+      {sparksoft ? (
+        <AboutHighlight
+          name={`${sparksoft.company} · ${sparksoft.role}`}
+          logo={sparksoft.logo}
+          logoAlt=""
+          tags={["Angular", "CMS", "Medicare", "Remote"]}
+        >
+          Medicare-facing work taught me that bugs have beneficiaries—performance and clarity matter when the
+          user is not in the room with you.
+        </AboutHighlight>
+      ) : null}
+
+      {scheller ? (
+        <AboutHighlight
+          name={scheller.company}
+          logo={scheller.logo}
+          logoAlt=""
+          tags={["LLMs", "Polymarket", "Research"]}
+        >
+          Back to long-horizon questions: LLM benchmarks on discourse and prediction markets—how narrative and
+          price move together, and when a model is only echoing the crowd.
+        </AboutHighlight>
+      ) : null}
     </div>
   );
 }
 
 function InspirationsTab() {
   return (
-    <div className="about-tab-story-body about-inspirations-stack text-left">
-      <StoryWord
-        word="Spotify"
-        pron={<span lang="en">/ˈspɒt.ɪ.faɪ/</span>}
-        pos="proper noun"
-        ety={
-          <>
-            Streaming audio — here, a public{" "}
-            <a
-              className="underline decoration-white/40 underline-offset-2 transition-colors hover:text-white"
-              href={SPOTIFY_PLAYLIST_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              playlist
-            </a>{" "}
-            you curate.
-          </>
-        }
-        defs={[
-          <>
-            A <strong>signal of taste</strong>: what you loop while coding, writing, or commuting says something
-            recruiters rarely get from a PDF.
-          </>,
-          <>
-            Keep it genuine — a tight playlist beats a generic “top 50” every time.
-          </>,
-        ]}
-        media={{ src: IMG_THREAD, alt: "Listening and headphones mood" }}
-      />
+    <div className="about-tab-story-body about-narrative about-inspirations-stack text-left">
+      <AboutNarrativeTitle>What keeps me going</AboutNarrativeTitle>
 
-      <StoryWord
-        word="Strava"
-        pron={<span lang="en">/ˈstrɑː.və/</span>}
-        pos="proper noun"
-        ety={
-          <>
-            Activity tracking — link your public profile in{" "}
-            <a className="underline decoration-white/40 underline-offset-2 hover:text-white" href="/contact">
-              Contact
-            </a>{" "}
-            if you want it discoverable elsewhere too.
-          </>
-        }
-        defs={[
-          <>
-            Proof of <strong>motion under load</strong>: consistency, discipline, and a life outside the desk —
-            useful color for collaborative teams.
-          </>,
-          <>
-            Share only what you are comfortable making public; the widget below respects your site styling.
-          </>,
-        ]}
-        media={{ src: IMG_COMPASS, alt: "Outdoor trail and movement" }}
-      />
+      <AboutProse>
+        <AboutProseP>
+          The habits from home and track did not disappear when I started working—they just moved. Off the
+          clock I still need rhythm and recovery, or I burn out on the things I care about most.
+        </AboutProseP>
+      </AboutProse>
 
-      <StoryWord
-        word="Charts"
-        pron={<span lang="en">/tʃɑːts/</span>}
-        pos="noun, plural"
-        ety={<>From Greek <em>khártēs</em>, “leaf of papyrus” — today, the songs you actually replay.</>}
-        defs={[
-          <>
-            Snapshot of <strong>recent listening</strong> from your saved snapshot data; swap copy when you wire
-            live APIs.
-          </>,
-        ]}
-        media={null}
-      />
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            <AboutTerm>Music</AboutTerm> is how I decompress and reset my attention; it is less about genre than
+            about giving my brain something that is not a problem to solve.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="music"
+          pron={<span lang="en">/ˈmjuː.zɪk/</span>}
+          pos="noun"
+          ety={<>From Greek <em>mousikē</em>, “art of the Muses.”</>}
+          defs={[
+            <>
+              What I loop while coding or unwinding—a signal of taste more honest than a skills list. One
+              playlist I keep coming back to is below.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            Strava is how I track <AboutTerm>movement</AboutTerm> outside the desk—proof I try to earn the screen
+            time.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="movement"
+          pron={<span lang="en">/ˈmuːv.mənt/</span>}
+          pos="noun"
+          defs={[
+            <>
+              Running, training, and staying active—the habit carried forward from track into everyday life.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
 
       <div className={`about-music glass mt-2 w-full px-4 py-6 md:px-6 ${legible}`}>
-        <h3 className="music-section-title">The motivation behind my work</h3>
         <div className="music-grid">
           <TopMusic />
           <div className="spotify-card glass">
             <h4 className={legible} style={{ marginBottom: 8 }}>
-              One of my favorite playlists I&apos;ve made:
+              <a
+                className="text-[#14110e] underline decoration-[#14110e]/40 underline-offset-2 hover:text-[#8a3d3d]"
+                href={SPOTIFY_PLAYLIST_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open playlist on Spotify
+              </a>
             </h4>
             <iframe
               title="Spotify Embed"
@@ -210,97 +364,111 @@ function InspirationsTab() {
 
 function BeliefsTab() {
   return (
-    <div className="about-tab-story-body text-left">
-      <p className={`mb-8 text-sm font-medium uppercase tracking-[0.2em] text-white/80 ${legible}`}>
-        Three words I return to — each with a line I believe and a dictionary sense.
-      </p>
-      <StoryWord
-        word="destiny"
-        pron={<span lang="en">/ˈdɛs.tɪ.ni/</span>}
-        pos="noun"
-        ety={
-          <>
-            Middle English <em>destinee</em>, from Old French <em>destinée</em>; ultimately Latin{" "}
-            <em>destinare</em>, “to make firm, establish.”
-          </>
-        }
-        quote={
-          <>
-            To realize one&apos;s destiny is a person&apos;s only real obligation; and when you want something,
-            all the universe conspires in helping you to achieve it.
-            <footer className="mt-2 block text-[0.85rem] not-italic text-white/55">
-              — Paulo Coelho, <cite>The Alchemist</cite>
-            </footer>
-          </>
-        }
-        defs={[
-          <>
-            The <strong>course of events</strong> regarded as predetermined or inevitable; what is meant to
-            happen to a person or thing.
-          </>,
-          <>
-            A person&apos;s <strong>predetermined lot</strong> or future; the hidden power believed to shape
-            outcomes — and the choice to move toward it rather than away.
-          </>,
-        ]}
-        media={{ src: IMG_DESTINY, alt: "Mountain path stretching toward the horizon" }}
-      />
-      <StoryWord
-        word="polymath"
-        pron={<span lang="en">/ˈpɒl.i.mæθ/</span>}
-        pos="noun"
-        ety={
-          <>
-            From Greek <em>polymathēs</em> (πολυμαθής): <em>poly-</em> “many” + <em>manthanein</em> “to learn.”
-          </>
-        }
-        quote={
-          <>
-            A true polymath is not one who masters many fields, but one who listens so deeply to the world that
-            every discipline begins to whisper the same truth in a different tongue.
-          </>
-        }
-        defs={[
-          <>
-            A person of <strong>wide-ranging knowledge</strong> or learning across several disciplines.
-          </>,
-          <>
-            Often distinguished from mere accumulation: breadth held together by a single habit of{" "}
-            <strong>attention</strong> — reading widely so patterns repeat across fields.
-          </>,
-        ]}
-        media={{ src: IMG_POLYMATH, alt: "Library shelves filled with books" }}
-      />
-      <StoryWord
-        word="family"
-        pron={<span lang="en">/ˈfæm.ɪ.li/</span>}
-        pos="noun"
-        ety={
-          <>
-            Latin <em>familia</em>, “household, servants of a house”; from <em>famulus</em>, “servant” — later,
-            the circle bound by kinship and shared roof.
-          </>
-        }
-        quote={
-          <>
-            No other success can compensate for failure in the home.
-            <footer className="mt-2 block text-[0.85rem] not-italic text-white/55">
-              — often attributed to David O. McKay
-            </footer>
-          </>
-        }
-        defs={[
-          <>
-            A group of people related by blood, marriage, or adoption; a <strong>household</strong> as a unit of
-            care and obligation.
-          </>,
-          <>
-            The <strong>domestic sphere</strong> where character is first formed — success elsewhere cannot
-            redeem neglect here.
-          </>,
-        ]}
-        media={{ src: IMG_FAMILY, alt: "Warm light in a home interior" }}
-      />
+    <div className="about-tab-story-body about-narrative text-left">
+      <AboutNarrativeTitle>What I believe</AboutNarrativeTitle>
+
+      <AboutProse>
+        <AboutProseP>
+          Beliefs are not decorations on a page—they are the decisions I already made at home and on the track,
+          stated plainly. Three ideas I return to when I am choosing what to prioritize next.
+        </AboutProseP>
+      </AboutProse>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            I think realizing your <AboutTerm>destiny</AboutTerm> is a real obligation—not passive waiting, but
+            choosing to move toward what you are meant to build.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="destiny"
+          pron={<span lang="en">/ˈdɛs.tɪ.ni/</span>}
+          pos="noun"
+          ety={
+            <>
+              Middle English <em>destinee</em>; Latin <em>destinare</em>, “to make firm, establish.”
+            </>
+          }
+          quote={
+            <>
+              To realize one&apos;s destiny is a person&apos;s only real obligation; and when you want something,
+              all the universe conspires in helping you to achieve it.
+              <footer className="mt-2 block text-[0.85rem] not-italic text-[#1f1c18]/55">
+                — Paulo Coelho, <cite>The Alchemist</cite>
+              </footer>
+            </>
+          }
+          defs={[
+            <>
+              The course of events regarded as meant to happen—and the choice to move toward it rather than
+              away.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            I do not think being a <AboutTerm>polymath</AboutTerm> means collecting fields for a résumé. It means
+            listening deeply enough that different disciplines start echoing the same truth.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="polymath"
+          pron={<span lang="en">/ˈpɒl.i.mæθ/</span>}
+          pos="noun"
+          ety={
+            <>
+              Greek <em>polymathēs</em> (πολυμαθής): <em>poly-</em> “many” + <em>manthanein</em> “to learn.”
+            </>
+          }
+          quote={
+            <>
+              A true polymath is not one who masters many fields, but one who listens so deeply to the world that
+              every discipline begins to whisper the same truth in a different tongue.
+            </>
+          }
+          defs={[
+            <>
+              Wide-ranging learning held together by attention—not mere accumulation of credentials.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
+
+      <AboutStoryBeat>
+        <AboutProse>
+          <AboutProseP>
+            Everything else has to fit around <AboutTerm>family</AboutTerm>—the people who raised you and the
+            home you come back to.
+          </AboutProseP>
+        </AboutProse>
+        <AboutDictionaryEntry
+          word="family"
+          pron={<span lang="en">/ˈfæm.ɪ.li/</span>}
+          pos="noun"
+          ety={
+            <>
+              Latin <em>familia</em>, “household”; the circle bound by kinship and shared roof.
+            </>
+          }
+          quote={
+            <>
+              No other success can compensate for failure in the home.
+              <footer className="mt-2 block text-[0.85rem] not-italic text-[#1f1c18]/55">
+                — often attributed to David O. McKay
+              </footer>
+            </>
+          }
+          defs={[
+            <>
+              The domestic sphere where character is first formed—success elsewhere cannot redeem neglect here.
+            </>,
+          ]}
+        />
+      </AboutStoryBeat>
     </div>
   );
 }

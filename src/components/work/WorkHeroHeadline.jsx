@@ -73,7 +73,7 @@ export default function WorkHeroHeadline() {
       className="home-hero-headline home-hero-headline--name-only m-0 flex flex-wrap items-baseline justify-center gap-x-[0.12em] !text-center"
       aria-label="My Work headline with cycling word Work"
     >
-      <span className="inline text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.55),0_0_40px_rgba(0,0,0,0.3)]">
+      <span className="inline text-[#14110e]">
         My{" "}
       </span>
       <span lang={WORK_LANG[wordIndex]} className="home-hero-name-wrap inline text-left">

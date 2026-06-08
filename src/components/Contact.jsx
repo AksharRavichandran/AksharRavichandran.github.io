@@ -77,24 +77,24 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="section home-hero-section contact contact--story contact-hero-fill flex min-h-0 flex-1 flex-col overflow-hidden"
+      className="section home-hero-section contact contact--story flex flex-col"
     >
       <motion.div
-        className="home-hero-scene contact-hero-scene-narrow flex min-h-0 flex-1 flex-col overflow-hidden"
+        className="home-hero-scene contact-hero-scene-narrow flex flex-col"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="home-hero-scene-intro shrink-0">
+        <div className="home-hero-scene-intro">
           <AboutCyclingHero
             prefix="Contact "
             ariaLabel="Contact Me headline with cycling word Me"
           />
         </div>
 
-        <div className="home-hero-card contact-content-card flex min-h-0 w-full flex-1 flex-col overflow-hidden">
+        <div className="home-hero-card contact-content-card w-full flex flex-col">
           <article
-            className="dictionary-entry home-hero-definition contact-dict-lede shrink-0"
+            className="dictionary-entry home-hero-definition contact-dict-lede"
             aria-label="How to reach out"
           >
             <div className="dictionary-headword">
@@ -110,7 +110,7 @@ export default function Contact() {
           </article>
 
           <nav
-            className="contact-dict-nav min-h-0 flex-1 overflow-y-auto pr-1"
+            className="contact-dict-nav"
             aria-label="Social and contact links"
           >
             <ol className="dictionary-definitions contact-dict-link-list m-0">

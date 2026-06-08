@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { NavLink, Link } from "react-router-dom";
+import { useHomeIntro } from "@/context/HomeIntroContext";
 
 const AIRPORT_CLOCKS = [
   { code: "MAA", timeZone: "Asia/Kolkata", name: "Chennai (MAA)" },
   { code: "BWI", timeZone: "America/New_York", name: "Baltimore–Washington (BWI)" },
-  { code: "ATL", timeZone: "America/New_York", name: "Atlanta (ATL)" },
 ];
 
 function formatLocalTime(date, timeZone) {
@@ -44,8 +45,29 @@ function navClass({ isActive }) {
 }
 
 export default function Navbar() {
+  const { stage, isHome } = useHomeIntro();
+  const showHeader =
+    !isHome ||
+    stage === "background" ||
+    stage === "greeting" ||
+    stage === "definition" ||
+    stage === "ready";
+
   return (
-    <nav className="navbar navbar--top">
+    <motion.nav
+      className="navbar navbar--top"
+      initial={false}
+      animate={
+        showHeader
+          ? { opacity: 1, y: 0 }
+          : { opacity: 0, y: -14 }
+      }
+      transition={{
+        duration: isHome ? 0.9 : 0,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      style={{ pointerEvents: showHeader ? "auto" : "none" }}
+    >
       <div className="nav-inner">
         <div className="nav-top">
           <h1 className="logo">
@@ -76,6 +98,6 @@ export default function Navbar() {
         </div>
         <AirportClocks />
       </div>
-    </nav>
+    </motion.nav>
   );
 }

@@ -36,7 +36,7 @@ function ChevronRight({ className }) {
 }
 
 function linkButtonClass() {
-  return "inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/[0.08] px-3 py-2 text-sm font-medium text-zinc-100 transition-colors hover:border-white/38 hover:bg-white/[0.14] hover:text-white";
+  return "inline-flex items-center gap-2 rounded-lg border border-black/15 bg-black/[0.04] px-3 py-2 text-sm font-medium text-[#2a2620] transition-colors hover:border-[#8a3d3d] hover:bg-black/[0.07] hover:text-[#8a3d3d]";
 }
 
 /** Expandable project rows (job-listing style) with calmer contrast for titles and body. */
@@ -80,7 +80,7 @@ export default function JobListingProjects({ jobs, className, onProjectClick }) 
             <motion.div
               ref={modalRef}
               layoutId={`proj-item-${activeItem.id}`}
-              className="pointer-events-auto flex max-h-[min(680px,88vh)] w-[min(560px,94vw)] cursor-default flex-col gap-5 overflow-y-auto rounded-2xl border border-white/[0.16] bg-[rgba(34,36,46,0.97)] p-6 shadow-2xl backdrop-blur-xl"
+              className="pointer-events-auto flex max-h-[min(680px,88vh)] w-[min(560px,94vw)] cursor-default flex-col gap-5 overflow-y-auto rounded-2xl border border-black/12 bg-[rgba(248,245,238,0.98)] p-6 shadow-[0_24px_60px_rgba(40,30,20,0.28)] backdrop-blur-xl"
               onClick={(e) => e.stopPropagation()}
               initial={{ opacity: 0, scale: 0.985 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -88,12 +88,12 @@ export default function JobListingProjects({ jobs, className, onProjectClick }) 
               transition={{ type: "spring", stiffness: 360, damping: 34 }}
             >
               <div className="flex w-full min-w-0 flex-col gap-1">
-                <h3 className="m-0 text-[1.15rem] font-semibold leading-snug tracking-tight text-[#fafaf8] md:text-[1.25rem]">
+                <h3 className="m-0 text-[1.15rem] font-semibold leading-snug tracking-tight text-[#14110e] md:text-[1.25rem]">
                   <motion.span layoutId={`proj-title-${activeItem.id}`} className="block">
                     {activeItem.title}
                   </motion.span>
                 </h3>
-                <p className="text-[0.8125rem] leading-snug text-zinc-300">
+                <p className="text-[0.8125rem] leading-snug text-[#4a443b]">
                   {activeItem.tagsLine}
                 </p>
               </div>
@@ -103,7 +103,7 @@ export default function JobListingProjects({ jobs, className, onProjectClick }) 
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, transition: { duration: 0.06 } }}
                 transition={{ delay: 0.04, duration: 0.25 }}
-                className="text-[0.9375rem] leading-[1.68] text-zinc-100"
+                className="text-[0.9375rem] leading-[1.68] text-[#2a2620]"
               >
                 {activeItem.desc}
               </motion.div>
@@ -112,7 +112,7 @@ export default function JobListingProjects({ jobs, className, onProjectClick }) 
                 {activeItem.tags.map((t) => (
                   <span
                     key={t}
-                    className="rounded-full border border-white/[0.12] bg-white/[0.08] px-3 py-1 text-[12px] font-medium tracking-wide text-zinc-200"
+                    className="rounded-full border border-black/12 bg-black/[0.04] px-3 py-1 text-[12px] font-medium tracking-wide text-[#3f3a32]"
                   >
                     {t}
                   </span>
@@ -120,7 +120,7 @@ export default function JobListingProjects({ jobs, className, onProjectClick }) 
               </div>
 
               {(activeItem.github || activeItem.doc || activeItem.youtube) && (
-                <div className="flex flex-wrap gap-2 border-t border-white/15 pt-4">
+                <div className="flex flex-wrap gap-2 border-t border-black/12 pt-4">
                   {activeItem.github && (
                     <a
                       className={linkButtonClass()}
@@ -170,7 +170,7 @@ export default function JobListingProjects({ jobs, className, onProjectClick }) 
                 layoutId={`proj-item-${role.id}`}
                 aria-label={`Open project details: ${role.title}`}
                 aria-expanded={activeItem?.id === role.id}
-                className="group flex w-full cursor-pointer items-center justify-between gap-3 rounded-xl border border-white/[0.14] bg-[rgba(34,36,46,0.88)] px-4 py-3.5 text-left shadow-lg shadow-black/30 backdrop-blur-md transition-[border-color,background-color] duration-200 hover:border-white/30 hover:bg-[rgba(44,46,58,0.92)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[rgba(5,5,5,0.5)] md:px-5 md:py-4"
+                className="group flex w-full cursor-pointer items-center justify-between gap-3 rounded-[3px] border border-black/12 bg-[rgba(255,255,255,0.5)] px-4 py-3.5 text-left shadow-[0_8px_22px_rgba(40,30,20,0.1)] transition-[border-color,background-color] duration-200 hover:border-[#8a3d3d]/40 hover:bg-[rgba(255,255,255,0.78)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8a3d3d]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f6f2e7] md:px-5 md:py-4"
                 onClick={() => {
                   setActiveItem(role);
                   onProjectClick?.(role);
@@ -178,11 +178,11 @@ export default function JobListingProjects({ jobs, className, onProjectClick }) 
               >
                 <motion.span
                   layoutId={`proj-title-${role.id}`}
-                  className="min-w-0 flex-1 text-[0.98rem] font-semibold leading-snug tracking-tight text-[#fafaf8] md:text-[1.06rem]"
+                  className="min-w-0 flex-1 text-[0.98rem] font-semibold leading-snug tracking-tight text-[#14110e] md:text-[1.06rem]"
                 >
                   {role.title}
                 </motion.span>
-                <ChevronRight className="h-5 w-5 shrink-0 text-zinc-500 transition-colors group-hover:text-zinc-200" />
+                <ChevronRight className="h-5 w-5 shrink-0 text-[#8a8275] transition-colors group-hover:text-[#8a3d3d]" />
               </motion.button>
             </li>
           ))}

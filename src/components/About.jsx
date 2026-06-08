@@ -1,38 +1,42 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AnimatedTabs } from "@/components/ui/animated-tabs";
-import AboutCyclingHero from "@/components/about/AboutCyclingHero";
-import { buildAboutStoryTabs } from "@/components/about/AboutStoryTabs";
+import AboutHousePillars from "@/components/about/AboutHousePillars";
 
 export default function About() {
-  const storyTabs = buildAboutStoryTabs();
-
   return (
     <section
       id="about"
-      className="section home-hero-section about about--story about-hero-fill flex min-h-0 flex-1 flex-col overflow-hidden"
+      className="section home-hero-section about about--story flex flex-col"
     >
       <motion.div
-        className="home-hero-scene about-hero-scene-wide flex min-h-0 flex-1 flex-col overflow-hidden"
+        className="home-hero-scene about-hero-scene-wide flex flex-col"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="home-hero-scene-intro shrink-0">
-          <AboutCyclingHero />
-        </div>
+        <header className="about-foundation home-hero-scene-intro">
+          <p className="about-foundation__lead">
+            Every structure begins with a foundation.
+          </p>
+          <p className="about-foundation__body">
+            Mine begins with a house in Kudavasal, where my grandfather grew up,
+            and with the values that traveled far beyond it.
+          </p>
+          <p className="about-foundation__sub">
+            Three pillars hold the structure together.
+          </p>
+          <p className="about-foundation__body">
+            The house rests on three pillars: background, motivation, and
+            beliefs.
+          </p>
+          <p className="about-foundation__hint">
+            Select a pillar to explore the values and experiences behind the
+            work I do today.
+          </p>
+        </header>
 
-        <div className="home-hero-card about-tabs-in-card flex min-h-0 w-full flex-1 flex-col overflow-hidden">
-          <AnimatedTabs
-            layoutIdPrefix="about"
-            integratedCard
-            large
-            fillHeight
-            defaultTab="background"
-            tabs={storyTabs}
-            className="w-full max-w-none min-h-0 flex-1 gap-4"
-            panelClassName="!px-0 !pb-1 sm:!px-1 md:!pt-3"
-          />
+        <div className="about-house-scroll w-full">
+          <AboutHousePillars />
         </div>
       </motion.div>
     </section>
