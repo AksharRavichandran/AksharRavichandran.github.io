@@ -23,6 +23,15 @@ function getDateDaysAgo(days) {
   return date;
 }
 
+function formatLocation(activity) {
+  if (!activity) return null;
+  const parts = [activity.location_city, activity.location_state]
+    .map((part) => (part || "").trim())
+    .filter(Boolean);
+  if (parts.length) return parts.join(", ");
+  return activity.location_country?.trim() || null;
+}
+
 export default async function handler(req, res) {
   if (req.method !== "GET") {
     res.status(405).json({ error: "Method not allowed" });
@@ -77,6 +86,10 @@ export default async function handler(req, res) {
     let lastRunDistance = "—";
     let lastRunPace = "—";
     let lastRunDate = "—";
+    let lastRunDateIso = null;
+    let lastRunLocation = null;
+    let lastRunName = null;
+    let lastRunUrl = null;
     let lastRunPolyline = null;
 
     if (lastRun) {
@@ -85,6 +98,12 @@ export default async function handler(req, res) {
       lastRunDistance = formatMiles(miles);
       lastRunPace = formatPace(paceSeconds);
       lastRunDate = new Date(lastRun.start_date_local).toLocaleDateString();
+      lastRunDateIso = lastRun.start_date_local;
+      lastRunLocation = formatLocation(lastRun);
+      lastRunName = lastRun.name?.trim() || null;
+      lastRunUrl = lastRun.id
+        ? `https://www.strava.com/activities/${lastRun.id}`
+        : null;
       lastRunPolyline = lastRun.map?.summary_polyline || null;
     }
 
@@ -98,6 +117,10 @@ export default async function handler(req, res) {
       lastRunDistance,
       lastRunPace,
       lastRunDate,
+      lastRunDateIso,
+      lastRunLocation,
+      lastRunName,
+      lastRunUrl,
       weekMiles: formatMiles(weekMiles),
       lastRunPolyline,
     });

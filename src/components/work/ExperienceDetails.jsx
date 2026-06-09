@@ -33,8 +33,8 @@ function GitHubGlyph({ className }) {
 }
 
 /**
- * Expanded notebook case study for one experience record.
- * @param {{ record: object, detailsId: string }} props
+ * Notebook case-study prose for one experience record.
+ * @param {{ record: object, detailsId?: string }} props
  */
 export default function ExperienceDetails({ record, detailsId }) {
   const metrics = record.metrics?.slice(0, 3) ?? [];
@@ -52,7 +52,10 @@ export default function ExperienceDetails({ record, detailsId }) {
     record.artifact;
 
   return (
-    <div id={detailsId} className="experience-record__details">
+    <div
+      {...(detailsId ? { id: detailsId } : {})}
+      className="experience-record__details"
+    >
       <div className="experience-record__details-grid">
         <div className="experience-record__narrative">
           {NARRATIVE_KEYS.map((key) => (

@@ -96,7 +96,9 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <AirportClocks />
+        <div className="nav-meta">
+          <AirportClocks />
+        </div>
       </div>
     </motion.nav>
   );

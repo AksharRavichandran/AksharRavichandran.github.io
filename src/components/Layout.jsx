@@ -33,7 +33,7 @@ function LayoutShell() {
           <div className="home-notebook-bg absolute inset-0 h-full w-full" />
         </div>
       </motion.div>
-      {/* Paper grain and margin line scroll with the page. */}
+      {/* Paper grain, margin line, and faint blue rules scroll with the page. */}
       <motion.div
         className="notebook-rules pointer-events-none absolute inset-0 z-0"
         aria-hidden

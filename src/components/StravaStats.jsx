@@ -1,35 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useStravaData } from "@/hooks/useStravaData";
 
 export default function StravaStats() {
-  const [data, setData] = useState(null);
-  const [status, setStatus] = useState("loading");
+  const { data, status } = useStravaData();
   const mapRef = useRef(null);
   const mapElRef = useRef(null);
   const layerRef = useRef(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const load = async () => {
-      try {
-        const endpoint = "https://strava-proxy-two.vercel.app/api/strava";
-        const resp = await fetch(endpoint);
-        if (!resp.ok) throw new Error("Failed to load Strava stats.");
-        const json = await resp.json();
-        if (!isMounted) return;
-        setData(json);
-        setStatus("ready");
-      } catch (error) {
-        if (!isMounted) return;
-        setStatus("error");
-      }
-    };
-
-    load();
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   useEffect(() => {
     if (!data?.lastRunPolyline || !mapElRef.current) return;
