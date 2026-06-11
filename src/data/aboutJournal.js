@@ -87,17 +87,23 @@ export const aboutJournalSections = [
         quote:
           "To realize one's destiny is a person's only real obligation; and when you want something, all the universe conspires in helping you to achieve it.",
         attribution: "Paulo Coelho, The Alchemist",
+        note:
+          "My grandfather filled a journal with my life before I could write it, then left the rest of the pages empty. This quote is how I read those pages: *wanting something on purpose is the obligation* — the universe handles the conspiring.",
       },
       {
         term: "polymath",
         quote:
           "A true polymath is not one who masters many fields, but one who listens so deeply to the world that every discipline begins to whisper the same truth in a different tongue.",
         attribution: null,
+        note:
+          "I keep ending up in different rooms — firmware one month, monetary policy the next, a race on the weekend. The thread was never mastery. It is listening long enough to hear the same truth told in a different tongue.",
       },
       {
         term: "family",
         quote: "No other success can compensate for failure in the home.",
         attribution: "often attributed to David O. McKay",
+        note:
+          "My dad's diagnosis made this one literal. The wristband I built to damp his tremor matters more to me than anything I have shipped — *home is the project that never gets deprioritized*.",
       },
     ],
     edgePhotos: [

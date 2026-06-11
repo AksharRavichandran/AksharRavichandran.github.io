@@ -4,7 +4,6 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import WorkPage from "./pages/WorkPage";
-import ContactPage from "./pages/ContactPage";
 import "./styles/globals.css";
 
 export default function App() {
@@ -14,7 +13,6 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/work" element={<WorkPage />} />
-        <Route path="/contact" element={<ContactPage />} />
       </Route>
     </Routes>
   );

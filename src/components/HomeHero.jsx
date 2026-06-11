@@ -342,11 +342,11 @@ export default function HomeHero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
-                <Link to="/work" className="home-hero-scene-link">
-                  View my work
+                <Link to="/about" className="home-hero-scene-link">
+                  About me
                 </Link>
-                <Link to="/contact" className="home-hero-scene-link">
-                  Contact
+                <Link to="/work" className="home-hero-scene-link">
+                  My work
                 </Link>
               </motion.div>
             ) : null}

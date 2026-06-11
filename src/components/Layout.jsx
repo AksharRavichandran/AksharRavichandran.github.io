@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { HomeIntroProvider, useHomeIntro } from "@/context/HomeIntroContext";
 
 function LayoutShell() {
@@ -44,12 +45,13 @@ function LayoutShell() {
           ease: [0.22, 1, 0.36, 1],
         }}
       />
-      <div className="relative z-10 flex min-h-full flex-col">
+      <div className="relative z-10 flex min-h-full flex-col layout-content">
         <Navbar />
         <div className="flex flex-1 flex-col">
           <Outlet />
         </div>
       </div>
+      {showBackground ? <Footer /> : null}
     </div>
   );
 }

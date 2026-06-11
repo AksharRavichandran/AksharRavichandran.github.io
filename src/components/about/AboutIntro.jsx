@@ -1,10 +1,31 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { aboutIntro } from "@/data/aboutIntro";
+import { renderMarked } from "@/components/journal/MarkedText";
 import {
   aboutTabContainerVariants,
   aboutTabItemVariants,
 } from "@/components/about/aboutTabMotion";
+
+function IntroBody({ MotionTag = "p", motionProps = {} }) {
+  return (
+    <>
+      {aboutIntro.dateline ? (
+        <MotionTag className="about-intro__dateline" {...motionProps}>
+          {aboutIntro.dateline}
+        </MotionTag>
+      ) : null}
+      {aboutIntro.paragraphs.map((para, i) => (
+        <MotionTag key={i} className="journal-section__para" {...motionProps}>
+          {renderMarked(para)}
+        </MotionTag>
+      ))}
+      <MotionTag className="about-intro__closing journal-section__para" {...motionProps}>
+        <span className="about-intro__ps">p.s. —</span> {aboutIntro.closing}
+      </MotionTag>
+    </>
+  );
+}
 
 /**
  * Concise personal intro for the Background tab — replaces body paragraphs, not the section title.
@@ -15,12 +36,7 @@ export default function AboutIntro() {
   if (reduceMotion) {
     return (
       <div className="about-intro">
-        {aboutIntro.paragraphs.map((para, i) => (
-          <p key={i} className="journal-section__para">
-            {para}
-          </p>
-        ))}
-        <p className="about-intro__closing journal-section__para">{aboutIntro.closing}</p>
+        <IntroBody />
       </div>
     );
   }
@@ -32,14 +48,7 @@ export default function AboutIntro() {
       initial="hidden"
       animate="show"
     >
-      {aboutIntro.paragraphs.map((para, i) => (
-        <motion.p key={i} className="journal-section__para" variants={aboutTabItemVariants}>
-          {para}
-        </motion.p>
-      ))}
-      <motion.p className="about-intro__closing journal-section__para" variants={aboutTabItemVariants}>
-        {aboutIntro.closing}
-      </motion.p>
+      <IntroBody MotionTag={motion.p} motionProps={{ variants: aboutTabItemVariants }} />
     </motion.div>
   );
 }

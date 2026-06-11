@@ -89,11 +89,6 @@ export default function Navbar() {
                 Work
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/contact" className={navClass}>
-                Contact
-              </NavLink>
-            </li>
           </ul>
         </div>
         <div className="nav-meta">

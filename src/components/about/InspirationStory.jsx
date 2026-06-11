@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import JournalSectionLayout from "@/components/journal/JournalSectionLayout";
 import { inspirationStory } from "@/data/inspirationStory";
 import { inspirationEdgePhotos } from "@/data/aboutJournal";
+import { renderMarked } from "@/components/journal/MarkedText";
 import {
   aboutTabContainerVariants,
   aboutTabItemVariants,
@@ -28,7 +29,7 @@ function InspirationBody({ chapters, reduceMotion }) {
             <ChapterMarker chapter={chapter} />
             {chapter.paragraphs.map((para, i) => (
               <p key={i} className="journal-section__para">
-                {para}
+                {renderMarked(para)}
               </p>
             ))}
           </React.Fragment>
@@ -44,7 +45,7 @@ function InspirationBody({ chapters, reduceMotion }) {
           <ChapterMarker chapter={chapter} MotionTag={motion.div} motionProps={{ variants: aboutTabItemVariants }} />
           {chapter.paragraphs.map((para, i) => (
             <motion.p key={i} className="journal-section__para" variants={aboutTabItemVariants}>
-              {para}
+              {renderMarked(para)}
             </motion.p>
           ))}
         </React.Fragment>

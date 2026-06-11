@@ -14,7 +14,7 @@ export const inspirationStory = {
         "Browsing through the library in my basement, you might find books from different parts of the world, old comics, and novels written by renowned authors. But the book I cherish most has never sat on those shelves. It was kept 10,000 miles away, inside a cabinet in my grandfather's home.",
         "On my first trip to India, my grandfather unlocked the cabinet and pulled out a thick leather journal titled Akshar.",
         "\"I update it every day,\" he told me as he began turning through the pages.",
-        "Inside were photographs of my family and friends, certificates from awards ceremonies, track ribbons, concert programs, and small memories I had almost forgotten. Each one had been dated, trimmed, and carefully placed between the brown leather covers. My grandfather had built a biography of my life before I had learned how to write one for myself.",
+        "Inside were photographs of my family and friends, certificates from awards ceremonies, track ribbons, concert programs, and small memories I had almost forgotten. Each one had been dated, trimmed, and carefully placed between the brown leather covers. *My grandfather had built a biography of my life before I had learned how to write one for myself.*",
       ],
     },
     {
@@ -34,7 +34,7 @@ export const inspirationStory = {
       title: "The Empty Pages",
       paragraphs: [
         "A quarter of the way through, he stopped turning the pages. The rest of the book was empty.",
-        "He did not need to explain it. I understood that the remaining pages were mine to fill.",
+        "He did not need to explain it. I understood that *the remaining pages were mine to fill*.",
         "That moment changed the journal from a record of my life into an invitation to create it.",
       ],
     },
