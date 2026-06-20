@@ -61,6 +61,7 @@ export default function Footer() {
                 href={item.href}
                 aria-label={item.label}
                 title={item.label}
+                {...(item.download ? { download: item.download } : {})}
                 {...(newTab ? { target: "_blank", rel: "noreferrer" } : {})}
               >
                 <FooterIcon name={item.icon} />

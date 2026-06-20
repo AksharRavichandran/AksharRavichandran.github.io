@@ -56,6 +56,15 @@ function Scrapbook() {
   );
 }
 
+function MobileScrapbook() {
+  const profile = SCRAPBOOK_PHOTOS[0];
+  return (
+    <div className="home-scrapbook-mobile" aria-hidden>
+      <ScrapbookPolaroid {...profile} delay={0.2} />
+    </div>
+  );
+}
+
 const GREETING = "Hey, I'm ";
 const NAME_FORMS = ["Akshar", "அக்ஷர்", "अक्षर", "अक्षरम्"];
 const NAME_LANG = ["en", "ta", "hi", "sa"];
@@ -352,6 +361,7 @@ export default function HomeHero() {
             ) : null}
           </motion.div>
         ) : null}
+        {showDefinition ? <MobileScrapbook /> : null}
       </div>
     </header>
   );

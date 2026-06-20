@@ -32,6 +32,21 @@ function loadEnvFile() {
   }, {});
 }
 
+function upsertEnvVar(key, value) {
+  const envPath = path.join(__dirname, '..', '.env');
+  let content = fs.existsSync(envPath) ? fs.readFileSync(envPath, 'utf8') : '';
+  const line = `${key}=${value}`;
+  const regex = new RegExp(`^${key}=.*$`, 'm');
+
+  if (regex.test(content)) {
+    content = content.replace(regex, line);
+  } else {
+    content = `${content.trimEnd()}${content ? '\n' : ''}${line}\n`;
+  }
+
+  fs.writeFileSync(envPath, content);
+}
+
 const envFile = loadEnvFile();
 const CLIENT_ID =
   process.env.SPOTIFY_CLIENT_ID ||
@@ -46,11 +61,17 @@ const REDIRECT_URI =
   envFile.SPOTIFY_REDIRECT_URI ||
   envFile.VITE_SPOTIFY_REDIRECT_URI;
 const PORT = 8080;
-const SCOPES = 'user-top-read';
+const SCOPES = "user-read-recently-played user-read-currently-playing";
 
 if (!CLIENT_ID || !CLIENT_SECRET || !REDIRECT_URI) {
+  const missing = [
+    !CLIENT_ID && "SPOTIFY_CLIENT_ID",
+    !CLIENT_SECRET && "SPOTIFY_CLIENT_SECRET",
+    !REDIRECT_URI && "SPOTIFY_REDIRECT_URI",
+  ].filter(Boolean);
   throw new Error(
-    'Missing Spotify env vars. Set SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, and SPOTIFY_REDIRECT_URI in .env.'
+    `Missing Spotify env vars in .env: ${missing.join(", ")}. ` +
+      "Get your client secret from https://developer.spotify.com/dashboard → your app → Settings."
   );
 }
 
@@ -172,44 +193,81 @@ async function exchangeCodeForToken(code) {
   const tokenData = await tokenResponse.json();
   console.log('✅ Access token obtained!\n');
 
-  // Now fetch the top tracks and artists
+  if (tokenData.refresh_token) {
+    upsertEnvVar('SPOTIFY_REFRESH_TOKEN', tokenData.refresh_token);
+    console.log('💾 Saved SPOTIFY_REFRESH_TOKEN to .env');
+    console.log('   Add the same value to your Vercel project env vars for live updates.\n');
+  }
+
+  // Now fetch the last played track
   await fetchSpotifyData(tokenData.access_token);
 }
 
+async function fetchLastPlayed(accessToken) {
+  const currentlyResp = await fetch(
+    "https://api.spotify.com/v1/me/player/currently-playing",
+    { headers: { Authorization: `Bearer ${accessToken}` } }
+  );
+
+  if (currentlyResp.status === 200) {
+    const data = await currentlyResp.json();
+    if (data?.item?.type === "track") {
+      return {
+        track: data.item,
+        playedAt: new Date().toISOString(),
+        isPlaying: Boolean(data.is_playing),
+      };
+    }
+  }
+
+  const recentResp = await fetch(
+    "https://api.spotify.com/v1/me/player/recently-played?limit=1",
+    { headers: { Authorization: `Bearer ${accessToken}` } }
+  );
+
+  if (!recentResp.ok) {
+    throw new Error("Failed to fetch recently played track");
+  }
+
+  const recentData = await recentResp.json();
+  const item = recentData.items?.[0];
+
+  if (!item?.track) {
+    return { track: null, playedAt: null, isPlaying: false };
+  }
+
+  return {
+    track: item.track,
+    playedAt: item.played_at,
+    isPlaying: false,
+  };
+}
+
 async function fetchSpotifyData(accessToken) {
-  console.log('📊 Fetching your top tracks and artists...\n');
+  console.log("📊 Fetching your last played track...\n");
 
   try {
-    const [tracksResponse, artistsResponse] = await Promise.all([
-      fetch('https://api.spotify.com/v1/me/top/tracks?limit=10&time_range=short_term', {
-        headers: { Authorization: `Bearer ${accessToken}` },
-      }),
-      fetch('https://api.spotify.com/v1/me/top/artists?limit=10&time_range=short_term', {
-        headers: { Authorization: `Bearer ${accessToken}` },
-      }),
-    ]);
-
-    if (!tracksResponse.ok || !artistsResponse.ok) {
-      throw new Error('Failed to fetch Spotify data');
-    }
-
-    const tracksData = await tracksResponse.json();
-    const artistsData = await artistsResponse.json();
+    const { track, playedAt, isPlaying } = await fetchLastPlayed(accessToken);
 
     const data = {
-      tracks: tracksData.items || [],
-      artists: artistsData.items || [],
-      lastUpdated: new Date().toISOString().split('T')[0],
+      track,
+      playedAt,
+      isPlaying,
+      tracks: track ? [track] : [],
+      lastUpdated: new Date().toISOString(),
     };
 
-    const outputPath = path.join(__dirname, '../src/data/spotify.json');
+    const outputPath = path.join(__dirname, "../src/data/spotify.json");
     fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
 
     console.log(`✅ Successfully saved to ${outputPath}`);
-    console.log(`   📀 ${data.tracks.length} tracks`);
-    console.log(`   🎤 ${data.artists.length} artists`);
-    console.log(`   📅 Last updated: ${data.lastUpdated}\n`);
-    console.log('🎉 Done! Refresh your browser to see the updated data.\n');
+    if (track) {
+      console.log(`   🎵 ${track.name}`);
+      console.log(`   🕒 ${isPlaying ? "Now playing" : playedAt}\n`);
+    } else {
+      console.log("   ⚠️  No recent listening history found.\n");
+    }
+    console.log("🎉 Done! Refresh your browser to see the updated data.\n");
   } catch (error) {
     throw new Error(`Failed to fetch Spotify data: ${error.message}`);
   }
@@ -219,8 +277,8 @@ async function main() {
   console.log('\n🎵 Spotify Data Fetcher\n');
   console.log('This script will:');
   console.log('1. Open your browser for Spotify authorization');
-  console.log('2. Fetch your top 10 tracks and artists');
-  console.log('3. Save them to src/data/spotify.json\n');
+  console.log("2. Fetch your last played track");
+  console.log("3. Save it to src/data/spotify.json\n");
 
   // Check if redirect URI is configured
   console.log('✅ Using redirect URI:');

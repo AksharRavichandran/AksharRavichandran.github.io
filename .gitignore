@@ -30,3 +30,6 @@ dist-ssr
 
 #vercel
 .vercel
+
+# Vercel serverless proxy (separate repo: strava-proxy)
+api-proxy/

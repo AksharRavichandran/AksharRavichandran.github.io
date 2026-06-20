@@ -19,18 +19,10 @@
   --notebook-rule-step: calc(var(--notebook-body-size) * var(--notebook-body-leading));
   /* About: tab panel max-height = viewport minus sticky header stack (nav + clocks + gap) */
   --about-header-reserve: max(9.25rem, calc(env(safe-area-inset-top, 0px) + 7.25rem));
-
-  /* Chennai dusk palette — warm charcoal route theme (About) */
-  --chennai-night: #171311;
-  --chennai-charcoal: #211a17;
-  --chennai-brown: #35251e;
-  --chennai-amber: #c27a2c;
-  --chennai-sand: #d5c6ad;
-  --chennai-maroon: #733c38;
-  --chennai-teal: #2d6764;
-  --chennai-cream: #f1eadf;
-  --chennai-muted: #b7a995;
-  --chennai-line: rgba(241, 234, 223, 0.12);
+  /* Red margin line position — shared by rules backdrop and content inset */
+  --notebook-margin-x: clamp(22px, 6.5vw, 72px);
+  --font-hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 
 html, body, #root {
@@ -149,7 +141,7 @@ body {
   flex-direction: column;
   align-items: stretch;
   gap: 6px;
-  padding: 14px 6vw;
+  padding: 14px clamp(1rem, 4vw, 2rem) 14px calc(var(--notebook-margin-x) + 0.65rem);
 }
 
 /* Title + nav links on one row (inline with each other) */
@@ -306,8 +298,13 @@ body {
 .logo a { color: inherit; text-decoration: none; }
 .logo a:hover { color: #f1f5f9; text-shadow: 0 0 12px rgba(255,255,255,0.18); }
 
-/* Routed pages */
-.page-main { flex: 1; width: 100%; }
+/* Routed pages — content sits to the right of the red margin line */
+.page-main {
+  flex: 1;
+  width: 100%;
+  padding-left: calc(var(--notebook-margin-x) + 0.65rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+}
 
 /* Home hero (high contrast on photo + noise) */
 .home-hero-section {
@@ -741,7 +738,6 @@ body {
 
 /* Scrolls with the page — red margin, faint blue rules, paper grain */
 .notebook-rules {
-  --notebook-margin-x: clamp(22px, 6.5vw, 72px);
   --notebook-rule-blue: rgba(88, 128, 168, 0.055);
   background-image:
     linear-gradient(rgba(199, 84, 78, 0.55), rgba(199, 84, 78, 0.55)),
@@ -823,6 +819,22 @@ body {
 .paper-theme .about-prose,
 .paper-theme .muted {
   line-height: var(--notebook-body-leading);
+}
+
+/* Journal body copy — serif ink on ruled paper */
+.paper-theme .journal-section__para,
+.paper-theme .about-journal-section__para,
+.paper-theme .journal-intro__body,
+.paper-theme .about-journal-intro__body,
+.paper-theme .work-journal-intro__body,
+.paper-theme .inspiration-story__intro,
+.paper-theme .inspiration-story__closing,
+.paper-theme .belief-card__quote,
+.paper-theme .belief-card__note,
+.paper-theme .work-card__blurb,
+.paper-theme .about-intro__closing,
+.paper-theme .work-gallery__note {
+  font-family: var(--font-serif);
 }
 
 .paper-theme .navbar.navbar--top .logo,
@@ -994,14 +1006,31 @@ body {
   }
 }
 
-.scrapbook-caption {
+.scrapbook-caption,
+.record-polaroid__caption,
+.journal-polaroid__caption,
+.about-journal-hero__caption {
   margin: 8px 2px 0;
   text-align: center;
-  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
-  letter-spacing: 0.04em;
+  font-family: var(--font-hand);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   color: #2c2723;
-  opacity: 0.82;
+  opacity: 0.88;
+  transform: rotate(-1deg);
+}
+
+.record-polaroid__caption,
+.journal-polaroid__caption,
+.about-journal-hero__caption {
+  margin: 5px 1px 0;
+  font-size: 0.85rem;
+}
+
+.about-journal-hero__caption {
+  font-size: 0.9rem;
+  color: #6b6357;
 }
 
 /* Strip of tape pinning the top edge */
@@ -1042,10 +1071,29 @@ body {
   right: clamp(14px, 6vw, 128px);
 }
 
-/* Too cramped to frame the definition on small screens — hide the scrapbook */
+/* Too cramped to frame the definition on small screens — hide corner scrapbook */
 @media (max-width: 900px) {
   .home-scrapbook {
     display: none;
+  }
+}
+
+/* Single profile polaroid below the definition on mobile */
+.home-scrapbook-mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .home-scrapbook-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .home-scrapbook-mobile .scrapbook-polaroid {
+    position: static;
+    width: clamp(140px, 42vw, 200px);
+    pointer-events: auto;
   }
 }
 
@@ -1346,16 +1394,6 @@ body {
   );
   background-size: 220% 100%;
   animation: scrapbook-shimmer 1.25s ease-in-out infinite;
-}
-
-.record-polaroid__caption {
-  margin: 5px 1px 0;
-  text-align: center;
-  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
-  font-size: 9px;
-  letter-spacing: 0.04em;
-  color: #2c2723;
-  opacity: 0.82;
 }
 
 /* Contact — same viewport hero + glass card rhythm as Work / About */
@@ -2555,16 +2593,6 @@ body {
   color: rgba(31, 28, 24, 0.42);
 }
 
-.journal-polaroid__caption {
-  margin: 5px 1px 0;
-  text-align: center;
-  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
-  font-size: 9px;
-  letter-spacing: 0.04em;
-  color: #2c2723;
-  opacity: 0.82;
-}
-
 @media (min-width: 920px) {
   .journal-section__inner,
   .about-journal-section__inner {
@@ -2743,11 +2771,11 @@ body {
 }
 
 .about-intro__ps {
-  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
-  font-size: 0.82em;
+  font-family: var(--font-hand);
+  font-size: 1.05em;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   color: #8a3d3d;
 }
 
@@ -2770,16 +2798,10 @@ body {
   max-width: 68ch;
   margin: 1.5rem 0 1rem;
   color: var(--muted);
-  font-family:
-    ui-monospace,
-    "SFMono-Regular",
-    Menlo,
-    Monaco,
-    Consolas,
-    monospace;
-  font-size: 0.76rem;
-  line-height: 1.6;
-  letter-spacing: 0.04em;
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .about-current-records {
@@ -2972,15 +2994,6 @@ body {
   transform: rotate(6deg);
 }
 
-.about-journal-hero__caption {
-  margin: 0.65rem 2px 0;
-  text-align: center;
-  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: #6b6357;
-}
-
 /* Beliefs — centered pull quotes (no dictionary framing) */
 .journal-section--beliefs .journal-section__content,
 .about-journal-section--beliefs .about-journal-section__content {
@@ -3071,11 +3084,10 @@ body {
 }
 
 .belief-card__note-label {
-  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
-  font-size: 0.72em;
+  font-family: var(--font-hand);
+  font-size: 0.95em;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: #8a3d3d;
 }
 
@@ -3851,23 +3863,24 @@ body {
 }
 
 .work-gallery__tab {
-  padding: 0.32rem 0.8rem;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
-  font-size: 0.68rem;
+  padding: 0.15rem 0;
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-transform: none;
   color: var(--muted);
   background: transparent;
-  border: 1px dashed rgba(31, 28, 24, 0.25);
-  border-radius: 999px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
   cursor: pointer;
-  transition: color 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+  transition: color 0.16s ease, border-color 0.16s ease;
 }
 
 .work-gallery__tab:hover {
   color: var(--text);
-  border-color: rgba(31, 28, 24, 0.45);
+  border-bottom-color: rgba(31, 28, 24, 0.25);
 }
 
 .work-gallery__tab:focus-visible {
@@ -3876,9 +3889,9 @@ body {
 }
 
 .work-gallery__tab.is-active {
-  color: #fff;
-  background: #8a3d3d;
-  border: 1px solid #8a3d3d;
+  color: var(--accent);
+  background: transparent;
+  border-bottom-color: var(--accent);
 }
 
 .work-gallery__grid {
@@ -4370,10 +4383,10 @@ body {
 
 .site-footer__note {
   margin: 0;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--muted);
   white-space: nowrap;
 }
@@ -4420,18 +4433,63 @@ body {
   }
 }
 
-/* ============================================================
-   Polaroid captions — the one handwritten touch (Caveat)
-   ============================================================ */
-
-:root {
-  --font-hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+/* 404 — torn page */
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: min(72vh, 640px);
 }
 
-.journal-polaroid__caption {
+.not-found {
+  width: min(100%, 52ch);
+  padding: clamp(1.5rem, 4vw, 2.5rem) 0;
+}
+
+.not-found__dateline {
+  margin: 0 0 0.85rem;
   font-family: var(--font-hand);
-  font-size: 0.92rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
-  transform: rotate(-1deg);
+  color: var(--accent);
+}
+
+.not-found__title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #14110e;
+}
+
+.not-found__body {
+  margin-bottom: 1.5rem;
+}
+
+.not-found__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.not-found__link {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(138, 61, 61, 0.35);
+  transition: border-color 0.16s ease, color 0.16s ease;
+}
+
+.not-found__link:hover,
+.not-found__link:focus-visible {
+  color: #6b2f2f;
+  border-bottom-color: var(--accent);
+}
+
+.not-found__link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

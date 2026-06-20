@@ -45,7 +45,7 @@ const REDIRECT_URI =
   process.env.VITE_SPOTIFY_REDIRECT_URI ||
   envFile.SPOTIFY_REDIRECT_URI ||
   envFile.VITE_SPOTIFY_REDIRECT_URI;
-const SCOPES = 'user-top-read';
+const SCOPES = "user-read-recently-played user-read-currently-playing";
 
 if (!CLIENT_ID || !REDIRECT_URI) {
   throw new Error(

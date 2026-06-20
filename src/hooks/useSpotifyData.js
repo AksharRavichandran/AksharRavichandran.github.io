@@ -2,19 +2,31 @@ import { useEffect, useState } from "react";
 import spotifySnapshot from "@/data/spotify.json";
 
 export const SPOTIFY_API_URL =
-  import.meta.env.VITE_SPOTIFY_API_URL || "/api/spotify";
+  import.meta.env.VITE_SPOTIFY_API_URL ||
+  "https://strava-proxy-two.vercel.app/api/spotify";
+
+export const SPOTIFY_POLL_MS = 60_000;
+
+function snapshotTrack() {
+  if (spotifySnapshot.track) return spotifySnapshot.track;
+  return spotifySnapshot.tracks?.[0] ?? null;
+}
 
 /**
  * @returns {{
- *   tracks: object[],
- *   artists: object[],
+ *   track: object | null,
+ *   playedAt: string | null,
+ *   isPlaying: boolean,
  *   lastUpdated: string | null,
  *   status: 'loading' | 'ready' | 'error'
  * }}
  */
 export function useSpotifyData() {
-  const [tracks, setTracks] = useState(spotifySnapshot.tracks || []);
-  const [artists, setArtists] = useState(spotifySnapshot.artists || []);
+  const [track, setTrack] = useState(snapshotTrack());
+  const [playedAt, setPlayedAt] = useState(spotifySnapshot.playedAt || null);
+  const [isPlaying, setIsPlaying] = useState(
+    Boolean(spotifySnapshot.isPlaying)
+  );
   const [lastUpdated, setLastUpdated] = useState(
     spotifySnapshot.lastUpdated || null
   );
@@ -29,24 +41,27 @@ export function useSpotifyData() {
         if (!resp.ok) throw new Error("Failed to load Spotify data.");
         const json = await resp.json();
         if (!isMounted) return;
-        setTracks(json.tracks || []);
-        setArtists(json.artists || []);
-        setLastUpdated(json.lastUpdated || null);
+
+        const nextTrack = json.track ?? json.tracks?.[0] ?? null;
+        setTrack(nextTrack);
+        setPlayedAt(json.playedAt ?? null);
+        setIsPlaying(Boolean(json.isPlaying));
+        setLastUpdated(json.lastUpdated ?? null);
         setStatus("ready");
       } catch {
         if (!isMounted) return;
-        const hasSnapshot =
-          (spotifySnapshot.tracks?.length ?? 0) > 0 ||
-          (spotifySnapshot.artists?.length ?? 0) > 0;
-        setStatus(hasSnapshot ? "ready" : "error");
+        setStatus(snapshotTrack() ? "ready" : "error");
       }
     };
 
     load();
+    const interval = setInterval(load, SPOTIFY_POLL_MS);
+
     return () => {
       isMounted = false;
+      clearInterval(interval);
     };
   }, []);
 
-  return { tracks, artists, lastUpdated, status };
+  return { track, playedAt, isPlaying, lastUpdated, status };
 }

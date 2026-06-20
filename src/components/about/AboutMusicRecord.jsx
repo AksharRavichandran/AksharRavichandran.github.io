@@ -1,12 +1,36 @@
 import React from "react";
 import { useSpotifyData } from "@/hooks/useSpotifyData";
 
-function formatUpdatedDate(lastUpdated) {
-  if (!lastUpdated) return null;
-  const parsed = new Date(lastUpdated);
+function formatPlayedAt(playedAt, isPlaying) {
+  if (isPlaying) return { label: "Now playing", dateTime: undefined };
+
+  if (!playedAt) return null;
+
+  const parsed = new Date(playedAt);
   if (Number.isNaN(parsed.getTime())) {
-    return { label: lastUpdated, dateTime: undefined };
+    return { label: playedAt, dateTime: undefined };
   }
+
+  const now = Date.now();
+  const diffMs = now - parsed.getTime();
+  const diffMins = Math.floor(diffMs / 60_000);
+
+  if (diffMins < 1) return { label: "Just now", dateTime: parsed.toISOString() };
+  if (diffMins < 60) {
+    return {
+      label: `${diffMins} min ago`,
+      dateTime: parsed.toISOString(),
+    };
+  }
+
+  const diffHours = Math.floor(diffMins / 60);
+  if (diffHours < 24) {
+    return {
+      label: `${diffHours} hr${diffHours === 1 ? "" : "s"} ago`,
+      dateTime: parsed.toISOString(),
+    };
+  }
+
   return {
     label: parsed.toLocaleDateString(undefined, {
       month: "long",
@@ -18,10 +42,9 @@ function formatUpdatedDate(lastUpdated) {
 }
 
 export default function AboutMusicRecord() {
-  const { tracks, lastUpdated, status } = useSpotifyData();
-  const track = tracks[0];
+  const { track, playedAt, isPlaying, status } = useSpotifyData();
   const artistNames = track?.artists?.map((artist) => artist.name).join(", ");
-  const updated = formatUpdatedDate(lastUpdated);
+  const played = formatPlayedAt(playedAt, isPlaying);
 
   if (status === "loading") {
     return (
@@ -44,13 +67,15 @@ export default function AboutMusicRecord() {
   return (
     <article className="about-current-record">
       <header className="about-current-record__header">
-        <p className="about-current-record__label">Listening note</p>
-        <time
-          className="about-current-record__date"
-          dateTime={updated?.dateTime}
-        >
-          {updated?.label ?? "Recently played"}
-        </time>
+        <p className="about-current-record__label">Last listened</p>
+        {played ? (
+          <time
+            className="about-current-record__date"
+            dateTime={played.dateTime}
+          >
+            {played.label}
+          </time>
+        ) : null}
       </header>
 
       <p className="about-current-record__primary">{track.name}</p>
