@@ -9,7 +9,11 @@ export const SPOTIFY_POLL_MS = 60_000;
 
 function snapshotTrack() {
   if (spotifySnapshot.track) return spotifySnapshot.track;
-  return spotifySnapshot.tracks?.[0] ?? null;
+  // Ignore legacy top-10 snapshots; they are not last-played data.
+  if (spotifySnapshot.playedAt || spotifySnapshot.isPlaying) {
+    return spotifySnapshot.tracks?.[0] ?? null;
+  }
+  return null;
 }
 
 /**

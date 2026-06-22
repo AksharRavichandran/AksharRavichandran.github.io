@@ -4,6 +4,7 @@ import { AnimatedTabs } from "@/components/ui/animated-tabs";
 import { buildAboutTabs } from "@/components/about/AboutPageTabs";
 import JournalPolaroid from "@/components/about/JournalPolaroid";
 import TypedJournalIntro from "@/components/journal/TypedJournalIntro";
+import kuduvasalImage from "@/assets/kuduvasal.jpg";
 
 export default function AboutJournal() {
   const aboutTabs = buildAboutTabs();
@@ -17,17 +18,17 @@ export default function AboutJournal() {
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
       <TypedJournalIntro
-        lead="Every structure begins with a foundation."
-        body="Mine begins with a house in Kudavasal, where my grandfather grew up, and with the values that traveled far beyond it."
+        lead="About Me"
+        body="Every story stars with a foundation. Mine begins with a house in Kudavasal: the home of my grandfather."
         onLeadComplete={() => setIntroDone(true)}
         afterLead={
           <JournalPolaroid
             orientation="landscape"
-            placeholderLabel="landscape photo"
-            caption="kudavasal"
-            rotate={-2}
-            tapeRotate={5}
-            className="journal-intro__polaroid"
+            src={kuduvasalImage}
+            alt="House in Kudavasal with banana-tree arch at the entrance"
+            rotate={0}
+            tapeRotate={0}
+            className="journal-intro__polaroid journal-intro__polaroid--flush"
           />
         }
       />

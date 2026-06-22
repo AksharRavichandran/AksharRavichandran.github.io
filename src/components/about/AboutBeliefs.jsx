@@ -28,19 +28,18 @@ function BeliefCard({ belief, index }) {
       {belief.attribution ? (
         <p className="belief-card__attr">— {belief.attribution}</p>
       ) : null}
-      {belief.note ? (
-        <div className="belief-card__note">
-          <span className="belief-card__note-label">in my margins —</span>{" "}
-          {renderMarked(belief.note)}
-        </div>
-      ) : null}
     </figure>
   );
 }
 
+function BeliefNote({ belief }) {
+  if (!belief.note) return null;
+  return <p className="belief-note journal-section__para">{renderMarked(belief.note)}</p>;
+}
+
 /**
- * Beliefs tab body — quotes as taped notebook cards, with the same
- * stagger reveal as Background.
+ * Beliefs tab body — each quote is a taped, slightly slanted notebook card,
+ * with the reflection set as plain text between the cards.
  */
 export default function AboutBeliefs({ intro, beliefs = [] }) {
   const reduceMotion = useReducedMotion();
@@ -50,7 +49,10 @@ export default function AboutBeliefs({ intro, beliefs = [] }) {
       <div className="about-beliefs">
         {intro ? <p className="journal-section__intro">{intro}</p> : null}
         {beliefs.map((belief, i) => (
-          <BeliefCard key={belief.term} belief={belief} index={i} />
+          <React.Fragment key={belief.term}>
+            <BeliefCard belief={belief} index={i} />
+            <BeliefNote belief={belief} />
+          </React.Fragment>
         ))}
       </div>
     );
@@ -69,9 +71,19 @@ export default function AboutBeliefs({ intro, beliefs = [] }) {
         </motion.p>
       ) : null}
       {beliefs.map((belief, i) => (
-        <motion.div key={belief.term} variants={aboutTabItemVariants}>
-          <BeliefCard belief={belief} index={i} />
-        </motion.div>
+        <React.Fragment key={belief.term}>
+          <motion.div variants={aboutTabItemVariants}>
+            <BeliefCard belief={belief} index={i} />
+          </motion.div>
+          {belief.note ? (
+            <motion.p
+              className="belief-note journal-section__para"
+              variants={aboutTabItemVariants}
+            >
+              {renderMarked(belief.note)}
+            </motion.p>
+          ) : null}
+        </React.Fragment>
       ))}
     </motion.div>
   );

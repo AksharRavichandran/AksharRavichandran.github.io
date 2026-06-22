@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import JournalSectionLayout from "@/components/journal/JournalSectionLayout";
 import TypedJournalIntro from "@/components/journal/TypedJournalIntro";
+import JournalPolaroid from "@/components/about/JournalPolaroid";
 import WorkStory from "@/components/work/WorkStory";
 import WorkGallery from "@/components/work/WorkGallery";
 import { workEdgePhotos } from "@/data/workJournal";
+import friendsImage from "@/assets/friends.jpg";
 
 export default function WorkPage() {
   const [introDone, setIntroDone] = useState(false);
@@ -23,9 +25,19 @@ export default function WorkPage() {
             transition={{ duration: 0.35, ease: "easeOut" }}
           >
             <TypedJournalIntro
-              lead="Every page here was built by hand."
-              body="A working draft of where I have built things, and a shelf of everything else — entries written down the way they happened."
+              lead="My Work"
+              body="My experiences would never be an experience if I did not have the people to share them with."
               onLeadComplete={() => setIntroDone(true)}
+              afterLead={
+                <JournalPolaroid
+                  orientation="landscape"
+                  src={friendsImage}
+                  alt="Friends together with the Atlanta skyline at night"
+                  rotate={0}
+                  tapeRotate={0}
+                  className="journal-intro__polaroid journal-intro__polaroid--work"
+                />
+              }
             />
 
             <motion.div

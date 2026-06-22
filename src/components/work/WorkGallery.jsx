@@ -56,9 +56,10 @@ export default function WorkGallery() {
   return (
     <section className="work-gallery" aria-label="Project gallery">
       <header className="work-gallery__header">
-        <p className="work-gallery__eyebrow">THE SHELF</p>
+        <p className="work-gallery__eyebrow">THE BOTTOM SHELF</p>
         <p className="work-gallery__note">
-          Everything else, kept like clippings — the links go straight to the source.
+          Side experiments, prototypes, and extra proof — kept like clippings for anyone who
+          wants to look closer.
         </p>
       </header>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import JournalSectionLayout from "@/components/journal/JournalSectionLayout";
+import SectionHeader from "@/components/about/SectionHeader";
 import { inspirationStory } from "@/data/inspirationStory";
 import { inspirationEdgePhotos } from "@/data/aboutJournal";
 import { renderMarked } from "@/components/journal/MarkedText";
@@ -58,12 +59,12 @@ function InspirationContent({ reduceMotion }) {
   if (reduceMotion) {
     return (
       <div className="inspiration-story">
-        <header className="inspiration-story__header">
-          <h2 id="inspiration-title" className="inspiration-story__title">
-            {inspirationStory.title}
-          </h2>
-          <p className="inspiration-story__intro journal-section__para">{inspirationStory.intro}</p>
-        </header>
+        <SectionHeader
+          number={inspirationStory.sectionNumber}
+          title={inspirationStory.sectionTitle}
+          kicker={inspirationStory.sectionKicker}
+        />
+        <p className="inspiration-story__intro journal-section__para">{inspirationStory.intro}</p>
 
         <InspirationBody chapters={inspirationStory.chapters} reduceMotion />
 
@@ -79,12 +80,16 @@ function InspirationContent({ reduceMotion }) {
       initial="hidden"
       animate="show"
     >
-      <motion.header className="inspiration-story__header" variants={aboutTabItemVariants}>
-        <h2 id="inspiration-title" className="inspiration-story__title">
-          {inspirationStory.title}
-        </h2>
-        <p className="inspiration-story__intro journal-section__para">{inspirationStory.intro}</p>
-      </motion.header>
+      <motion.div variants={aboutTabItemVariants}>
+        <SectionHeader
+          number={inspirationStory.sectionNumber}
+          title={inspirationStory.sectionTitle}
+          kicker={inspirationStory.sectionKicker}
+        />
+      </motion.div>
+      <motion.p className="inspiration-story__intro journal-section__para" variants={aboutTabItemVariants}>
+        {inspirationStory.intro}
+      </motion.p>
 
       <InspirationBody chapters={inspirationStory.chapters} reduceMotion={false} />
 

@@ -7,10 +7,10 @@ import {
   aboutTabItemVariants,
 } from "@/components/about/aboutTabMotion";
 
-function IntroBody({ MotionTag = "p", motionProps = {} }) {
+function IntroBody({ MotionTag = "p", motionProps = {}, hideDateline = false }) {
   return (
     <>
-      {aboutIntro.dateline ? (
+      {aboutIntro.dateline && !hideDateline ? (
         <MotionTag className="about-intro__dateline" {...motionProps}>
           {aboutIntro.dateline}
         </MotionTag>
@@ -30,13 +30,13 @@ function IntroBody({ MotionTag = "p", motionProps = {} }) {
 /**
  * Concise personal intro for the Background tab — replaces body paragraphs, not the section title.
  */
-export default function AboutIntro() {
+export default function AboutIntro({ hideDateline = false }) {
   const reduceMotion = useReducedMotion();
 
   if (reduceMotion) {
     return (
       <div className="about-intro">
-        <IntroBody />
+        <IntroBody hideDateline={hideDateline} />
       </div>
     );
   }
@@ -48,7 +48,11 @@ export default function AboutIntro() {
       initial="hidden"
       animate="show"
     >
-      <IntroBody MotionTag={motion.p} motionProps={{ variants: aboutTabItemVariants }} />
+      <IntroBody
+        MotionTag={motion.p}
+        motionProps={{ variants: aboutTabItemVariants }}
+        hideDateline={hideDateline}
+      />
     </motion.div>
   );
 }

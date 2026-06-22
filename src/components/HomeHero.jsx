@@ -5,26 +5,60 @@ import { TextEffect } from "@/components/ui/text-effect";
 import { TypewriterText } from "@/components/ui/typewriter-text";
 import { TypingCursor } from "@/components/ui/typing-cursor";
 import { useHomeIntro } from "@/context/HomeIntroContext";
-import profileImage from "../assets/profile.jpeg";
-import chennaiImage from "../assets/chennai.jpg";
-import atlImage from "../assets/atl.jpg";
-import bwiImage from "../assets/bwi.jpg";
+import gradImage from "../assets/grad.JPG";
+import familyImage from "../assets/family.jpg";
+import computerImage from "../assets/computer.JPG";
+import sunsetImage from "../assets/sunset.JPG";
 
 // Polaroids tucked into the four corners around the definition — a slanted
 // scrapbook. `corner` drives placement (CSS), `rotate`/`tapeRotate` the tilt.
 const SCRAPBOOK_PHOTOS = [
-  { src: profileImage, alt: "Akshar", caption: "me", corner: "tl", rotate: -7, tapeRotate: 7 },
-  { src: chennaiImage, alt: "Chennai traffic", caption: "chennai", corner: "tr", rotate: 6, tapeRotate: -6 },
-  { src: atlImage, alt: "Atlanta", caption: "atlanta", corner: "bl", rotate: 5, tapeRotate: -8 },
-  { src: bwiImage, alt: "Baltimore", caption: "home", corner: "br", rotate: -6, tapeRotate: 5 },
+  { src: gradImage, alt: "Akshar at graduation", caption: "Me", corner: "tl", rotate: -7, tapeRotate: 7 },
+  {
+    src: familyImage,
+    alt: "Family portrait",
+    caption: "The Fam",
+    corner: "tr",
+    rotate: 6,
+    tapeRotate: -6,
+    orientation: "landscape",
+  },
+  {
+    src: computerImage,
+    alt: "Working at a desk",
+    caption: "Hard at Work",
+    corner: "bl",
+    rotate: 5,
+    tapeRotate: -8,
+    orientation: "landscape",
+  },
+  {
+    src: sunsetImage,
+    alt: "Sunset",
+    caption: "☀️",
+    corner: "br",
+    rotate: -6,
+    tapeRotate: 5,
+    orientation: "landscape",
+  },
 ];
 
-function ScrapbookPolaroid({ src, alt, caption, corner, rotate, tapeRotate, delay }) {
+function ScrapbookPolaroid({
+  src,
+  alt,
+  caption,
+  corner,
+  rotate,
+  tapeRotate,
+  delay,
+  orientation = "square",
+}) {
   const [loaded, setLoaded] = useState(false);
+  const isLandscape = orientation === "landscape";
 
   return (
     <motion.figure
-      className={`scrapbook-polaroid scrapbook-polaroid--${corner}`}
+      className={`scrapbook-polaroid scrapbook-polaroid--${corner}${isLandscape ? " scrapbook-polaroid--landscape" : ""}`}
       style={{ "--tape-rotate": `${tapeRotate}deg` }}
       initial={{ opacity: 0, scale: 0.82, rotate: rotate * 1.9, y: -18 }}
       animate={{ opacity: 1, scale: 1, rotate, y: 0 }}
@@ -144,15 +178,14 @@ function DictionaryEntry({ onRevealComplete }) {
 
       <motion.ol className="dictionary-definitions" variants={DEFINITION_CONTAINER}>
         <motion.li variants={DEFINITION_SECTION}>
-          A <strong>letter</strong> or written character; the smallest unit of a script one reads or types.
+          A <strong>letter</strong> or written character; the smallest unit of a script one reads or writes.
         </motion.li>
         <motion.li variants={DEFINITION_SECTION}>
-          In Indian thought, often glossed as an <em>imperishable syllable</em> or primordial sound—the kind of
+          In Indian thought, often glossed as an <em>imperishable syllable</em> or primordial sound,the kind of
           fixed, resonant unit that shows up in mantra and metaphor alike.
         </motion.li>
         <motion.li variants={DEFINITION_SECTION}>
-          By extension (and a little playfully): a nod to <strong>language</strong>, <strong>code</strong>, and
-          the clarity of getting a name—or a symbol—exactly right.
+          By extension: a nod to <strong>knowledge</strong>, <strong>wisdom</strong>, and <strong>permanence</strong>.
         </motion.li>
       </motion.ol>
     </motion.article>

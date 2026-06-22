@@ -8,7 +8,7 @@ export const aboutJournalSections = [
   {
     id: "background",
     number: "01",
-    title: "Background",
+    title: "Reporting Live from Atlanta, Georgia",
     kicker: "Where I come from",
     paragraphs: [],
     edgePhotos: [
@@ -77,10 +77,10 @@ export const aboutJournalSections = [
   {
     id: "beliefs",
     number: "03",
-    title: "Beliefs",
-    kicker: "What I hold to",
+    title: "Written in the Margins",
+    kicker: "What I return to",
     intro:
-      "Beliefs are not decorations on a page — they are the decisions I already made at home and on the track, stated plainly. Three ideas I return to when I am choosing what to prioritize next.",
+     "Beliefs are not decorations on a page. They are the ideas I try to live by, the ones I return to when I am deciding what matters most and what kind of person I want to become.",
     beliefs: [
       {
         term: "destiny",
@@ -88,23 +88,26 @@ export const aboutJournalSections = [
           "To realize one's destiny is a person's only real obligation; and when you want something, all the universe conspires in helping you to achieve it.",
         attribution: "Paulo Coelho, The Alchemist",
         note:
-          "My grandfather filled a journal with my life before I could write it, then left the rest of the pages empty. This quote is how I read those pages: *wanting something on purpose is the obligation* — the universe handles the conspiring.",
+          "I have always wondered why things happen the way they do. Is it fate, luck, or something written before we are ready to understand it? I believe life leaves signs, and destiny is partly about learning how to read them. *The Alchemist* put words to that feeling for me: the idea that when you want something with purpose, the path begins to reveal itself.",
       },
       {
         term: "polymath",
         quote:
-          "A true polymath is not one who masters many fields, but one who listens so deeply to the world that every discipline begins to whisper the same truth in a different tongue.",
+          "Jack of all trades, master of none, but oftentimes better than a master of one.",
         attribution: null,
         note:
-          "I keep ending up in different rooms — firmware one month, monetary policy the next, a race on the weekend. The thread was never mastery. It is listening long enough to hear the same truth told in a different tongue.",
+          "I have heard the first half of this quote my entire life, but almost no one seems to recognize the second half. To me, being a polymath is not about trying to know everything. It is about being versatile enough to adapt to whatever setting, problem, or challenge you are placed in. I have never wanted to get too comfortable doing only one thing. Throughout college, I kept chasing projects that were different in scope: software, machine learning, hardware, finance, research, and ideas that did not fit neatly into one category. That range has taught me to stay curious, keep expanding my domain, and trust that different experiences can sharpen each other.",
       },
+
       {
         term: "family",
         quote: "No other success can compensate for failure in the home.",
-        attribution: "often attributed to David O. McKay",
+        attribution: "David O. McKay",
         note:
-          "My dad's diagnosis made this one literal. The wristband I built to damp his tremor matters more to me than anything I have shipped — *home is the project that never gets deprioritized*.",
+          "Family is the thing I always find myself returning to. It keeps me grounded in my work, gives me motivation when I lack it, strength when I need it, and courage when I cannot find it on my own. Watching my parents move countries, fight illness, make sacrifices, and keep our family together has shown me what true success really means. Without family, success feels incomplete. *Home is where purpose starts*.",
       },
+
+
     ],
     edgePhotos: [
       {

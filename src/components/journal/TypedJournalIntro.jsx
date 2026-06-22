@@ -33,7 +33,7 @@ export default function TypedJournalIntro({
       <header className={`journal-intro${className ? ` ${className}` : ""}`}>
         <p className="journal-intro__lead">{lead}</p>
         {afterLead}
-        {body ? <p className="journal-intro__body">{body}</p> : null}
+        {body !== undefined ? <p className="journal-intro__body">{body || "\u00a0"}</p> : null}
       </header>
     );
   }
@@ -57,14 +57,14 @@ export default function TypedJournalIntro({
         </motion.div>
       ) : null}
 
-      {body ? (
+      {body !== undefined ? (
         <motion.p
           className="journal-intro__body"
           initial={{ opacity: 0, y: 10 }}
           animate={done ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.5, delay: 0.3, ease: EASE }}
         >
-          {body}
+          {body || "\u00a0"}
         </motion.p>
       ) : null}
     </header>

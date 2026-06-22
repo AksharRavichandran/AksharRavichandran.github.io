@@ -805,6 +805,8 @@ body {
 .paper-theme li,
 .paper-theme .about-journal-intro__body,
 .paper-theme .journal-intro__body,
+.paper-theme .journal-section__intro,
+.paper-theme .about-journal-section__intro,
 .paper-theme .journal-section__para,
 .paper-theme .inspiration-story__intro,
 .paper-theme .inspiration-story__closing,
@@ -822,6 +824,8 @@ body {
 }
 
 /* Journal body copy — serif ink on ruled paper */
+.paper-theme .journal-section__intro,
+.paper-theme .about-journal-section__intro,
 .paper-theme .journal-section__para,
 .paper-theme .about-journal-section__para,
 .paper-theme .journal-intro__body,
@@ -933,8 +937,8 @@ body {
 
 .scrapbook-polaroid {
   position: absolute;
-  width: clamp(118px, 12vw, 188px);
-  padding: 10px 10px 30px;
+  width: clamp(128px, 13vw, 200px);
+  padding: 10px 10px 32px;
   background: linear-gradient(180deg, #ffffff 0%, #f4eee2 100%);
   border-radius: 2px;
   box-shadow:
@@ -942,6 +946,14 @@ body {
     0 3px 8px rgba(40, 30, 20, 0.22),
     inset 0 0 0 1px rgba(0, 0, 0, 0.05);
   will-change: transform, opacity;
+}
+
+.scrapbook-polaroid--landscape {
+  width: clamp(158px, 16vw, 248px);
+}
+
+.scrapbook-polaroid--landscape .scrapbook-photo {
+  aspect-ratio: 4 / 3;
 }
 
 .scrapbook-photo {
@@ -1092,8 +1104,12 @@ body {
 
   .home-scrapbook-mobile .scrapbook-polaroid {
     position: static;
-    width: clamp(140px, 42vw, 200px);
+    width: clamp(152px, 44vw, 210px);
     pointer-events: auto;
+  }
+
+  .home-scrapbook-mobile .scrapbook-polaroid--landscape {
+    width: clamp(176px, 64vw, 260px);
   }
 }
 
@@ -2300,16 +2316,56 @@ body {
 
 .journal-intro__polaroid {
   flex-shrink: 0;
-  width: clamp(220px, 52vw, 340px);
+  width: clamp(240px, 54vw, 340px);
   margin: clamp(1rem, 2.5vw, 1.35rem) auto;
+  padding: 6px 6px 10px;
+  transform: rotate(0deg);
+  overflow: visible;
+}
+
+.journal-intro__polaroid--flush {
+  padding-bottom: 6px;
+}
+
+.journal-intro__polaroid .journal-polaroid__caption {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 8px 2px 0;
+  padding-bottom: 2px;
 }
 
 .journal-polaroid--landscape {
   width: clamp(220px, 52vw, 340px);
 }
 
+.journal-polaroid--landscape.journal-intro__polaroid {
+  width: clamp(240px, 54vw, 340px);
+}
+
+.journal-polaroid--landscape.journal-intro__polaroid--work {
+  width: clamp(270px, 60vw, 380px);
+}
+
 .journal-polaroid--landscape .journal-polaroid__photo {
   aspect-ratio: 3 / 2;
+}
+
+.journal-intro__polaroid .journal-polaroid__photo {
+  aspect-ratio: 16 / 9;
+}
+
+.journal-intro__polaroid .journal-polaroid__photo img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.journal-intro__polaroid--work .journal-polaroid__photo {
+  aspect-ratio: 16 / 9;
+}
+
+.journal-intro__polaroid--work .journal-polaroid__photo img {
+  object-position: center bottom;
 }
 
 .journal-nav,
@@ -2994,16 +3050,23 @@ body {
   transform: rotate(6deg);
 }
 
-/* Beliefs — centered pull quotes (no dictionary framing) */
+/* Beliefs — header and prose left-aligned; quote cards stay centered as cards */
 .journal-section--beliefs .journal-section__content,
 .about-journal-section--beliefs .about-journal-section__content {
-  text-align: center;
+  text-align: left;
+}
+
+.journal-section--beliefs .journal-section__header,
+.about-journal-section--beliefs .journal-section__header {
+  text-align: left;
 }
 
 .journal-section--beliefs .journal-section__intro,
-.about-journal-section--beliefs .about-journal-section__intro {
-  margin-left: auto;
-  margin-right: auto;
+.about-journal-section--beliefs .journal-section__intro,
+.about-beliefs .journal-section__intro {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
 }
 
 /* Belief quotes — taped notebook cards, slightly scattered */
@@ -3074,21 +3137,11 @@ body {
   color: var(--muted);
 }
 
-.belief-card__note {
-  margin-top: 0.9rem;
-  padding-top: 0.8rem;
-  border-top: 1px dashed rgba(31, 28, 24, 0.16);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: rgba(31, 28, 24, 0.74);
-}
-
-.belief-card__note-label {
-  font-family: var(--font-hand);
-  font-size: 0.95em;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #8a3d3d;
+/* Reflection text set between the taped quote cards */
+.belief-note {
+  max-width: none;
+  margin: clamp(1rem, 2.4vw, 1.4rem) 0 0;
+  text-align: left;
 }
 
 @media (max-width: 560px) {
@@ -3717,7 +3770,7 @@ body {
 /* Inline card — the place or project a paragraph just mentioned */
 .work-card {
   max-width: 56ch;
-  margin: clamp(0.9rem, 2vw, 1.15rem) 0 0;
+  margin: clamp(0.9rem, 2vw, 1.15rem) auto 0;
   padding: clamp(0.9rem, 2vw, 1.15rem) clamp(1rem, 2.2vw, 1.35rem);
   background: rgba(250, 247, 240, 0.85);
   border: 1px solid rgba(31, 28, 24, 0.14);
@@ -3858,29 +3911,30 @@ body {
 .work-gallery__tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.5rem 0.6rem;
   margin-bottom: clamp(0.9rem, 2vw, 1.25rem);
 }
 
 .work-gallery__tab {
-  padding: 0.15rem 0;
+  padding: 0.4rem 0.85rem;
   font-family: var(--font-serif);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   text-transform: none;
   color: var(--muted);
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid transparent;
-  border-radius: 0;
+  background: rgba(250, 247, 240, 0.55);
+  border: 1px solid rgba(31, 28, 24, 0.18);
+  border-radius: 999px;
   cursor: pointer;
-  transition: color 0.16s ease, border-color 0.16s ease;
+  transition: color 0.16s ease, border-color 0.16s ease, background 0.16s ease,
+    box-shadow 0.16s ease;
 }
 
 .work-gallery__tab:hover {
   color: var(--text);
-  border-bottom-color: rgba(31, 28, 24, 0.25);
+  border-color: rgba(31, 28, 24, 0.35);
+  background: rgba(250, 247, 240, 0.9);
 }
 
 .work-gallery__tab:focus-visible {
@@ -3889,9 +3943,21 @@ body {
 }
 
 .work-gallery__tab.is-active {
-  color: var(--accent);
-  background: transparent;
-  border-bottom-color: var(--accent);
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 2px 6px rgba(138, 61, 61, 0.25);
+}
+
+@media (max-width: 480px) {
+  .work-gallery__tabs {
+    justify-content: center;
+  }
+
+  .work-gallery__tab {
+    font-size: 0.82rem;
+    padding: 0.4rem 0.75rem;
+  }
 }
 
 .work-gallery__grid {
