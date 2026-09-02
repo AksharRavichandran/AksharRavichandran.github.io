@@ -109,67 +109,9 @@ export const aboutJournalSections = [
 
 
     ],
-    edgePhotos: [
-      {
-        side: "left",
-        caption: "track",
-        placeholderLabel: "track ribbon",
-        rotate: -9,
-        tapeRotate: 5,
-      },
-      {
-        side: "left",
-        caption: "finish line",
-        placeholderLabel: "race bib",
-        rotate: 5,
-        tapeRotate: -7,
-      },
-      {
-        side: "right",
-        caption: "family",
-        placeholderLabel: "family photo",
-        rotate: 6,
-        tapeRotate: -5,
-      },
-      {
-        side: "right",
-        caption: "home",
-        placeholderLabel: "kitchen table",
-        rotate: -7,
-        tapeRotate: 6,
-      },
-    ],
+    edgePhotos: [],
   },
 ];
 
-/** Margin photo placeholders for tabs defined outside aboutJournalSections. */
-export const inspirationEdgePhotos = [
-  {
-    side: "left",
-    caption: "the book",
-    placeholderLabel: "leather journal",
-    rotate: -7,
-    tapeRotate: 6,
-  },
-  {
-    side: "left",
-    caption: "margin notes",
-    placeholderLabel: "handwritten note",
-    rotate: 8,
-    tapeRotate: -4,
-  },
-  {
-    side: "right",
-    caption: "scrapbook",
-    placeholderLabel: "family photos",
-    rotate: 5,
-    tapeRotate: -6,
-  },
-  {
-    side: "right",
-    caption: "keepsake",
-    placeholderLabel: "old photograph",
-    rotate: -6,
-    tapeRotate: 5,
-  },
-];
+/** Margin photos for tabs defined outside aboutJournalSections. */
+export const inspirationEdgePhotos = [];

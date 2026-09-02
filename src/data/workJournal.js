@@ -18,6 +18,13 @@ export const workEdgePhotos = [
     tapeRotate: -5,
   },
   {
+    side: "left",
+    caption: "late nights",
+    placeholderLabel: "the grind",
+    rotate: -5,
+    tapeRotate: 7,
+  },
+  {
     side: "right",
     caption: "campus",
     placeholderLabel: "georgia tech",
@@ -30,5 +37,12 @@ export const workEdgePhotos = [
     placeholderLabel: "presentation",
     rotate: -6,
     tapeRotate: 4,
+  },
+  {
+    side: "right",
+    caption: "the team",
+    placeholderLabel: "coworkers",
+    rotate: 7,
+    tapeRotate: -5,
   },
 ];

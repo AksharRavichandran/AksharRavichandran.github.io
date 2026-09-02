@@ -2,14 +2,63 @@ import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { workStory } from "@/data/workStory";
 import { renderMarked } from "@/components/journal/MarkedText";
+import JournalPolaroid from "@/components/about/JournalPolaroid";
 import {
   aboutTabContainerVariants,
   aboutTabItemVariants,
 } from "@/components/about/aboutTabMotion";
+import computerImage from "@/assets/computer.JPG";
+import gradImage from "@/assets/grad.JPG";
+
+/** Inline photos threaded between chapters so the story is never a wall of text. */
+const INLINE_PHOTOS = {
+  "georgia-tech": {
+    src: gradImage,
+    alt: "Graduation day at Georgia Tech",
+    caption: "the diploma",
+    rotate: -3,
+    tapeRotate: 5,
+  },
+  amazon: {
+    src: computerImage,
+    alt: "Working at the desk",
+    caption: "the desk",
+    rotate: 3,
+    tapeRotate: -5,
+  },
+  markets: {
+    alt: "Placeholder for a markets keepsake",
+    placeholderLabel: "ticker tape",
+    caption: "the markets",
+    rotate: 4,
+    tapeRotate: -6,
+  },
+  scheller: {
+    alt: "Placeholder for a research keepsake",
+    placeholderLabel: "market notes",
+    caption: "the edge",
+    rotate: -4,
+    tapeRotate: 6,
+  },
+};
 
 function WorkCard({ card }) {
   return (
     <aside className="work-card">
+      {card.photo ? (
+        <div className="work-card__reveal" aria-hidden>
+          <JournalPolaroid
+            orientation="landscape"
+            src={card.photo.src}
+            alt={card.photo.alt ?? card.photo.caption ?? ""}
+            caption={card.photo.caption}
+            placeholderLabel={card.photo.placeholderLabel}
+            rotate={5}
+            tapeRotate={-6}
+          />
+        </div>
+      ) : null}
+
       <div className="work-card__head">
         {card.logo ? (
           <img
@@ -58,6 +107,8 @@ function WorkCard({ card }) {
 }
 
 function Chapter({ chapter, MotionTag = "div", motionProps = {} }) {
+  const inlinePhoto = INLINE_PHOTOS[chapter.id];
+
   return (
     <MotionTag className="work-story__chapter" {...motionProps}>
       {chapter.paragraphs.map((para, i) => (
@@ -66,6 +117,13 @@ function Chapter({ chapter, MotionTag = "div", motionProps = {} }) {
         </p>
       ))}
       {chapter.card ? <WorkCard card={chapter.card} /> : null}
+      {inlinePhoto ? (
+        <JournalPolaroid
+          orientation="landscape"
+          {...inlinePhoto}
+          className="work-story__inline-photo"
+        />
+      ) : null}
     </MotionTag>
   );
 }

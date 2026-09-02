@@ -60,7 +60,6 @@ function InspirationContent({ reduceMotion }) {
     return (
       <div className="inspiration-story">
         <SectionHeader
-          number={inspirationStory.sectionNumber}
           title={inspirationStory.sectionTitle}
           kicker={inspirationStory.sectionKicker}
         />
@@ -82,7 +81,6 @@ function InspirationContent({ reduceMotion }) {
     >
       <motion.div variants={aboutTabItemVariants}>
         <SectionHeader
-          number={inspirationStory.sectionNumber}
           title={inspirationStory.sectionTitle}
           kicker={inspirationStory.sectionKicker}
         />

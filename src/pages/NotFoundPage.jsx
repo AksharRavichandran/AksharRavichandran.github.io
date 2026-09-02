@@ -20,8 +20,8 @@ export default function NotFoundPage() {
           <Link to="/about" className="not-found__link">
             About me
           </Link>
-          <Link to="/work" className="not-found__link">
-            My work
+          <Link to="/entries" className="not-found__link">
+            Entries
           </Link>
         </nav>
       </section>

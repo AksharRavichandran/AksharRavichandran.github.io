@@ -387,8 +387,8 @@ export default function HomeHero() {
                 <Link to="/about" className="home-hero-scene-link">
                   About me
                 </Link>
-                <Link to="/work" className="home-hero-scene-link">
-                  My work
+                <Link to="/entries" className="home-hero-scene-link">
+                  Entries
                 </Link>
               </motion.div>
             ) : null}

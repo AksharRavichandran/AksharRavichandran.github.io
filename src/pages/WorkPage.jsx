@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import JournalSectionLayout from "@/components/journal/JournalSectionLayout";
 import TypedJournalIntro from "@/components/journal/TypedJournalIntro";
 import JournalPolaroid from "@/components/about/JournalPolaroid";
-import WorkStory from "@/components/work/WorkStory";
+import WorkBlurb from "@/components/work/WorkBlurb";
+import WorkCV from "@/components/work/WorkCV";
 import WorkGallery from "@/components/work/WorkGallery";
-import { workEdgePhotos } from "@/data/workJournal";
 import friendsImage from "@/assets/friends.jpg";
 
 export default function WorkPage() {
@@ -25,34 +24,37 @@ export default function WorkPage() {
             transition={{ duration: 0.35, ease: "easeOut" }}
           >
             <TypedJournalIntro
-              lead="My Work"
-              body="My experiences would never be an experience if I did not have the people to share them with."
+              lead="About Me"
               onLeadComplete={() => setIntroDone(true)}
               afterLead={
-                <JournalPolaroid
-                  orientation="landscape"
-                  src={friendsImage}
-                  alt="Friends together with the Atlanta skyline at night"
-                  rotate={0}
-                  tapeRotate={0}
-                  className="journal-intro__polaroid journal-intro__polaroid--work"
-                />
+                <>
+                  <JournalPolaroid
+                    orientation="landscape"
+                    src={friendsImage}
+                    alt="Friends together with the Atlanta skyline at night"
+                    rotate={0}
+                    tapeRotate={0}
+                    className="journal-intro__polaroid journal-intro__polaroid--work"
+                  />
+                  <p className="journal-intro__caption">
+                    My experiences would never be an experience if I did not have the people to share
+                    them with.
+                  </p>
+                </>
               }
             />
 
             <motion.div
+              className="work-tabs-panel w-full"
               initial={{ opacity: 0, y: 16 }}
               animate={introDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
               transition={{ duration: 0.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
-              <JournalSectionLayout
-                id="work-journal"
-                className="about-journal-tab"
-                edgePhotos={workEdgePhotos}
-              >
-                <WorkStory />
-                <WorkGallery />
-              </JournalSectionLayout>
+              <WorkBlurb />
+
+              <WorkCV />
+
+              <WorkGallery />
             </motion.div>
           </motion.div>
         </section>

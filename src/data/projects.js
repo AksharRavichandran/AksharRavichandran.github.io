@@ -88,7 +88,7 @@ export const projects = [
     id: "smart-chessboard",
     category: "devices",
     title: "Smart Chessboard",
-    dates: "2023",
+    dates: "2026",
     blurb:
       "Sensor-equipped board that tracks piece movement and feeds game state into software.",
     tags: ["Embedded", "IoT"],

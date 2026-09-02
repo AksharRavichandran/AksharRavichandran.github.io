@@ -81,12 +81,12 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink to="/about" className={navClass}>
-                Me
+                About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/work" className={navClass}>
-                Work
+              <NavLink to="/entries" className={navClass}>
+                Entries
               </NavLink>
             </li>
           </ul>
